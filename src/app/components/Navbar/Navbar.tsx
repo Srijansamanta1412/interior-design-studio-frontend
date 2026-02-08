@@ -4,14 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"; // Import SheetTitle
 import { Logo } from "@/components/shared/Logo";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"; // Ensure accessibility
+import { navbarLinks } from "@/app/routes/navigation";
 
 export function Navbar() {
-  const navLinks = [
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "How it Works", href: "/how-it-works" },
-    { name: "Stories", href: "/stories" },
-    { name: "Pricing", href: "/pricing" },
-  ];
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -22,13 +17,13 @@ export function Navbar() {
 
         {/* 2. Desktop Nav */}
         <div className="hidden md:flex gap-8">
-          {navLinks.map((link) => (
+          {navbarLinks.map((link) => (
             <Link 
-              key={link.name} 
+              key={link.title} 
               to={link.href}
               className="text-sm font-medium transition-colors hover:text-gold"
             >
-              {link.name}
+              {link.title}
             </Link>
           ))}
         </div>
@@ -63,13 +58,13 @@ export function Navbar() {
               <div className="flex flex-col gap-6 mt-10 px-6">
                 <Logo />
                 <div className="flex flex-col gap-4">
-                  {navLinks.map((link) => (
+                  {navbarLinks.map((link) => (
                     <Link 
-                      key={link.name} 
+                      key={link.title} 
                       to={link.href}
                       className="text-lg font-serif font-medium hover:text-gold"
                     >
-                      {link.name}
+                      {link.title}
                     </Link>
                   ))}
                   <hr className="my-2" />
