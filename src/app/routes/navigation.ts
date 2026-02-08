@@ -4,6 +4,8 @@
 export interface NavItem {
   title: string;
   href: string;
+  description?: string; // Good for mega menus
+  items?: NavItem[]; // Recursive children
 }
 
 export interface FooterSection {
@@ -12,8 +14,25 @@ export interface FooterSection {
 }
 
 export const navbarLinks: NavItem[] = [
-  { title: "Portfolio", href: "/portfolio" },
-  { title: "How it Works", href: "/how-it-works" },
+  { 
+    title: "Portfolio", 
+    href: "/portfolio", // Main click goes to full portfolio
+    items: [
+      { title: "Living Room", href: "/portfolio/living-room", description: "Cozy and modern living spaces." },
+      { title: "Kitchen & Dining", href: "/portfolio/kitchen", description: "Functional and stylish culinary hubs." },
+      { title: "Bedroom", href: "/portfolio/bedroom", description: "Serene retreats and sleeping quarters." },
+      { title: "Home Office", href: "/portfolio/office", description: "Productive workspaces." },
+    ]
+  },
+  { 
+    title: "How it Works", 
+    href: "/how-it-works",
+    items: [
+      { title: "The Process", href: "/how-it-works/process", description: "Step-by-step guide to your dream home." },
+      { title: "Pricing Packages", href: "/pricing", description: "Affordable flat-rate design packages." },
+      { title: "Compare Us", href: "/compare", description: "See how we stack up against traditional designers." },
+    ]
+  },
   { title: "Stories", href: "/stories" },
   { title: "Pricing", href: "/pricing" },
 ];
