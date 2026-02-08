@@ -8,17 +8,15 @@ interface LogoProps {
 
 export function Logo({ className, variant = "dark" }: LogoProps) {
   return (
-    // <Link 
-    //   to="/" 
-    //   className={cn(
-    //     "font-serif text-2xl font-bold tracking-tight transition-opacity hover:opacity-80",
-    //     variant === "light" ? "text-white" : "text-foreground",
-    //     className
-    //   )}
-    // >
-    <>
-    DECORILLA
-    </>
-    // </Link>
+    <Link 
+      to="/" 
+      className={cn(
+        "font-serif text-2xl font-bold tracking-tight transition-opacity hover:opacity-80",
+        variant === "light" ? "text-white" : "text-foreground",
+        className
+      )}
+    >
+      DECORILLA
+    </Link>
   );
 }

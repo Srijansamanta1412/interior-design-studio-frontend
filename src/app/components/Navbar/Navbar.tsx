@@ -60,7 +60,7 @@ export function Navbar() {
                 <SheetTitle>Navigation Menu</SheetTitle>
               </VisuallyHidden>
               
-              <div className="flex flex-col gap-6 mt-10">
+              <div className="flex flex-col gap-6 mt-10 px-6">
                 <Logo />
                 <div className="flex flex-col gap-4">
                   {navLinks.map((link) => (
