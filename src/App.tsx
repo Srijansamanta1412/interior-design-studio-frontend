@@ -1,9 +1,10 @@
-import StyleGuide from "@/app/pages/public/StyleGuide";
+import { RouterProvider } from "react-router-dom";
+import { appRouter } from "@/app/routes";
 
 export default function App() {
   return (
     <>
-    <StyleGuide />
+    <RouterProvider router={appRouter} />
     </>
   );
 }
