@@ -34,7 +34,7 @@ export function Navbar() {
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent font-medium hover:text-gold hover:bg-transparent focus:bg-transparent focus:text-gold data-[state=open]:bg-transparent">
+                      <NavigationMenuTrigger className="bg-muted/50 font-medium hover:text-gold hover:bg-muted/80 focus:bg-muted/80 focus:text-gold data-[state=open]:bg-muted/80">
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -52,8 +52,8 @@ export function Navbar() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link to={item.href || "#"} className={navigationMenuTriggerStyle()}>
-                      <span className="font-medium hover:text-gold transition-colors">
+                    <Link to={item.href || "#"} className={cn(navigationMenuTriggerStyle(), "bg-muted/50 hover:bg-muted/80 hover:text-gold focus:bg-muted/80 focus:text-gold")}>
+                      <span className="font-medium transition-colors">
                         {item.title}
                       </span>
                     </Link>
@@ -72,7 +72,7 @@ export function Navbar() {
               placeholder="Search designs..." 
               className="h-9 w-[200px] lg:w-[250px] bg-muted/50 focus-visible:ring-gold"
             />
-            <Button size="icon" variant="outline" className="px-3">
+            <Button size="icon" variant="outline" className="bg-muted/50 px-3">
               <Search className="h-4 w-4" />
               <span className="sr-only">Search</span>
             </Button>
@@ -84,7 +84,7 @@ export function Navbar() {
           
           <div className="hidden md:flex gap-2">
             <Link to="/auth/login">
-              <Button variant="ghost">Log In</Button>
+              <Button className="text-gold bg-muted/50 hover:bg-muted/80">Log In</Button>
             </Link>
             <Button variant="gold">Start Project</Button>
           </div>
