@@ -31,7 +31,7 @@ export function HeroSection() {
           <div className="pt-8">
             <Link to="/start-project">
               <Button 
-                className="bg-[#D4AF37] hover:bg-[#C5A028] text-white text-base md:text-lg font-medium tracking-[0.15em] uppercase px-10 py-7 rounded-sm shadow-lg transition-all duration-300 hover:scale-105"
+                className="bg-[#D4AF37] hover:bg-[#C5A028] text-white text-sm md:text-lg font-medium tracking-[0.15em] uppercase px-6 py-6 md:px-10 md:py-7 rounded-sm shadow-lg transition-all duration-300 hover:scale-105 w-full md:w-auto max-w-xs md:max-w-none"
               >
                 Start My Transformation
               </Button>
