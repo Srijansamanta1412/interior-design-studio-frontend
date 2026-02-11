@@ -15,15 +15,15 @@ const vendors = [
 
 export function VendorSavingsSection() {
   return (
-    <section className="py-24 bg-[#F9F9F9]">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4 text-center">
         
         {/* Header */}
         <div className="mb-16 animate-fade-in-up">
-          <h2 className="font-serif text-4xl md:text-5xl font-normal text-neutral-900 mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl font-normal text-foreground mb-6">
             Decorilla Pays for Itself
           </h2>
-          <p className="text-neutral-500 font-light text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground font-light text-lg max-w-2xl mx-auto">
             We pass on our furniture discount at +350 vendors so you save money
           </p>
         </div>
@@ -34,7 +34,7 @@ export function VendorSavingsSection() {
             {vendors.map((vendor, index) => (
               <div 
                 key={index} 
-                className="font-serif text-xl md:text-2xl text-neutral-800 uppercase tracking-widest hover:text-[#D4AF37] transition-colors cursor-default"
+                className="font-serif text-xl md:text-2xl text-muted-foreground uppercase tracking-widest hover:text-[#D4AF37] transition-colors cursor-default"
                 aria-label={vendor}
               >
                 {/* 

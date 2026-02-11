@@ -31,7 +31,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-[#F9F9F9]">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         
         {/* Header */}
@@ -39,7 +39,7 @@ export function TestimonialsSection() {
           <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
             Testimonials
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl font-normal text-neutral-900">
+          <h2 className="font-serif text-4xl md:text-5xl font-normal text-foreground">
             Client Stories
           </h2>
         </div>
@@ -65,7 +65,7 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="font-serif text-2xl md:text-4xl italic leading-relaxed text-neutral-800 mb-10 max-w-3xl">
+                    <blockquote className="font-serif text-2xl md:text-4xl italic leading-relaxed text-foreground mb-10 max-w-3xl">
                       "{t.quote}"
                     </blockquote>
 
@@ -77,7 +77,7 @@ export function TestimonialsSection() {
                       </Avatar>
                       
                       <div className="text-center">
-                        <cite className="not-italic text-sm font-bold uppercase tracking-widest text-neutral-900 block mb-1">
+                        <cite className="not-italic text-sm font-bold uppercase tracking-widest text-foreground block mb-1">
                           {t.name}
                         </cite>
                         <span className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider">
@@ -93,8 +93,8 @@ export function TestimonialsSection() {
             
             {/* Custom Navigation */}
             <div className="hidden md:block">
-              <CarouselPrevious className="left-0 border-neutral-300 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-              <CarouselNext className="right-0 border-neutral-300 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+              <CarouselPrevious className="left-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+              <CarouselNext className="right-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
             </div>
           </Carousel>
         </div>

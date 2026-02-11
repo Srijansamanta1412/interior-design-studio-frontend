@@ -20,7 +20,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-neutral-950 text-white pt-20 pb-10 border-t border-neutral-800">
+    <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border">
       <div className="container mx-auto px-6">
         
         {/* Top Section: Links & Newsletter */}
@@ -29,11 +29,11 @@ export function Footer() {
           {/* Dynamic Sections from Navigation */}
           {Object.values(footerLinks).map((section) => (
              <div key={section.title}>
-               <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">{section.title}</h4>
+               <h4 className="font-bold text-sm tracking-wider mb-6 text-foreground uppercase">{section.title}</h4>
                <ul className="space-y-3">
                  {section.links.map((link) => (
                    <li key={link.title}>
-                     <Link to={link.href} className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
+                     <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-sm font-light">
                        {link.title}
                      </Link>
                    </li>
@@ -44,43 +44,43 @@ export function Footer() {
 
           {/* 4. Newsletter & Socials */}
           <div className="lg:pl-8">
-            <h4 className="font-bold text-sm tracking-wider mb-4 text-white uppercase">GET EXCLUSIVE TIPS & OFFERS</h4>
+            <h4 className="font-bold text-sm tracking-wider mb-4 text-foreground uppercase">GET EXCLUSIVE TIPS & OFFERS</h4>
             <div className="flex gap-2 mb-10">
               <Input 
                 placeholder="Enter email address" 
-                className="bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 rounded-md h-12 focus-visible:ring-[#D4AF37] focus-visible:border-[#D4AF37]" 
+                className="bg-muted border-input text-foreground placeholder:text-muted-foreground rounded-md h-12 focus-visible:ring-[#D4AF37] focus-visible:border-[#D4AF37]" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={handleKeyDown}
               />
             </div>
 
-            <h4 className="font-bold text-sm tracking-wider mb-4 text-white uppercase">JOIN OUR COMMUNITY</h4>
+            <h4 className="font-bold text-sm tracking-wider mb-4 text-foreground uppercase">JOIN OUR COMMUNITY</h4>
             <div className="flex gap-6">
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors"><PinIcon className="w-5 h-5" /></a> {/* Lucide doesn't have a perfect Pinterest icon, usually strict-style */}
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors"><Youtube className="w-5 h-5" /></a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><PinIcon className="w-5 h-5" /></a> {/* Lucide doesn't have a perfect Pinterest icon, usually strict-style */}
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Youtube className="w-5 h-5" /></a>
             </div>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-neutral-800 w-full mb-10" />
+        <div className="h-px bg-border w-full mb-10" />
 
         {/* Bottom Section: Logo & Legal */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           
           {/* Logo (Forced White/Light for Footer) */}
-          <div className="opacity-90 grayscale brightness-200 contrast-200">
+          <div className="opacity-90 grayscale brightness-0 dark:brightness-200 contrast-200">
              <Logo /> 
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 text-xs text-neutral-400">
-            <Link to="/terms" className="hover:text-white transition-colors">Our Terms & Conditions</Link>
-            <span className="text-neutral-700">|</span>
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+            <Link to="/terms" className="hover:text-foreground transition-colors">Our Terms & Conditions</Link>
+            <span className="text-muted-foreground">|</span>
+            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <span className="text-neutral-700">|</span>
             <span>Copyright © 2026</span>
           </div>

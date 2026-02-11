@@ -28,7 +28,7 @@ const projects = [
 
 export function ProjectShowcaseSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         
         <Carousel className="w-full">
@@ -38,7 +38,7 @@ export function ProjectShowcaseSection() {
                 <div>
                   {/* Header (Left Aligned as per screenshot) */}
                   <div className="mb-12 animate-fade-in-up">
-                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-neutral-900 uppercase tracking-wide">
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground uppercase tracking-wide">
                       {project.title}
                     </h2>
                   </div>
@@ -51,19 +51,19 @@ export function ProjectShowcaseSection() {
                            <TabsList className="flex gap-4 bg-transparent p-0 mb-6">
                              <TabsTrigger 
                                value="before" 
-                               className="rounded-none border border-neutral-300 px-6 py-2 text-xs font-bold tracking-widest uppercase transition-all data-[state=active]:border-[#D4AF37] data-[state=active]:bg-[#D4AF37] data-[state=active]:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] bg-transparent shadow-none w-32"
+                               className="rounded-none border border-border px-6 py-2 text-xs font-bold tracking-widest uppercase transition-all data-[state=active]:border-[#D4AF37] data-[state=active]:bg-[#D4AF37] data-[state=active]:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] bg-transparent shadow-none w-32"
                              >
                                Before
                              </TabsTrigger>
                              <TabsTrigger 
                                value="after" 
-                               className="rounded-none border border-neutral-300 px-6 py-2 text-xs font-bold tracking-widest uppercase transition-all data-[state=active]:border-[#D4AF37] data-[state=active]:bg-[#D4AF37] data-[state=active]:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] bg-transparent shadow-none w-32"
+                               className="rounded-none border border-border px-6 py-2 text-xs font-bold tracking-widest uppercase transition-all data-[state=active]:border-[#D4AF37] data-[state=active]:bg-[#D4AF37] data-[state=active]:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] bg-transparent shadow-none w-32"
                              >
                                After
                              </TabsTrigger>
                            </TabsList>
 
-                           <div className="rounded-xl overflow-hidden border border-neutral-100 bg-neutral-100 touch-pan-y aspect-[4/3] relative">
+                           <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-[4/3] relative">
                              <TabsContent value="before" className="mt-0 w-full h-full">
                                 <img
                                   src={project.beforeImage}
@@ -89,23 +89,23 @@ export function ProjectShowcaseSection() {
                       
                       {/* Challenge */}
                       <div>
-                        <h3 className="font-bold text-lg text-neutral-900 mb-3">
+                        <h3 className="font-bold text-lg text-foreground mb-3">
                           Client's Challenge
                         </h3>
-                        <p className="text-neutral-600 leading-relaxed font-light">
+                        <p className="text-muted-foreground leading-relaxed font-light">
                           {project.challenge}
                         </p>
                       </div>
 
                       {/* Result */}
                       <div>
-                        <h3 className="font-bold text-lg text-neutral-900 mb-3">
+                        <h3 className="font-bold text-lg text-foreground mb-3">
                           Result
                         </h3>
-                        <blockquote className="text-neutral-600 italic mb-4 leading-relaxed">
+                        <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">
                           "{project.result}"
                         </blockquote>
-                        <p className="text-sm font-medium text-neutral-500 mb-4">
+                        <p className="text-sm font-medium text-muted-foreground mb-4">
                           - {project.author}
                         </p>
                         
@@ -137,14 +137,14 @@ export function ProjectShowcaseSection() {
           
           {/* Navigation Arrows */}
           <div className="hidden md:block">
-            <CarouselPrevious className="-left-12 border-neutral-300 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-            <CarouselNext className="-right-12 border-neutral-300 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+            <CarouselPrevious className="-left-12 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+            <CarouselNext className="-right-12 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
           </div>
           
            {/* Mobile Navigation (Centered below) */}
            <div className="flex md:hidden justify-center gap-4 mt-8">
-              <CarouselPrevious className="static translate-y-0 border-neutral-300 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-              <CarouselNext className="static translate-y-0 border-neutral-300 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+              <CarouselPrevious className="static translate-y-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+              <CarouselNext className="static translate-y-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
            </div>
 
         </Carousel>

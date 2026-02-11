@@ -16,6 +16,7 @@ import {
 import { Logo } from "@/components/shared/Logo";
 import { navbarLinks } from "@/app/routes/navigation";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "@/components/shared/mode-toggle";
 
 export function Navbar() {
 
@@ -82,7 +83,8 @@ export function Navbar() {
             <Search className="h-4 w-4" />
           </Button>
           
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex gap-2 items-center">
+            <ModeToggle />
             <Link to="/auth/login">
               <Button className="text-gold bg-muted/50 hover:bg-muted/80">Log In</Button>
             </Link>
@@ -141,6 +143,9 @@ export function Navbar() {
                     Log In
                   </Link>
                   <Button variant="gold" className="w-full mt-2">Start Project</Button>
+                  <div className="mt-4 flex justify-center">
+                    <ModeToggle />
+                  </div>
                 </div>
               </div>
             </SheetContent>

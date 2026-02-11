@@ -10,9 +10,9 @@ export function FeaturedSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="font-serif text-3xl md:text-4xl text-center text-neutral-800 mb-16">
+        <h2 className="font-serif text-3xl md:text-4xl text-center text-muted-foreground mb-16">
           Featured & Trusted By
         </h2>
         
@@ -22,7 +22,7 @@ export function FeaturedSection() {
                <img 
                  src={logo.src} 
                  alt={`${logo.name} logo`}
-                 className="max-h-8 md:max-h-10 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-all duration-300"
+                 className="max-h-8 md:max-h-10 w-auto object-contain grayscale opacity-60 hover:opacity-100 dark:invert transition-all duration-300"
                  loading="lazy"
                  width="150" 
                  height="40"

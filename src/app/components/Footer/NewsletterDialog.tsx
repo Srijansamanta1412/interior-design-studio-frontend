@@ -43,7 +43,7 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden bg-white text-neutral-900 border-none shadow-2xl">
+      <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden bg-background text-foreground border-none shadow-2xl">
         <div className="p-8 md:p-12 relative min-h-[400px] flex flex-col justify-center">
           
           {isSubmitted ? (
@@ -53,10 +53,10 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
                   <CheckIcon className="w-10 h-10 text-white" strokeWidth={3} />
                </div>
                <div className="space-y-3">
-                 <DialogTitle className="font-serif text-4xl md:text-5xl text-[#2F2F2F] tracking-tight">
+                 <DialogTitle className="font-serif text-4xl md:text-5xl text-foreground tracking-tight">
                    Thank You for Signing Up
                  </DialogTitle>
-                 <DialogDescription className="text-neutral-500 text-lg font-light tracking-wide">
+                 <DialogDescription className="text-muted-foreground text-lg font-light tracking-wide">
                    Expect deals and offers coming your way soon!
                  </DialogDescription>
                </div>
@@ -71,14 +71,14 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
                 <span>You're In! Thanks For Your Email Sign Up!</span>
               </div>
 
-              <div className="w-full h-px bg-neutral-200" />
+              <div className="w-full h-px bg-border" />
 
               {/* Main Content */}
               <div className="space-y-2">
-                <DialogTitle className="font-serif text-3xl md:text-4xl text-neutral-900">
+                <DialogTitle className="font-serif text-3xl md:text-4xl text-foreground">
                   Want VIP Access to More Perks?
                 </DialogTitle>
-                <DialogDescription className="text-neutral-600 text-base">
+                <DialogDescription className="text-muted-foreground text-base">
                   Sign up for SMS alerts to receive exclusive offers and special updates in real time!
                 </DialogDescription>
               </div>
@@ -100,13 +100,13 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
                     id="sms-agree" 
                     checked={agreed} 
                     onCheckedChange={(checked) => setAgreed(checked as boolean)}
-                    className="mt-1 border-neutral-400 data-[state=checked]:bg-[#D4AF37] data-[state=checked]:border-[#D4AF37]"
+                    className="mt-1 border-input data-[state=checked]:bg-[#D4AF37] data-[state=checked]:border-[#D4AF37]"
                   />
                   <label 
                     htmlFor="sms-agree" 
-                    className="text-xs text-neutral-500 leading-relaxed cursor-pointer"
+                    className="text-xs text-muted-foreground leading-relaxed cursor-pointer"
                   >
-                    Yes, send me exclusive offers and updates. I agree to the <a href="/terms" className="underline hover:text-neutral-800">Terms</a>, <a href="/privacy" className="underline hover:text-neutral-800">Privacy Policy</a>, and understand I can unsubscribe anytime. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.
+                    Yes, send me exclusive offers and updates. I agree to the <a href="/terms" className="underline hover:text-foreground">Terms</a>, <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>, and understand I can unsubscribe anytime. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.
                   </label>
                 </div>
 
@@ -123,7 +123,7 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
                   <button 
                     type="button"
                     onClick={() => handleOpenChange(false)}
-                    className="text-sm text-neutral-500 underline hover:text-neutral-800"
+                    className="text-sm text-muted-foreground underline hover:text-foreground"
                   >
                     No, I don't want exclusive deals
                   </button>

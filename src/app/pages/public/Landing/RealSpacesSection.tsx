@@ -140,11 +140,11 @@ export function RealSpacesSection() {
   }, [api]);
 
   return (
-    <section className="py-24 bg-white overflow-x-hidden"> {/* Added overflow-x-hidden to prevent horizontal scrollbar due to full width */}
+    <section className="py-24 bg-background overflow-x-hidden"> {/* Added overflow-x-hidden to prevent horizontal scrollbar due to full width */}
       <div className="container mx-auto px-4 text-center">
         
         {/* Header */}
-        <h2 className="font-serif text-4xl md:text-5xl font-normal text-neutral-900 mb-12 animate-fade-in-up">
+        <h2 className="font-serif text-4xl md:text-5xl font-normal text-foreground mb-12 animate-fade-in-up">
           Explore Real Spaces We've Transformed
         </h2>
 
@@ -155,7 +155,7 @@ export function RealSpacesSection() {
                <TabsTrigger 
                  key={category} 
                  value={category}
-                 className="rounded-none border-b-2 border-transparent data-[state=active]:text-[#D4AF37] text-neutral-400 font-bold tracking-[0.15em] text-xs uppercase bg-transparent shadow-none hover:text-neutral-600 transition-all px-1 pb-2 shrink-0"
+                 className="rounded-none border-b-2 border-transparent data-[state=active]:text-[#D4AF37] text-muted-foreground font-bold tracking-[0.15em] text-xs uppercase bg-transparent shadow-none hover:text-foreground transition-all px-1 pb-2 shrink-0"
                >
                  {category}
                </TabsTrigger>
@@ -181,7 +181,7 @@ export function RealSpacesSection() {
                         <CarouselContent className="-ml-4">
                           {images.map((src, index) => (
                             <CarouselItem key={index} className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                              <div className="aspect-square relative overflow-hidden rounded-xl bg-neutral-100 group-hover:cursor-pointer">
+                              <div className="aspect-square relative overflow-hidden rounded-xl bg-muted group-hover:cursor-pointer">
                                  <img 
                                    src={src} 
                                    alt={`${category} Project ${index + 1}`}
@@ -194,8 +194,8 @@ export function RealSpacesSection() {
                         </CarouselContent>
                         
                         {/* Navigation Arrows - customized positioning */}
-                        <CarouselPrevious className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-neutral-800 border-none w-14 h-14 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden md:flex" />
-                        <CarouselNext className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-neutral-800 border-none w-14 h-14 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden md:flex" />
+                        <CarouselPrevious className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-14 h-14 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden md:flex" />
+                        <CarouselNext className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-14 h-14 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden md:flex" />
 
                       </Carousel>
                   </div>
@@ -208,7 +208,7 @@ export function RealSpacesSection() {
                         onClick={() => api?.scrollTo(index)}
                         className={cn(
                           "w-2 h-2 rounded-full transition-all duration-300",
-                          current === index ? "bg-neutral-800 scale-125" : "bg-neutral-300 hover:bg-neutral-400"
+                          current === index ? "bg-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                         )}
                         aria-label={`Go to slide ${index + 1}`}
                       />
