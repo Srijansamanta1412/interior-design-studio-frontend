@@ -1,50 +1,24 @@
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
-import { Logo } from "@/components/shared/Logo"; // We'll wrap this or style it to be white/light
+import { Logo } from "@/components/shared/Logo";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter, Youtube, PinIcon } from "lucide-react";
-
-// Hardcoded data based on the screenshot to ensure exact match
-const footerData = {
-  about: {
-    title: "ABOUT US",
-    links: [
-      { title: "The Team", href: "/team" },
-      { title: "Company", href: "/company" },
-      { title: "Reviews", href: "/reviews" },
-      { title: "Pricing", href: "/pricing" },
-      { title: "Design Careers", href: "/careers" },
-      { title: "Press", href: "/press" },
-    ]
-  },
-  explore: {
-    title: "EXPLORE",
-    links: [
-      { title: "Style Quiz", href: "/quiz" },
-      { title: "Interior Design Blog", href: "/blog" },
-      { title: "Sample Projects", href: "/projects" },
-      { title: "Designer Portfolios", href: "/portfolios" },
-      { title: "Virtual Interior Design", href: "/virtual-design" },
-      { title: "FAQ", href: "/faq" },
-      { title: "Contact Us", href: "/contact" },
-      { title: "Interior Design Gift Cards", href: "/gift-cards" },
-    ]
-  },
-  locations: {
-    title: "LOCATIONS",
-    links: [
-      { title: "New York", href: "/locations/nyc" },
-      { title: "Miami", href: "/locations/miami" },
-      { title: "Los Angeles", href: "/locations/la" },
-      { title: "Austin", href: "/locations/austin" },
-      { title: "Charlotte", href: "/locations/charlotte" },
-      { title: "Chicago", href: "/locations/chicago" },
-      { title: "Seattle", href: "/locations/seattle" },
-      { title: "See All Locations", href: "/locations" },
-    ]
-  }
-};
+import { footerLinks } from "@/app/routes/navigation";
+import { NewsletterDialog } from "./NewsletterDialog";
 
 export function Footer() {
+  const [email, setEmail] = useState("");
+  const [showDialog, setShowDialog] = useState(false);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && email) {
+      e.preventDefault(); // Prevent default behavior (form submission, focus jump)
+      if (email.includes("@")) {
+         setShowDialog(true);
+      }
+    }
+  };
+
   return (
     <footer className="bg-neutral-950 text-white pt-20 pb-10 border-t border-neutral-800">
       <div className="container mx-auto px-6">
@@ -52,59 +26,36 @@ export function Footer() {
         {/* Top Section: Links & Newsletter */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
           
-          {/* 1. About Us */}
-          <div>
-            <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">{footerData.about.title}</h4>
-            <ul className="space-y-3">
-              {footerData.about.links.map((link) => (
-                <li key={link.title}>
-                  <Link to={link.href} className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 2. Explore */}
-          <div>
-            <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">{footerData.explore.title}</h4>
-            <ul className="space-y-3">
-              {footerData.explore.links.map((link) => (
-                <li key={link.title}>
-                  <Link to={link.href} className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 3. Locations */}
-          <div>
-            <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">{footerData.locations.title}</h4>
-            <ul className="space-y-3">
-              {footerData.locations.links.map((link) => (
-                <li key={link.title}>
-                  <Link to={link.href} className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Dynamic Sections from Navigation */}
+          {Object.values(footerLinks).map((section) => (
+             <div key={section.title}>
+               <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">{section.title}</h4>
+               <ul className="space-y-3">
+                 {section.links.map((link) => (
+                   <li key={link.title}>
+                     <Link to={link.href} className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
+                       {link.title}
+                     </Link>
+                   </li>
+                 ))}
+               </ul>
+             </div>
+          ))}
 
           {/* 4. Newsletter & Socials */}
           <div className="lg:pl-8">
-            <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">GET EXCLUSIVE TIPS & OFFERS</h4>
-            <div className="mb-10">
+            <h4 className="font-bold text-sm tracking-wider mb-4 text-white uppercase">GET EXCLUSIVE TIPS & OFFERS</h4>
+            <div className="flex gap-2 mb-10">
               <Input 
                 placeholder="Enter email address" 
                 className="bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 rounded-md h-12 focus-visible:ring-[#D4AF37] focus-visible:border-[#D4AF37]" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
             </div>
 
-            <h4 className="font-bold text-sm tracking-wider mb-6 text-white uppercase">JOIN OUR COMMUNITY</h4>
+            <h4 className="font-bold text-sm tracking-wider mb-4 text-white uppercase">JOIN OUR COMMUNITY</h4>
             <div className="flex gap-6">
               <a href="#" className="text-neutral-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
@@ -136,6 +87,12 @@ export function Footer() {
         </div>
 
       </div>
+
+      <NewsletterDialog 
+        isOpen={showDialog} 
+        onOpenChange={setShowDialog} 
+        email={email} 
+      />
     </footer>
   );
 }

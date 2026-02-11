@@ -37,28 +37,43 @@ export const navbarLinks: NavItem[] = [
   { title: "Pricing", href: "/pricing" },
 ];
 
+// Updated to match the new Dark Theme Footer design
 export const footerLinks: Record<string, FooterSection> = {
+  about: {
+    title: "ABOUT US",
+    links: [
+      { title: "The Team", href: "/team" },
+      { title: "Company", href: "/company" },
+      { title: "Reviews", href: "/reviews" },
+      { title: "Pricing", href: "/pricing" },
+      { title: "Design Careers", href: "/careers" },
+      { title: "Press", href: "/press" },
+    ]
+  },
   explore: {
-    title: "Explore",
+    title: "EXPLORE",
     links: [
-      { title: "Portfolio", href: "/portfolio" },
-      { title: "How it Works", href: "/how-it-works" },
-      { title: "Stories", href: "/stories" },
-    ],
+      { title: "Style Quiz", href: "/quiz" },
+      { title: "Interior Design Blog", href: "/blog" },
+      { title: "Sample Projects", href: "/projects" },
+      { title: "Designer Portfolios", href: "/portfolios" },
+      { title: "Virtual Interior Design", href: "/virtual-design" },
+      { title: "FAQ", href: "/faq" },
+      { title: "Contact Us", href: "/contact" },
+      { title: "Interior Design Gift Cards", href: "/gift-cards" },
+    ]
   },
-  company: {
-    title: "Company",
+  locations: {
+    title: "LOCATIONS",
     links: [
-      { title: "About Us", href: "/about" },
-      { title: "Contact", href: "/contact" },
-      { title: "Careers", href: "/careers" },
-    ],
-  },
-  legal: {
-    title: "Legal",
-    links: [
-      { title: "Privacy Policy", href: "/privacy" },
-      { title: "Terms of Service", href: "/terms" },
-    ],
-  },
+      { title: "New York", href: "/locations/nyc" },
+      { title: "Miami", href: "/locations/miami" },
+      { title: "Los Angeles", href: "/locations/la" },
+      { title: "Austin", href: "/locations/austin" },
+      { title: "Charlotte", href: "/locations/charlotte" },
+      { title: "Chicago", href: "/locations/chicago" },
+      { title: "Seattle", href: "/locations/seattle" },
+      { title: "See All Locations", href: "/locations" },
+    ]
+  }
 };
