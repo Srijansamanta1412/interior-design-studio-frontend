@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { BlurImage } from "@/components/shared/BlurImage";
 
 const projects = [
   {
@@ -64,20 +65,19 @@ export function ProjectShowcaseSection() {
                            </TabsList>
 
                            <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-[4/3] relative">
-                             <TabsContent value="before" className="mt-0 w-full h-full">
-                                <img
+                             <TabsContent value="before" className="mt-0 ">
+                                <BlurImage
                                   src={project.beforeImage}
                                   alt={`Before - ${project.title}`}
-                                  className="w-full h-full object-cover grayscale brightness-90 animate-fade-in"
-                                  loading="lazy"
+                                  ratio={4/3}
+                                  className="brightness-90"
                                 />
                              </TabsContent>
-                             <TabsContent value="after" className="mt-0 w-full h-full">
-                                <img
+                             <TabsContent value="after" className="mt-0 ">
+                                <BlurImage
                                   src={project.afterImage}
                                   alt={`After - ${project.title}`}
-                                  className="w-full h-full object-cover animate-fade-in"
-                                  loading="lazy"
+                                  ratio={4/3}
                                 />
                              </TabsContent>
                            </div>

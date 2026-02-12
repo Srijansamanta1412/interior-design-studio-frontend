@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { BlurImage } from "@/components/shared/BlurImage";
 
 const categories = [
   "LIVING ROOM",
@@ -181,12 +182,12 @@ export function RealSpacesSection() {
                         <CarouselContent className="-ml-4">
                           {images.map((src, index) => (
                             <CarouselItem key={index} className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                              <div className="aspect-square relative overflow-hidden rounded-xl bg-muted group-hover:cursor-pointer">
-                                 <img 
+                              <div className="group-hover:cursor-pointer">
+                                 <BlurImage 
                                    src={src} 
                                    alt={`${category} Project ${index + 1}`}
-                                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                                   loading="lazy"
+                                   ratio={1/1}
+                                   className="hover:scale-105"
                                  />
                               </div>
                             </CarouselItem>

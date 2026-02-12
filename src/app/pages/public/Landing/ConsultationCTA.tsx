@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { BlurImage } from "@/components/shared/BlurImage";
 
 export function ConsultationCTA() {
   return (
     <section className="w-full flex flex-col md:flex-row">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 h-[50vh] md:h-auto md:min-h-[600px] relative bg-muted/50">
-        <img
+        <BlurImage
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop"
           alt="Beautiful interior design living room"
-          className="w-full h-full object-cover"
-          loading="lazy"
+          className="h-full w-full object-cover"
+          containerClassName="h-full rounded-none"
         />
       </div>
 
