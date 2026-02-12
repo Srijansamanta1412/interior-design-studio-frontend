@@ -48,7 +48,7 @@ export function Footer() {
             <div className="flex gap-2 mb-10">
               <Input 
                 placeholder="Enter email address" 
-                className="bg-muted border-input text-foreground placeholder:text-muted-foreground rounded-md h-12 focus-visible:ring-[#D4AF37] focus-visible:border-[#D4AF37]" 
+                className="bg-muted border-input text-foreground placeholder:text-muted-foreground rounded-md h-12 focus-visible:ring-gold focus-visible:border-gold" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={handleKeyDown}
@@ -73,8 +73,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           
           {/* Logo (Forced White/Light for Footer) */}
-          <div className="opacity-90 grayscale brightness-0 dark:brightness-200 contrast-200">
-             <Logo /> 
+          <div className="mb-4"> 
+            <Logo /> 
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">

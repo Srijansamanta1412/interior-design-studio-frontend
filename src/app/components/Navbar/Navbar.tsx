@@ -35,7 +35,7 @@ export function Navbar() {
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
                     <>
-                      <NavigationMenuTrigger className="bg-muted/50 font-medium hover:text-gold hover:bg-muted/80 focus:bg-muted/80 focus:text-gold data-[state=open]:bg-muted/80">
+                      <NavigationMenuTrigger className="bg-transparent font-serif text-base font-medium text-foreground/80 hover:text-gold hover:bg-transparent focus:bg-transparent focus:text-gold data-[state=open]:bg-transparent data-[state=open]:text-gold">
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -53,8 +53,8 @@ export function Navbar() {
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <Link to={item.href || "#"} className={cn(navigationMenuTriggerStyle(), "bg-muted/50 hover:bg-muted/80 hover:text-gold focus:bg-muted/80 focus:text-gold")}>
-                      <span className="font-medium transition-colors">
+                    <Link to={item.href || "#"} className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent hover:text-gold focus:bg-transparent focus:text-gold")}>
+                      <span className="font-serif text-base font-medium transition-colors">
                         {item.title}
                       </span>
                     </Link>
