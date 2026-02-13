@@ -156,7 +156,7 @@ export function RealSpacesSection() {
                <TabsTrigger 
                  key={category} 
                  value={category}
-                 className="rounded-none border-b-2 border-transparent data-[state=active]:border-[#D4AF37] data-[state=active]:text-[#D4AF37] data-[state=active]:bg-transparent! data-[state=active]:!shadow-none text-muted-foreground/70 font-bold tracking-[0.15em] text-xs uppercase bg-transparent shadow-none hover:text-[#D4AF37] transition-all px-1 pb-1 shrink-0"
+                 className="rounded-none border-b-2 border-transparent data-[state=active]:border-[#D4AF37] data-[state=active]:text-[#D4AF37] data-[state=active]:bg-transparent! data-[state=active]:shadow-none! text-muted-foreground/70 font-bold tracking-[0.15em] text-xs uppercase bg-transparent shadow-none hover:text-[#D4AF37] transition-all px-1 pb-1 shrink-0"
                >
                  {category}
                </TabsTrigger>
