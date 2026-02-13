@@ -9,11 +9,19 @@ export function HeroSection() {
       */}
       <div className="absolute inset-0 z-0">
         <img
+          // 1. Serve optimized WebP format (&fm=webp)
+          // 2. Serve right size for right device (800w for mobile, 2000w for desktop)
+          srcSet="
+            https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop&fm=webp 800w,
+            https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop&fm=webp 1200w,
+            https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop&fm=webp 2000w
+          "
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+          sizes="100vw"
           alt="Luxury Living Room Interior"
           className="w-full h-full object-cover brightness-[0.85]"
-          fetchPriority="high" // Critical for LCP
-          loading="eager"      // Critical for LCP
+          fetchPriority="high" // Helper for LCP
+          loading="eager"      // Helper for LCP
         />
         {/* Subtle overlay for text readability if needed, though brightness handles most */}
         <div className="absolute inset-0 bg-black/10" />

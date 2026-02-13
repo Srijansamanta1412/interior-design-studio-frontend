@@ -11,10 +11,8 @@ import { FeaturedSection } from "./Landing/FeaturedSection";
 export default function Landing() {
   return (
     <>
-      {/* <Helmet>
-        <title>Online Interior Design Services | Decorilla Clone</title>
-        <meta name="description" content="Get professional interior design help online. Affordable, accessible, and personalized design services." />
-      </Helmet> */}
+      <title>Online Interior Design Services | Decorilla Clone</title>
+      <meta name="description" content="Get professional interior design help online. Affordable, accessible, and personalized design services." />
       
       <div className="flex flex-col w-full">
         <HeroSection />

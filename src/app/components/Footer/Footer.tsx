@@ -57,11 +57,11 @@ export function Footer() {
 
             <h4 className="font-bold text-sm tracking-wider mb-4 text-foreground uppercase">JOIN OUR COMMUNITY</h4>
             <div className="flex gap-6">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><PinIcon className="w-5 h-5" /></a> {/* Lucide doesn't have a perfect Pinterest icon, usually strict-style */}
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Youtube className="w-5 h-5" /></a>
+              <a href="#" aria-label="Follow us on Instagram" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" aria-label="Follow us on Facebook" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="#" aria-label="Follow us on Pinterest" className="text-muted-foreground hover:text-foreground transition-colors"><PinIcon className="w-5 h-5" /></a>
+              <a href="#" aria-label="Follow us on Twitter" className="text-muted-foreground hover:text-foreground transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="#" aria-label="Subscribe to our YouTube channel" className="text-muted-foreground hover:text-foreground transition-colors"><Youtube className="w-5 h-5" /></a>
             </div>
           </div>
         </div>
