@@ -91,10 +91,10 @@ export function TestimonialsSection() {
               ))}
             </CarouselContent>
             
-            {/* Custom Navigation */}
-            <div className="hidden md:block">
-              <CarouselPrevious className="left-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-              <CarouselNext className="right-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+            {/* Navigation Arrows */}
+            <div className="block">
+              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors translate-x-[-30px] md:translate-x-0" />
+              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors translate-x-[30px] md:translate-x-0" />
             </div>
           </Carousel>
         </div>

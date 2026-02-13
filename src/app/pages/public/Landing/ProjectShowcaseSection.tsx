@@ -51,7 +51,7 @@ export function ProjectShowcaseSection() {
                          <Tabs defaultValue="after" className="w-full">
 
 
-                           <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-[4/3] relative">
+                           <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-4/3 relative">
                              {/* Overlay Tabs */}
                              <TabsList className="absolute top-2 left-2 z-20 flex bg-background/95 backdrop-blur-sm rounded-md p-1 border border-border/20 shadow-sm">
                                <TabsTrigger 

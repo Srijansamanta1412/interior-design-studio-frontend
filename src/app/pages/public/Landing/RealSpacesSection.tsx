@@ -195,42 +195,42 @@ export function RealSpacesSection() {
                         </CarouselContent>
                         
                         {/* Navigation Arrows - customized positioning */}
-                        <CarouselPrevious className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-14 h-14 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden md:flex" />
-                        <CarouselNext className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-14 h-14 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden md:flex" />
+                        <CarouselPrevious className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
+                        <CarouselNext className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
 
                       </Carousel>
                   </div>
 
-                  {/* Dots */}
-                  <div className="flex justify-center gap-2 mt-8">
-                    {Array.from({ length: count }).map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => api?.scrollTo(index)}
-                        className={cn(
-                          "w-2 h-2 rounded-full transition-all duration-300",
-                          current === index ? "bg-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                        )}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    ))}
-                  </div>
+                    {/* Dots */}
+                    <div className="flex justify-center gap-2 mt-8">
+                      {Array.from({ length: count }).map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => api?.scrollTo(index)}
+                          className={cn(
+                            "w-2 h-2 rounded-full transition-all duration-300",
+                            current === index ? "bg-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                          )}
+                          aria-label={`Go to slide ${index + 1}`}
+                        />
+                      ))}
+                    </div>
 
-               </TabsContent>
-             );
-           })}
-        </Tabs>
+                 </TabsContent>
+               );
+             })}
+          </Tabs>
 
-        {/* View Portfolio Button */}
-        <div className="mt-12">
-          <Link to="/portfolio">
-             <Button variant="gold" size="lg" className="px-12 py-6 text-sm">
-               View Portfolio
-             </Button>
-          </Link>
+          {/* View Portfolio Button */}
+          <div className="mt-12">
+            <Link to="/portfolio">
+               <Button variant="gold" size="lg" className="px-12 py-6 text-sm">
+                 View Portfolio
+               </Button>
+            </Link>
+          </div>
+  
         </div>
-
-      </div>
-    </section>
-  );
-}
+      </section>
+    );
+  }
