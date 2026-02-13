@@ -151,12 +151,12 @@ export function RealSpacesSection() {
 
         {/* Categories / Tabs */}
         <Tabs defaultValue="LIVING ROOM" className="w-full mb-12">
-           <TabsList className="bg-transparent flex flex-nowrap overflow-x-auto justify-start md:justify-center gap-x-8 mb-12 border-b-0 w-screen relative left-1/2 right-1/2 -ml-[50vw] h-auto no-scrollbar scroll-smooth px-4 md:px-12">
+           <TabsList variant="line" className="bg-transparent flex flex-nowrap overflow-x-auto justify-start md:justify-center gap-x-8 mb-12 border-b-0 w-screen relative left-1/2 right-1/2 -ml-[50vw] h-auto no-scrollbar scroll-smooth px-4 md:px-12">
              {categories.map((category) => (
                <TabsTrigger 
                  key={category} 
                  value={category}
-                 className="rounded-none border-b-2 border-transparent data-[state=active]:text-[#D4AF37] text-muted-foreground font-bold tracking-[0.15em] text-xs uppercase bg-transparent shadow-none hover:text-foreground transition-all px-1 pb-2 shrink-0"
+                 className="rounded-none border-b-2 border-transparent data-[state=active]:border-[#D4AF37] data-[state=active]:text-[#D4AF37] data-[state=active]:!bg-transparent data-[state=active]:!shadow-none text-muted-foreground/70 font-bold tracking-[0.15em] text-xs uppercase bg-transparent shadow-none hover:text-[#D4AF37] transition-all px-1 pb-1 shrink-0"
                >
                  {category}
                </TabsTrigger>

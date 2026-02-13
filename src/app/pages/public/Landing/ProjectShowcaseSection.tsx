@@ -49,23 +49,26 @@ export function ProjectShowcaseSection() {
                     {/* Left Column: Tabs for Before/After */}
                     <div className="w-full">
                          <Tabs defaultValue="after" className="w-full">
-                           <TabsList className="flex gap-4 bg-transparent p-0 mb-6">
-                             <TabsTrigger 
-                               value="before" 
-                               className="rounded-none border border-border px-6 py-2 text-xs font-bold tracking-widest uppercase transition-all data-[state=active]:border-[#D4AF37] data-[state=active]:bg-[#D4AF37] data-[state=active]:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] bg-transparent shadow-none w-32"
-                             >
-                               Before
-                             </TabsTrigger>
-                             <TabsTrigger 
-                               value="after" 
-                               className="rounded-none border border-border px-6 py-2 text-xs font-bold tracking-widest uppercase transition-all data-[state=active]:border-[#D4AF37] data-[state=active]:bg-[#D4AF37] data-[state=active]:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] bg-transparent shadow-none w-32"
-                             >
-                               After
-                             </TabsTrigger>
-                           </TabsList>
+
 
                            <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-[4/3] relative">
-                             <TabsContent value="before" className="mt-0 ">
+                             {/* Overlay Tabs */}
+                             <TabsList className="absolute top-2 left-2 z-20 flex bg-background/95 backdrop-blur-sm rounded-md p-1 border border-border/20 shadow-sm">
+                               <TabsTrigger 
+                                 value="before" 
+                                 className="rounded-sm px-4 py-1.5 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase transition-all data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-sm text-muted-foreground hover:text-foreground bg-transparent w-auto h-auto border-none"
+                               >
+                                 Before
+                               </TabsTrigger>
+                               <TabsTrigger 
+                                 value="after" 
+                                 className="rounded-sm px-4 py-1.5 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase transition-all data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-sm text-muted-foreground hover:text-foreground bg-transparent w-auto h-auto border-none"
+                               >
+                                 After
+                               </TabsTrigger>
+                             </TabsList>
+
+                             <TabsContent value="before" className="mt-0 w-full h-full">
                                 <BlurImage
                                   src={project.beforeImage}
                                   alt={`Before - ${project.title}`}
