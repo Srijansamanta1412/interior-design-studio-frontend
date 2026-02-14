@@ -19,6 +19,8 @@ export function HeroSection() {
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
           sizes="100vw"
           alt="Luxury Living Room Interior"
+          width="2000"
+          height="1333"
           className="w-full h-full object-cover brightness-[0.85]"
           fetchPriority="high" // Helper for LCP
           loading="eager"      // Helper for LCP

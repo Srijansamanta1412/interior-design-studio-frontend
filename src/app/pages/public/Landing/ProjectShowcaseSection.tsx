@@ -140,14 +140,14 @@ export function ProjectShowcaseSection() {
 
           {/* Navigation Arrows */}
           <div className="hidden md:block">
-            <CarouselPrevious className="-left-12 border-border hover:border-gold hover:text-gold transition-colors" />
-            <CarouselNext className="-right-12 border-border hover:border-gold hover:text-gold transition-colors" />
+            <CarouselPrevious aria-label="Previous project" className="-left-12 border-border hover:border-gold hover:text-gold transition-colors" />
+            <CarouselNext aria-label="Next project" className="-right-12 border-border hover:border-gold hover:text-gold transition-colors" />
           </div>
 
           {/* Mobile Navigation (Centered below) */}
           <div className="flex md:hidden justify-center gap-4 mt-8">
-            <CarouselPrevious className="static translate-y-0 border-border hover:border-gold hover:text-gold transition-colors" />
-            <CarouselNext className="static translate-y-0 border-border hover:border-gold hover:text-gold transition-colors" />
+            <CarouselPrevious aria-label="Previous project" className="static translate-y-0 border-border hover:border-gold hover:text-gold transition-colors" />
+            <CarouselNext aria-label="Next project" className="static translate-y-0 border-border hover:border-gold hover:text-gold transition-colors" />
           </div>
 
         </Carousel>

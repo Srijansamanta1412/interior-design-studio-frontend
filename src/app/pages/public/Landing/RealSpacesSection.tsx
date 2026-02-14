@@ -195,8 +195,8 @@ export function RealSpacesSection() {
                     </CarouselContent>
 
                     {/* Navigation Arrows - customized positioning */}
-                    <CarouselPrevious className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
-                    <CarouselNext className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
+                    <CarouselPrevious aria-label="Previous image" className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
+                    <CarouselNext aria-label="Next image" className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
 
                   </Carousel>
                 </div>

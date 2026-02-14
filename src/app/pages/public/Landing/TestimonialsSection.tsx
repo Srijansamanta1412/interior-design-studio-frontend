@@ -72,7 +72,13 @@ export function TestimonialsSection() {
                     {/* Author Info */}
                     <div className="flex flex-col items-center gap-4">
                       <Avatar className="w-16 h-16 border-2 border-gold p-1">
-                        <AvatarImage src={t.image} className="rounded-full object-cover" />
+                        <AvatarImage 
+                          src={t.image} 
+                          alt={t.name}
+                          width={64}
+                          height={64}
+                          className="rounded-full object-cover" 
+                        />
                         <AvatarFallback>{t.name[0]}</AvatarFallback>
                       </Avatar>
 
@@ -93,8 +99,8 @@ export function TestimonialsSection() {
 
             {/* Navigation Arrows */}
             <div className="block">
-              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 border-border hover:border-gold hover:text-gold transition-colors translate-x-[-30px] md:translate-x-0" />
-              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 border-border hover:border-gold hover:text-gold transition-colors translate-x-[30px] md:translate-x-0" />
+              <CarouselPrevious aria-label="Previous testimonial" className="absolute left-0 top-1/2 -translate-y-1/2 border-border hover:border-gold hover:text-gold transition-colors translate-x-[-30px] md:translate-x-0" />
+              <CarouselNext aria-label="Next testimonial" className="absolute right-0 top-1/2 -translate-y-1/2 border-border hover:border-gold hover:text-gold transition-colors translate-x-[30px] md:translate-x-0" />
             </div>
           </Carousel>
         </div>
