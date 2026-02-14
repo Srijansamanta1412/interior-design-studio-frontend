@@ -31,7 +31,7 @@ export function ProjectShowcaseSection() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        
+
         <Carousel className="w-full">
           <CarouselContent>
             {projects.map((project) => (
@@ -45,51 +45,51 @@ export function ProjectShowcaseSection() {
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-                    
+
                     {/* Left Column: Tabs for Before/After */}
                     <div className="w-full">
-                         <Tabs defaultValue="after" className="w-full">
+                      <Tabs defaultValue="after" className="w-full">
 
 
-                           <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-4/3 relative">
-                             {/* Overlay Tabs */}
-                             <TabsList className="absolute top-2 left-2 z-20 flex bg-background/95 backdrop-blur-sm rounded-md p-1 border border-border/20 shadow-sm">
-                               <TabsTrigger 
-                                 value="before" 
-                                 className="rounded-sm px-4 py-1.5 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase transition-all data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-sm text-muted-foreground hover:text-foreground bg-transparent w-auto h-auto border-none"
-                               >
-                                 Before
-                               </TabsTrigger>
-                               <TabsTrigger 
-                                 value="after" 
-                                 className="rounded-sm px-4 py-1.5 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase transition-all data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-sm text-muted-foreground hover:text-foreground bg-transparent w-auto h-auto border-none"
-                               >
-                                 After
-                               </TabsTrigger>
-                             </TabsList>
+                        <div className="rounded-xl overflow-hidden border border-border bg-muted touch-pan-y aspect-4/3 relative">
+                          {/* Overlay Tabs */}
+                          <TabsList className="absolute top-2 left-2 z-20 flex bg-background/95 backdrop-blur-sm rounded-md p-1 border border-border/20 shadow-sm">
+                            <TabsTrigger
+                              value="before"
+                              className="rounded-sm px-5 py-2 text-xs font-bold tracking-[0.15em] uppercase transition-all data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-sm text-muted-foreground hover:text-foreground bg-transparent w-auto h-auto border-none"
+                            >
+                              Before
+                            </TabsTrigger>
+                            <TabsTrigger
+                              value="after"
+                              className="rounded-sm px-5 py-2 text-xs font-bold tracking-[0.15em] uppercase transition-all data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=active]:shadow-sm text-muted-foreground hover:text-foreground bg-transparent w-auto h-auto border-none"
+                            >
+                              After
+                            </TabsTrigger>
+                          </TabsList>
 
-                             <TabsContent value="before" className="mt-0 w-full h-full">
-                                <BlurImage
-                                  src={project.beforeImage}
-                                  alt={`Before - ${project.title}`}
-                                  ratio={4/3}
-                                  className="brightness-90"
-                                />
-                             </TabsContent>
-                             <TabsContent value="after" className="mt-0 ">
-                                <BlurImage
-                                  src={project.afterImage}
-                                  alt={`After - ${project.title}`}
-                                  ratio={4/3}
-                                />
-                             </TabsContent>
-                           </div>
-                         </Tabs>
+                          <TabsContent value="before" className="mt-0 w-full h-full">
+                            <BlurImage
+                              src={project.beforeImage}
+                              alt={`Before - ${project.title}`}
+                              ratio={4 / 3}
+                              className="brightness-90"
+                            />
+                          </TabsContent>
+                          <TabsContent value="after" className="mt-0 ">
+                            <BlurImage
+                              src={project.afterImage}
+                              alt={`After - ${project.title}`}
+                              ratio={4 / 3}
+                            />
+                          </TabsContent>
+                        </div>
+                      </Tabs>
                     </div>
 
                     {/* Right Column: Project Details */}
                     <div className="flex flex-col justify-center space-y-8 lg:pt-8 text-left">
-                      
+
                       {/* Challenge */}
                       <div>
                         <h3 className="font-bold text-lg text-foreground mb-3">
@@ -111,23 +111,23 @@ export function ProjectShowcaseSection() {
                         <p className="text-sm font-medium text-muted-foreground mb-4">
                           - {project.author}
                         </p>
-                        
+
                         {/* Rating */}
-                        <div className="flex gap-1 text-[#D4AF37]">
-                           {[...Array(5)].map((_, i) => (
-                             <Star key={i} className="w-5 h-5 fill-current" />
-                           ))}
+                        <div className="flex gap-1 text-gold-dark">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 fill-current" />
+                          ))}
                         </div>
                       </div>
 
                       {/* CTA */}
                       <div className="pt-4">
-                         <Link 
-                            to={project.link} 
-                            className="inline-flex items-center text-[#D4AF37] hover:text-[#B59020] font-bold text-sm tracking-[0.15em] uppercase border-b-2 border-[#D4AF37] pb-1 transition-colors"
-                         >
-                            View More Details
-                         </Link>
+                        <Link
+                          to={project.link}
+                          className="inline-flex items-center text-gold-dark hover:text-gold-dark/80 font-bold text-sm tracking-[0.15em] uppercase border-b-2 border-gold pb-1 transition-colors"
+                        >
+                          View More Details
+                        </Link>
                       </div>
 
                     </div>
@@ -137,18 +137,18 @@ export function ProjectShowcaseSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          
+
           {/* Navigation Arrows */}
           <div className="hidden md:block">
-            <CarouselPrevious className="-left-12 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-            <CarouselNext className="-right-12 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
+            <CarouselPrevious className="-left-12 border-border hover:border-gold hover:text-gold transition-colors" />
+            <CarouselNext className="-right-12 border-border hover:border-gold hover:text-gold transition-colors" />
           </div>
-          
-           {/* Mobile Navigation (Centered below) */}
-           <div className="flex md:hidden justify-center gap-4 mt-8">
-              <CarouselPrevious className="static translate-y-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-              <CarouselNext className="static translate-y-0 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors" />
-           </div>
+
+          {/* Mobile Navigation (Centered below) */}
+          <div className="flex md:hidden justify-center gap-4 mt-8">
+            <CarouselPrevious className="static translate-y-0 border-border hover:border-gold hover:text-gold transition-colors" />
+            <CarouselNext className="static translate-y-0 border-border hover:border-gold hover:text-gold transition-colors" />
+          </div>
 
         </Carousel>
 

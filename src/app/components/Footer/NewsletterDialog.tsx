@@ -30,7 +30,7 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
         setPhone("");
         setAgreed(false);
         setIsSubmitted(false);
-      }, 300); 
+      }, 300);
     }
   };
 
@@ -45,26 +45,26 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden bg-background text-foreground border-none shadow-2xl">
         <div className="p-8 md:p-12 relative min-h-[400px] flex flex-col justify-center">
-          
+
           {isSubmitted ? (
-             /* Thank You State */
+            /* Thank You State */
             <div className="flex flex-col items-center text-center space-y-6 animate-in fade-in zoom-in duration-300">
-               <div className="w-20 h-20 bg-[#8DA37D] rounded-full flex items-center justify-center mb-2 shadow-sm">
-                  <CheckIcon className="w-10 h-10 text-white" strokeWidth={3} />
-               </div>
-               <div className="space-y-3">
-                 <DialogTitle className="font-serif text-4xl md:text-5xl text-foreground tracking-tight">
-                   Thank You for Signing Up
-                 </DialogTitle>
-                 <DialogDescription className="text-muted-foreground text-lg font-light tracking-wide">
-                   Expect deals and offers coming your way soon!
-                 </DialogDescription>
-               </div>
+              <div className="w-20 h-20 bg-[#8DA37D] rounded-full flex items-center justify-center mb-2 shadow-sm">
+                <CheckIcon className="w-10 h-10 text-white" strokeWidth={3} />
+              </div>
+              <div className="space-y-3">
+                <DialogTitle className="font-serif text-4xl md:text-5xl text-foreground tracking-tight">
+                  Thank You for Signing Up
+                </DialogTitle>
+                <DialogDescription className="text-muted-foreground text-lg font-light tracking-wide">
+                  Expect deals and offers coming your way soon!
+                </DialogDescription>
+              </div>
             </div>
           ) : (
             /* Form State */
             <div className="flex flex-col items-center text-center space-y-6">
-              
+
               {/* Success Message (Initial "You're In" banner) */}
               <div className="flex items-center gap-2 text-green-700 font-medium">
                 <CircleCheck className="w-5 h-5 fill-green-100 text-green-600" />
@@ -86,24 +86,24 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
               {/* Form */}
               <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6 mt-4">
                 <div className="flex justify-center">
-                   <PhoneInput
+                  <PhoneInput
                     placeholder="Enter your mobile number"
                     value={phone}
                     onChange={setPhone}
                     className="w-full"
-                    defaultCountry="US" 
+                    defaultCountry="US"
                   />
                 </div>
 
                 <div className="flex items-start gap-3 text-left">
-                  <Checkbox 
-                    id="sms-agree" 
-                    checked={agreed} 
+                  <Checkbox
+                    id="sms-agree"
+                    checked={agreed}
                     onCheckedChange={(checked) => setAgreed(checked as boolean)}
-                    className="mt-1 border-input data-[state=checked]:bg-[#D4AF37] data-[state=checked]:border-[#D4AF37]"
+                    className="mt-1 border-input data-[state=checked]:bg-gold data-[state=checked]:border-gold"
                   />
-                  <label 
-                    htmlFor="sms-agree" 
+                  <label
+                    htmlFor="sms-agree"
                     className="text-xs text-muted-foreground leading-relaxed cursor-pointer"
                   >
                     Yes, send me exclusive offers and updates. I agree to the <a href="/terms" className="underline hover:text-foreground">Terms</a>, <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>, and understand I can unsubscribe anytime. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.
@@ -111,16 +111,16 @@ export function NewsletterDialog({ isOpen, onOpenChange, email }: NewsletterDial
                 </div>
 
                 <div className="space-y-4 pt-2">
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     variant="gold"
                     className="w-full py-6 text-base font-bold tracking-widest uppercase shadow-none rounded-sm disabled:bg-neutral-200 disabled:text-neutral-400 disabled:opacity-100"
                     disabled={!agreed || !phone}
                   >
                     Receive SMS
                   </Button>
-                  
-                  <button 
+
+                  <button
                     type="button"
                     onClick={() => handleOpenChange(false)}
                     className="text-sm text-muted-foreground underline hover:text-foreground"

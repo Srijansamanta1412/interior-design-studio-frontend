@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,7 +29,8 @@
 
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
-
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-dark: var(--gold-dark);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -101,8 +100,9 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --gold: #D4AF37;
-  --gold-foreground: #ffffff;
+  --gold: #d4af37;
+  --gold-foreground: #1c1917; /* Dark text on Gold bg for 10:1 contrast */
+  --gold-dark: #997f26; /* Darker for accessibility on light bg */
 }
 
 .dark {
@@ -138,8 +138,9 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 
-  --gold: #D4AF37;
-  --gold-foreground: #ffffff;
+  --gold: #d4af37;
+  --gold-foreground: #1c1917; /* Dark text on Gold bg for 10:1 contrast */
+  --gold-dark: #d4af37; /* Bright gold for dark bg */
 }
 
 @layer base {

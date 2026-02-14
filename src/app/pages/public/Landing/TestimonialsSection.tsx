@@ -33,10 +33,10 @@ export function TestimonialsSection() {
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        
+
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
+          <span className="text-gold-dark text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
             Testimonials
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-normal text-foreground">
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="max-w-5xl mx-auto px-12 relative">
-          <Carousel 
+          <Carousel
             opts={{
               align: "center",
               loop: true,
@@ -56,9 +56,9 @@ export function TestimonialsSection() {
               {testimonials.map((t, index) => (
                 <CarouselItem key={index} className="md:basis-full lg:basis-full">
                   <div className="flex flex-col items-center text-center py-8 px-4">
-                    
+
                     {/* Stars */}
-                    <div className="flex gap-1 mb-6 text-[#D4AF37]">
+                    <div className="flex gap-1 mb-6 text-gold-dark">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 fill-current" />
                       ))}
@@ -71,16 +71,16 @@ export function TestimonialsSection() {
 
                     {/* Author Info */}
                     <div className="flex flex-col items-center gap-4">
-                      <Avatar className="w-16 h-16 border-2 border-[#D4AF37] p-1">
+                      <Avatar className="w-16 h-16 border-2 border-gold p-1">
                         <AvatarImage src={t.image} className="rounded-full object-cover" />
                         <AvatarFallback>{t.name[0]}</AvatarFallback>
                       </Avatar>
-                      
+
                       <div className="text-center">
                         <cite className="not-italic text-sm font-bold uppercase tracking-widest text-foreground block mb-1">
                           {t.name}
                         </cite>
-                        <span className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider">
+                        <span className="text-xs text-gold-dark font-medium uppercase tracking-wider">
                           {t.role}
                         </span>
                       </div>
@@ -90,11 +90,11 @@ export function TestimonialsSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            
+
             {/* Navigation Arrows */}
             <div className="block">
-              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors translate-x-[-30px] md:translate-x-0" />
-              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 border-border hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors translate-x-[30px] md:translate-x-0" />
+              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 border-border hover:border-gold hover:text-gold transition-colors translate-x-[-30px] md:translate-x-0" />
+              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 border-border hover:border-gold hover:text-gold transition-colors translate-x-[30px] md:translate-x-0" />
             </div>
           </Carousel>
         </div>

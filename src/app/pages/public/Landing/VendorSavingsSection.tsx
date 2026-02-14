@@ -17,7 +17,7 @@ export function VendorSavingsSection() {
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4 text-center">
-        
+
         {/* Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="font-serif text-4xl md:text-5xl font-normal text-foreground mb-6">
@@ -32,9 +32,9 @@ export function VendorSavingsSection() {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center opacity-80">
             {vendors.map((vendor, index) => (
-              <div 
-                key={index} 
-                className="font-serif text-xl md:text-2xl text-muted-foreground uppercase tracking-widest hover:text-[#D4AF37] transition-colors cursor-default"
+              <div
+                key={index}
+                className="font-serif text-xl md:text-2xl text-muted-foreground uppercase tracking-widest hover:text-gold-dark transition-colors cursor-default"
                 aria-label={vendor}
               >
                 {/* 
@@ -45,15 +45,15 @@ export function VendorSavingsSection() {
               </div>
             ))}
           </div>
-          
+
 
         </div>
 
         {/* Footer Link */}
         <div>
-          <Link 
-            to="/concierge" 
-            className="inline-block text-[#D4AF37] hover:text-[#B59020] font-bold text-sm tracking-[0.15em] uppercase border-b border-[#D4AF37] pb-1 transition-colors"
+          <Link
+            to="/concierge"
+            className="inline-block text-gold-dark hover:text-gold-dark/80 font-bold text-sm tracking-[0.15em] uppercase border-b border-gold pb-1 transition-colors"
           >
             + WHITE GLOVE CONCIERGE ACCESS
           </Link>

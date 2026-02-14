@@ -13,6 +13,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Logo } from "@/components/shared/Logo";
 import { navbarLinks } from "@/app/routes/navigation";
 import { cn } from "@/lib/utils";
@@ -23,7 +29,7 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        
+
         {/* 1. Logo */}
         <Logo />
 
@@ -68,9 +74,9 @@ export function Navbar() {
         {/* 3. Actions */}
         <div className="flex items-center gap-4">
           <div className="hidden lg:flex items-center space-x-2">
-            <Input 
-              type="search" 
-              placeholder="Search designs..." 
+            <Input
+              type="search"
+              placeholder="Search designs..."
               className="h-9 w-[200px] lg:w-[250px] bg-muted/50 focus-visible:ring-gold"
             />
             <Button size="icon" variant="outline" className="bg-muted/50 px-3">
@@ -78,11 +84,11 @@ export function Navbar() {
               <span className="sr-only">Search</span>
             </Button>
           </div>
-          
+
           <Button variant="outline" size="icon" className="lg:hidden">
             <Search className="h-4 w-4" />
           </Button>
-          
+
           <div className="hidden md:flex gap-2 items-center">
             <ModeToggle />
             <Link to="/auth/login">
@@ -100,46 +106,49 @@ export function Navbar() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="overflow-y-auto px-6">
+            <SheetContent side="right" className="overflow-y-auto px-6 w-[300px]">
               <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
               <SheetDescription className="sr-only">Navigation links</SheetDescription>
-              
+
               <div className="flex flex-col gap-6 mt-10">
                 <Logo />
                 <div className="flex flex-col gap-2">
-                  {navbarLinks.map((item) => (
-                    <div key={item.title} className="flex flex-col">
-                      {item.items ? (
-                        // Mobile "Accordion" style (Simplified)
-                        <div className="py-2">
-                          <p className="font-serif font-bold text-lg text-foreground mb-2">
+                  <Accordion type="single" collapsible className="w-full">
+                    {navbarLinks.map((item) => (
+                      <div key={item.title} className="flex flex-col">
+                        {item.items ? (
+                          // Mobile "Accordion" style
+                          <AccordionItem value={item.title} className="border-b-0">
+                            <AccordionTrigger className="py-2 text-lg font-serif font-medium hover:text-gold hover:no-underline">
+                              {item.title}
+                            </AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-3 pl-4 border-l-2 border-neutral-100 dark:border-neutral-800 pb-2">
+                              {item.items.map((subItem) => (
+                                <Link
+                                  key={subItem.title}
+                                  to={subItem.href || "#"}
+                                  className="text-sm font-medium text-muted-foreground hover:text-gold py-1"
+                                >
+                                  {subItem.title}
+                                </Link>
+                              ))}
+                            </AccordionContent>
+                          </AccordionItem>
+                        ) : (
+                          // Standard Mobile Link
+                          <Link
+                            to={item.href || "#"}
+                            className="py-3 text-lg font-serif font-medium hover:text-gold border-b-0"
+                          >
                             {item.title}
-                          </p>
-                          <div className="flex flex-col pl-4 border-l-2 border-neutral-100 gap-3">
-                            {item.items.map((subItem) => (
-                              <Link 
-                                key={subItem.title}
-                                to={subItem.href || "#"}
-                                className="text-sm font-medium text-muted-foreground hover:text-gold"
-                              >
-                                {subItem.title}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        // Standard Mobile Link
-                        <Link 
-                          to={item.href || "#"}
-                          className="py-2 text-lg font-serif font-medium hover:text-gold"
-                        >
-                          {item.title}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-                  <hr className="my-2 border-neutral-200" />
-                  <Link to="/auth/login" className="text-lg font-medium hover:text-gold">
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </Accordion>
+
+                  <hr className="my-2 border-border" />
+                  <Link to="/auth/login" className="py-2 text-lg font-medium hover:text-gold">
                     Log In
                   </Link>
                   <Button variant="gold" className="w-full mt-2">Start Project</Button>

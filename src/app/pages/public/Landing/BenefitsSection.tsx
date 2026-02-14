@@ -28,15 +28,15 @@ export function BenefitsSection() {
             <div key={index} className="relative mt-12 group px-4 md:px-0">
               {/* Floating Icon */}
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-background px-3 transition-transform duration-500 group-hover:-translate-y-1 z-10">
-                 <benefit.icon 
-                   className="w-16 h-16 text-[#D4AF37]" 
-                   strokeWidth={1}
-                 />
+                <benefit.icon
+                  className="w-16 h-16 text-gold-dark"
+                  strokeWidth={1}
+                />
               </div>
 
               {/* Card */}
-              <Card 
-                className="border border-border shadow-sm hover:shadow-xl hover:border-[#D4AF37]/30 transition-all duration-500 text-center pt-14 pb-10 px-6 h-full flex flex-col items-center justify-start bg-card rounded-[2rem] overflow-visible gap-0"
+              <Card
+                className="border border-border shadow-sm hover:shadow-xl hover:border-gold/30 transition-all duration-500 text-center pt-14 pb-10 px-6 h-full flex flex-col items-center justify-start bg-card rounded-[2rem] overflow-visible gap-0"
               >
                 <CardHeader className="p-0 mb-4 flex flex-col items-center w-full">
                   <CardTitle className="font-serif text-xl lg:text-2xl font-normal text-card-foreground tracking-wide whitespace-nowrap overflow-hidden text-ellipsis w-full px-2">
