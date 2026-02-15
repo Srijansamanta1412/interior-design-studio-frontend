@@ -1,4 +1,3 @@
-
 export function FeaturedSection() {
   const logos = [
     { name: "Architectural Digest", src: "https://upload.wikimedia.org/wikipedia/commons/4/41/Architectural_Digest_logo.svg" },
@@ -10,7 +9,7 @@ export function FeaturedSection() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background border-t border-border/40">
       <div className="container mx-auto px-4">
         <h2 className="font-serif text-3xl md:text-4xl text-center text-muted-foreground mb-16">
           Featured & Trusted By

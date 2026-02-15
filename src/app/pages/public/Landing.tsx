@@ -8,9 +8,9 @@ const TestimonialsSection = lazy(() => import("./Landing/TestimonialsSection").t
 const ProjectShowcaseSection = lazy(() => import("./Landing/ProjectShowcaseSection").then(module => ({ default: module.ProjectShowcaseSection })));
 const VendorSavingsSection = lazy(() => import("./Landing/VendorSavingsSection").then(module => ({ default: module.VendorSavingsSection })));
 const RealSpacesSection = lazy(() => import("./Landing/RealSpacesSection").then(module => ({ default: module.RealSpacesSection })));
-const BenefitsSection = lazy(() => import("./Landing/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
+const BenefitsSection = lazy(() => import("@/components/shared/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
 const ConsultationCTA = lazy(() => import("./Landing/ConsultationCTA").then(module => ({ default: module.ConsultationCTA })));
-const FeaturedSection = lazy(() => import("./Landing/FeaturedSection").then(module => ({ default: module.FeaturedSection })));
+const FeaturedSection = lazy(() => import("@/components/shared/FeaturedSection").then(module => ({ default: module.FeaturedSection })));
 
 export default function Landing() {
   return (
