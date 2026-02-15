@@ -36,7 +36,7 @@ export function ProcessSection() {
         {/* Steps Grid */}
         <div className="relative grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {/* Connector Line (Desktop Only) */}
-          <div className="hidden md:block absolute top-[48px] left-[16%] right-[16%] h-[1px] bg-border z-0"></div>
+          <div className="hidden md:block absolute top-[48px] left-[16%] right-[16%] h-px bg-border z-0"></div>
 
           {steps.map((step, index) => (
             <div key={index} className="relative z-10 flex flex-col items-center text-center group">
