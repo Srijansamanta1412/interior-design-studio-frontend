@@ -59,7 +59,7 @@ export function PortfolioFAQ() {
                 >
                   <AccordionItem 
                     value={`item-${index}`} 
-                    className="border border-gray-100 rounded-lg shadow-sm bg-white px-6 data-[state=open]:border-gold/30 transition-all duration-300 hover:shadow-md"
+                    className="border border-border rounded-lg shadow-sm bg-card px-6 data-[state=open]:border-gold/30 transition-all duration-300 hover:shadow-md"
                   >
                     <AccordionTrigger className="text-left text-base md:text-lg font-medium text-foreground hover:no-underline hover:text-gold py-6">
                       {faq.question}
