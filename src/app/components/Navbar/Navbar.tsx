@@ -41,8 +41,13 @@ export function Navbar() {
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent font-serif text-base font-medium text-foreground/80 hover:text-gold hover:bg-transparent focus:bg-transparent focus:text-gold data-[state=open]:bg-transparent data-[state=open]:text-gold">
-                        {item.title}
+                      <Link to={item.href || "#"} className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent hover:text-gold focus:bg-transparent focus:text-gold pr-0")}>
+                        <span className="font-serif text-base font-medium transition-colors">
+                          {item.title}
+                        </span>
+                      </Link>
+                      <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:text-gold data-[state=open]:text-gold px-2 pl-1">
+                          <span className="sr-only">Toggle {item.title}</span>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -119,9 +124,17 @@ export function Navbar() {
                         {item.items ? (
                           // Mobile "Accordion" style
                           <AccordionItem value={item.title} className="border-b-0">
-                            <AccordionTrigger className="py-2 text-lg font-serif font-medium hover:text-gold hover:no-underline">
-                              {item.title}
-                            </AccordionTrigger>
+                            <div className="flex items-center justify-between py-2 border-b">
+                                <Link 
+                                    to={item.href || "#"} 
+                                    className="flex-1 py-1 text-lg font-serif font-medium hover:text-gold"
+                                >
+                                    {item.title}
+                                </Link>
+                                <AccordionTrigger className="w-12 py-1 hover:no-underline justify-end">
+                                    <span className="sr-only">Toggle</span>
+                                </AccordionTrigger>
+                            </div>
                             <AccordionContent className="flex flex-col gap-3 pl-4 border-l-2 border-neutral-100 dark:border-neutral-800 pb-2">
                               {item.items.map((subItem) => (
                                 <Link

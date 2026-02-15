@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { HeroSection } from "./Landing/HeroSection";
+import { SectionLoader } from "@/components/shared/SectionLoader";
 
 // Lazy load below-the-fold sections
 const ProcessSection = lazy(() => import("./Landing/ProcessSection").then(module => ({ default: module.ProcessSection })));
@@ -10,11 +11,6 @@ const RealSpacesSection = lazy(() => import("./Landing/RealSpacesSection").then(
 const BenefitsSection = lazy(() => import("./Landing/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
 const ConsultationCTA = lazy(() => import("./Landing/ConsultationCTA").then(module => ({ default: module.ConsultationCTA })));
 const FeaturedSection = lazy(() => import("./Landing/FeaturedSection").then(module => ({ default: module.FeaturedSection })));
-
-// Loading placeholder component to prevent CLS
-const SectionLoader = ({ height = "h-96" }: { height?: string }) => (
-  <div className={`w-full ${height} bg-muted/10 animate-pulse`} role="presentation" />
-);
 
 export default function Landing() {
   return (
