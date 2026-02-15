@@ -1,29 +1,63 @@
+import { lazy, Suspense } from "react";
 import { HeroSection } from "./Landing/HeroSection";
-import { ProcessSection } from "./Landing/ProcessSection";
-import { TestimonialsSection } from "./Landing/TestimonialsSection";
-import { ProjectShowcaseSection } from "./Landing/ProjectShowcaseSection";
-import { VendorSavingsSection } from "./Landing/VendorSavingsSection";
-import { RealSpacesSection } from "./Landing/RealSpacesSection";
-import { BenefitsSection } from "./Landing/BenefitsSection";
-import { ConsultationCTA } from "./Landing/ConsultationCTA";
-import { FeaturedSection } from "./Landing/FeaturedSection";
+
+// Lazy load below-the-fold sections
+const ProcessSection = lazy(() => import("./Landing/ProcessSection").then(module => ({ default: module.ProcessSection })));
+const TestimonialsSection = lazy(() => import("./Landing/TestimonialsSection").then(module => ({ default: module.TestimonialsSection })));
+const ProjectShowcaseSection = lazy(() => import("./Landing/ProjectShowcaseSection").then(module => ({ default: module.ProjectShowcaseSection })));
+const VendorSavingsSection = lazy(() => import("./Landing/VendorSavingsSection").then(module => ({ default: module.VendorSavingsSection })));
+const RealSpacesSection = lazy(() => import("./Landing/RealSpacesSection").then(module => ({ default: module.RealSpacesSection })));
+const BenefitsSection = lazy(() => import("./Landing/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
+const ConsultationCTA = lazy(() => import("./Landing/ConsultationCTA").then(module => ({ default: module.ConsultationCTA })));
+const FeaturedSection = lazy(() => import("./Landing/FeaturedSection").then(module => ({ default: module.FeaturedSection })));
+
+// Loading placeholder component to prevent CLS
+const SectionLoader = ({ height = "h-96" }: { height?: string }) => (
+  <div className={`w-full ${height} bg-muted/10 animate-pulse`} role="presentation" />
+);
 
 export default function Landing() {
   return (
     <>
-      <title>Online Interior Design Services | Decorilla Clone</title>
-      <meta name="description" content="Get professional interior design help online. Affordable, accessible, and personalized design services." />
+      <title>Online Interior Design Services | Expert Interior Designers</title>
+      <meta name="description" content="Transform your space with professional online interior design services. Get personalized designs from top experts starting at affordable prices. #1 Rated on Forbes." />
+      <meta name="theme-color" content="#FFFFFF" />
       
       <div className="flex flex-col w-full">
+        {/* Hero is Eager Loaded to preserve LCP */}
         <HeroSection />
-        <ProcessSection />
-        <TestimonialsSection />
-        <ProjectShowcaseSection />
-        <VendorSavingsSection />
-        <RealSpacesSection />
-        <BenefitsSection />
-        <ConsultationCTA />
-        <FeaturedSection />
+
+        <Suspense fallback={<SectionLoader height="h-[600px]" />}>
+          <ProcessSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[800px]" />}>
+          <TestimonialsSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[800px]" />}>
+          <ProjectShowcaseSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[400px]" />}>
+          <VendorSavingsSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[800px]" />}>
+          <RealSpacesSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[600px]" />}>
+          <BenefitsSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[400px]" />}>
+          <ConsultationCTA />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader height="h-[300px]" />}>
+          <FeaturedSection />
+        </Suspense>
       </div>
     </>
   );

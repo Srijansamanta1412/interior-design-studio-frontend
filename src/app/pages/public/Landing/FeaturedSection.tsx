@@ -18,7 +18,7 @@ export function FeaturedSection() {
         
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12 items-center justify-items-center">
           {logos.map((logo, index) => (
-            <div key={index} className="w-full flex justify-center p-4">
+            <div key={index} className="w-full h-20 flex items-center justify-center p-4">
                <img 
                  src={logo.src} 
                  alt={`${logo.name} logo`}

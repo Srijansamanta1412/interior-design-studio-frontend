@@ -53,7 +53,7 @@ export function HeroSection() {
 
       {/* 3. FORBES BADGE (Bottom Left) */}
       <div className="absolute bottom-0 left-8 md:left-12 z-20 hidden md:block">
-        <div className="bg-white text-black p-4 pb-2 shadow-2xl flex flex-col items-center justify-center min-w-[100px] relative after:content-[''] after:absolute after:top-full after:left-0 after:border-l-[50px] after:border-l-transparent after:border-r-[50px] after:border-r-transparent after:border-t-[15px] after:border-t-white">
+        <div className="bg-white text-black p-4 pb-2 shadow-2xl flex flex-col items-center justify-center min-w-[100px] relative after:content-[''] after:absolute after:top-full after:left-0 after:border-l-50 after:border-l-transparent after:border-r-50 after:border-r-transparent after:border-t-15 after:border-t-white">
           {/* Badge Content */}
           <div className="flex flex-col items-center -mt-1">
             <span className="font-serif text-4xl font-bold leading-none">#1</span>
