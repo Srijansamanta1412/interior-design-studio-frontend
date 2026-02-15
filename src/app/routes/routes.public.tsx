@@ -6,6 +6,7 @@ import { SuspenseWrapper } from "./routeUtils";
 // Lazy Load Pages
 const LandingPage = lazy(() => import("@/app/pages/public/Landing"));
 const PortfolioPage = lazy(() => import("@/app/pages/public/Portfolio"));
+const HowItWorksPage = lazy(() => import("@/app/pages/public/HowItWorksPage"));
 
 
 
@@ -21,6 +22,10 @@ export const publicRoutes: RouteObject[] = [
       {
         path: "portfolio",
         element: SuspenseWrapper(PortfolioPage),
+      },
+      {
+        path: "how-it-works",
+        element: SuspenseWrapper(HowItWorksPage),
       },
     ],
   },

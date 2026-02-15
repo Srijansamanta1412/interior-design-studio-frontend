@@ -6,7 +6,7 @@ import { SectionLoader } from "@/components/shared/SectionLoader";
 const PortfolioSteps = lazy(() => import("./Portfolio/PortfolioSteps").then(module => ({ default: module.PortfolioSteps })));
 const PortfolioDeliverables = lazy(() => import("./Portfolio/PortfolioDeliverables").then(module => ({ default: module.PortfolioDeliverables })));
 const PortfolioBottomSteps = lazy(() => import("./Portfolio/PortfolioBottomSteps").then(module => ({ default: module.PortfolioBottomSteps })));
-const PortfolioCTA = lazy(() => import("./Portfolio/PortfolioCTA").then(module => ({ default: module.PortfolioCTA })));
+const PortfolioCTA = lazy(() => import("@/components/shared/CTASection").then(module => ({ default: module.CTASection })));
 const PortfolioComparison = lazy(() => import("./Portfolio/PortfolioComparison").then(module => ({ default: module.PortfolioComparison })));
 const BenefitsSection = lazy(() => import("@/components/shared/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
 const PortfolioFAQ = lazy(() => import("./Portfolio/PortfolioFAQ").then(module => ({ default: module.PortfolioFAQ })));

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-export function PortfolioCTA() {
+export function CTASection() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 text-center">
