@@ -33,7 +33,7 @@ export const navbarLinks: NavItem[] = [
       { title: "Compare Us", href: "/compare", description: "See how we stack up against traditional designers." },
     ]
   },
-  { title: "Stories", href: "/stories" },
+  { title: "Blogs", href: "/blogs" },
   { title: "Pricing", href: "/pricing" },
 ];
 
