@@ -20,16 +20,23 @@ export function BlurImage({
   ratio,
   className,
   containerClassName,
+  loading = "lazy",
+  decoding = "async",
+  fetchPriority = "auto",
   ...props
 }: BlurImageProps) {
-  const [isLoading, setLoading] = useState(true);
+  // If loading is eager (usually LCP), skip blur to paint immediately on the main thread.
+  const isEager = loading === "eager";
+  const [isLoading, setLoading] = useState(!isEager);
 
   // The actual image element with the blur/scale transition logic
   const ImageElement = (
     <img
       src={src}
       alt={alt}
-      loading="lazy"
+      loading={loading}
+      decoding={decoding}
+      fetchPriority={fetchPriority}
       className={cn(
         "h-full w-full object-cover transition-all duration-700 ease-in-out",
         // Loading: Scale up (to hide blur edges), Blur, Grayscale
@@ -38,7 +45,7 @@ export function BlurImage({
           : "scale-100 blur-0 grayscale-0 opacity-100",
         className
       )}
-      onLoad={() => setLoading(false)}
+      onLoad={() => { if (!isEager) setLoading(false); }}
       {...props}
     />
   );

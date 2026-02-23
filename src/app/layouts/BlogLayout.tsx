@@ -1,73 +1,51 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import { Outlet } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-
-const BLOG_CATEGORIES = [
-  { name: "All Posts", path: "/blog" },
-  { name: "Design Trends", path: "/blog/category/trends" },
-  { name: "Tips & Guides", path: "/blog/category/guides" },
-  { name: "Home Tours", path: "/blog/category/tours" },
-  { name: "Before & After", path: "/blog/category/makeovers" },
-];
+import { BlurImage } from "@/components/shared/BlurImage";
 
 export function BlogLayout() {
-  const location = useLocation();
-
   return (
     <div className="flex flex-col min-h-screen w-full bg-background">
-      
-      {/* Blog Sub-Navigation (Sticky under the main navbar) */}
-      <div className="sticky top-20 z-40 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 hidden md:block">
-         <div className="container mx-auto px-4">
-            <nav className="flex items-center space-x-8 overflow-x-auto no-scrollbar py-4">
-              {BLOG_CATEGORIES.map((cat) => {
-                const isActive = location.pathname === cat.path;
-                return (
-                  <Link
-                    key={cat.name}
-                    to={cat.path}
-                    className={cn(
-                      "text-sm font-bold uppercase tracking-widest whitespace-nowrap transition-colors hover:text-gold",
-                      isActive 
-                        ? "text-gold border-b-2 border-gold pb-1" 
-                        : "text-muted-foreground"
-                    )}
-                  >
-                    {cat.name}
-                  </Link>
-                );
-              })}
-            </nav>
-         </div>
-      </div>
 
       {/* Main Content Area (BlogIndex or BlogPost will render here) */}
       <main className="flex-1 w-full">
         <Outlet />
       </main>
 
-      {/* Blog-Specific CTA / Newsletter */}
-      <section className="bg-muted py-24 border-t border-border">
-         <div className="container mx-auto px-4 text-center max-w-2xl">
-            <h3 className="font-serif text-3xl md:text-4xl font-normal mb-6 text-foreground">
-              The Decorilla Digest
-            </h3>
-            <p className="text-muted-foreground mb-10 text-lg">
-              Get the latest interior design trends, expert tips, and exclusive offers delivered straight to your inbox every week.
+      {/* Blog-Specific CTA */}
+      <section className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden flex items-center min-h-[500px] md:min-h-[600px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 bg-black">
+          <BlurImage
+            src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2000&auto=format&fit=crop"
+            alt="Beautiful contemporary kitchen"
+            className="w-full h-full object-cover opacity-60 md:opacity-80 brightness-[0.65]"
+            containerClassName="w-full h-full rounded-none border-0"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Overlay gradient to ensure text readability on the left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-0 pointer-events-none" />
+
+        {/* Content */}
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 w-full">
+          <div className="max-w-2xl text-left text-white">
+            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl lg:leading-[1.1] font-normal mb-6 pb-2">
+              Kickstart Your<br />
+              Design Journey
+            </h2>
+            <p className="text-lg md:text-xl md:leading-relaxed mb-10 text-white/90 max-w-lg font-medium tracking-wide">
+              Take our interior design style quiz<br className="hidden md:block" />
+              to ignite your inspiration today!
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
-              <Input
-                type="email"
-                placeholder="Enter your email address"
-                className="h-12 bg-background border-input focus-visible:ring-gold"
-                required
-              />
-              <Button type="submit" variant="gold" className="h-12 px-8 uppercase tracking-widest text-xs">
-                Subscribe
-              </Button>
-            </form>
-         </div>
+            <Button 
+              size="lg"
+              className="bg-gold hover:bg-gold-dark text-white px-8 py-6 text-sm md:text-base tracking-widest font-bold uppercase rounded shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+            >
+              FIND YOUR STYLE
+            </Button>
+          </div>
+        </div>
       </section>
 
     </div>
