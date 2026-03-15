@@ -25,7 +25,7 @@ export function BlogLayout() {
         </div>
 
         {/* Overlay gradient to ensure text readability on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-0 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/60 to-transparent z-0 pointer-events-none" />
 
         {/* Content */}
         <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 w-full">

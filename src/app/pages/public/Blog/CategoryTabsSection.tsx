@@ -7,11 +7,9 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-  type CarouselApi
+  CarouselPrevious
 } from "@/components/ui/carousel";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
 
 const categories = [
   "Full Home",
@@ -24,11 +22,6 @@ const categories = [
 export function CategoryTabsSection() {
   const [posts, setPosts] = React.useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  
-  // Carousel State
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     const fetchAllPosts = async () => {
@@ -45,19 +38,7 @@ export function CategoryTabsSection() {
     fetchAllPosts();
   }, []);
 
-  // Update dots when carousel API is available
-  React.useEffect(() => {
-    if (!api) {
-      return;
-    }
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
 
   if (isLoading) {
     return (
@@ -123,7 +104,6 @@ export function CategoryTabsSection() {
                 {/* Full Width Carousel Container */}
                 <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] text-left">
                   <Carousel
-                    setApi={setApi}
                     opts={{
                       align: "center",
                       loop: true,
@@ -147,22 +127,7 @@ export function CategoryTabsSection() {
                   </Carousel>
                 </div>
 
-                {/* Dots Navigation */}
-                {filteredPosts.length > 1 && (
-                    <div className="flex justify-center gap-2 mt-8">
-                      {Array.from({ length: count }).map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => api?.scrollTo(index)}
-                          className={cn(
-                            "w-2 h-2 rounded-full transition-all duration-300",
-                            current === index ? "bg-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                          )}
-                          aria-label={`Go to slide ${index + 1}`}
-                        />
-                      ))}
-                    </div>
-                )}
+
                 
               </TabsContent>
             );

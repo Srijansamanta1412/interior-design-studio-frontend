@@ -10,6 +10,10 @@ const MOCK_AUTHOR = {
 
 const CATEGORY_BEFORE_AFTER = { id: "c-ba", name: "Before & After", slug: "before-and-after" };
 const CATEGORY_TIPS_GUIDES = { id: "c-tg", name: "Tips & Guides", slug: "tips-and-guides" };
+const CATEGORY_DECOR_TRENDS = { id: "c-dt", name: "Decor Trends", slug: "decor-trends" };
+const CATEGORY_SEASONAL = { id: "c-se", name: "Seasonal", slug: "seasonal" };
+const CATEGORY_BUSINESS_OFFICE = { id: "c-bo", name: "Business Office", slug: "business-office" };
+const CATEGORY_STYLES_GUIDES = { id: "c-sg", name: "Styles & Guides", slug: "styles-and-guides" };
 
 const TAGS = {
   FULL_HOME: { id: "t-fh", name: "Full Home", slug: "full-home", icon: "Home" } as BlogTag,
@@ -277,6 +281,44 @@ const MOCK_POSTS: BlogPost[] = [
     category: CATEGORY_TIPS_GUIDES, tags: [TAGS.OFFICES], readingTime: 5,
   }
 ];
+
+// Dynamically generate 10 posts for the requested categories to flush out the mock data
+const generatedCategories = [
+  CATEGORY_BEFORE_AFTER, CATEGORY_TIPS_GUIDES, CATEGORY_DECOR_TRENDS,
+  CATEGORY_SEASONAL, CATEGORY_BUSINESS_OFFICE, CATEGORY_STYLES_GUIDES
+];
+
+const mockImages = [
+  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200",
+  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200",
+  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200",
+  "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=1200",
+  "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1200",
+  "https://images.unsplash.com/photo-1560067174-c5a3a8f37060?q=80&w=1200",
+  "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200"
+];
+
+generatedCategories.forEach((cat, catIndex) => {
+  for (let i = 1; i <= 10; i++) {
+    const defaultTag = cat.id === 'c-bo' ? TAGS.OFFICES :
+                       cat.id === 'c-se' ? TAGS.BEDROOMS :
+                       cat.id === 'c-kb' ? TAGS.KITCHEN_BATH : TAGS.FULL_HOME;
+                       
+    MOCK_POSTS.push({
+      id: `gen-${cat.id}-${i}`,
+      slug: `${cat.slug}-post-${i}`,
+      title: `${cat.name} Inspiration & Tips ${i}`,
+      description: `Explore the latest design trends and comprehensive guides focusing on ${cat.name.toLowerCase()} to elevate your space.`,
+      featuredImage: mockImages[(catIndex + i) % mockImages.length],
+      content: "<p>Detailed interior design masterclass content will go here. Featuring comprehensive layouts and before/after comparisons.</p>",
+      author: MOCK_AUTHOR,
+      publishDate: new Date(Date.now() - (i * 86400000) - (catIndex * 1000000)).toISOString(),
+      category: cat,
+      tags: [defaultTag],
+      readingTime: 4 + (i % 6)
+    });
+  }
+});
 
 // --- SERVICE METHODS ---
 export const blogService = {
