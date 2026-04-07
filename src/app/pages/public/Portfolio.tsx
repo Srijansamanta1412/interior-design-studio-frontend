@@ -1,16 +1,12 @@
 import { lazy, Suspense } from "react";
-import { PortfolioHero } from "./Portfolio/PortfolioHero";
+import { HowItWorksHero } from "./HowItWorks/HowItWorksHero";
 import { SectionLoader } from "@/components/shared/SectionLoader";
 
 // Lazy load below-the-fold sections
-const PortfolioSteps = lazy(() => import("./Portfolio/PortfolioSteps").then(module => ({ default: module.PortfolioSteps })));
-const PortfolioDeliverables = lazy(() => import("./Portfolio/PortfolioDeliverables").then(module => ({ default: module.PortfolioDeliverables })));
-const PortfolioBottomSteps = lazy(() => import("./Portfolio/PortfolioBottomSteps").then(module => ({ default: module.PortfolioBottomSteps })));
-const PortfolioCTA = lazy(() => import("@/components/shared/CTASection").then(module => ({ default: module.CTASection })));
-const PortfolioComparison = lazy(() => import("./Portfolio/PortfolioComparison").then(module => ({ default: module.PortfolioComparison })));
-const BenefitsSection = lazy(() => import("@/components/shared/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
-const PortfolioFAQ = lazy(() => import("./Portfolio/PortfolioFAQ").then(module => ({ default: module.PortfolioFAQ })));
-const FeaturedSection = lazy(() => import("@/components/shared/FeaturedSection").then(module => ({ default: module.FeaturedSection })));
+const HowItWorksTabs = lazy(() => import("./HowItWorks/HowItWorksTabs").then(module => ({ default: module.HowItWorksTabs })));
+const HowItWorksProjectDetails = lazy(() => import("./HowItWorks/HowItWorksProjectDetails").then(module => ({ default: module.HowItWorksProjectDetails })));
+const HowItWorksGallery = lazy(() => import("./HowItWorks/HowItWorksGallery").then(module => ({ default: module.HowItWorksGallery })));
+const CTASection = lazy(() => import("@/components/shared/CTASection").then(module => ({ default: module.CTASection })));
 
 const Portfolio = () => {
   return (
@@ -20,41 +16,38 @@ const Portfolio = () => {
       
       <div className="flex flex-col w-full">
         {/* Hero is Eager Loaded to preserve LCP */}
-        <PortfolioHero />
+        <HowItWorksHero />
 
         <Suspense fallback={<SectionLoader height="h-[800px]" />}>
-            <PortfolioSteps />
+          <HowItWorksTabs />
         </Suspense>
 
         <Suspense fallback={<SectionLoader height="h-[600px]" />}>
-            <PortfolioDeliverables />
+          <HowItWorksProjectDetails 
+            title="Black and White Living Room Design"
+            designer="Renata P."
+            imageSrc="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200&auto=format&fit=crop"
+          />
         </Suspense>
 
         <Suspense fallback={<SectionLoader height="h-[800px]" />}>
-            <PortfolioBottomSteps />
-        </Suspense>
-
-        <Suspense fallback={<SectionLoader height="h-[300px]" />}>
-            <PortfolioCTA />
+          <HowItWorksGallery />
         </Suspense>
 
         <Suspense fallback={<SectionLoader height="h-[600px]" />}>
-            <PortfolioComparison />
+          <HowItWorksProjectDetails 
+            title="Modern Living Room Dining Room Combo"
+            designer="Meric S."
+            imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop"
+            reversed={true}
+          />
         </Suspense>
-
-        <Suspense fallback={<SectionLoader height="h-[500px]" />}>
-            <BenefitsSection />
-        </Suspense>
-
-        <Suspense fallback={<SectionLoader height="h-[600px]" />}>
-            <PortfolioFAQ />
-        </Suspense>
-
+        
         <Suspense fallback={<SectionLoader height="h-[300px]" />}>
-            <FeaturedSection />
+          <CTASection />
         </Suspense>
-
-        {/* Future sections like Gallery/Testimonials will go here */}
+        
+        {/* Future sections: Steps, FAQ, etc. */}
       </div>
     </>
   );

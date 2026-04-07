@@ -56,12 +56,12 @@ export function HowItWorksHero() {
             </Link>
 
             {/* CTA 2: White Outline */}
-            <Link to="/portfolio" className="w-full md:w-auto">
+            <Link to="/how-it-works" className="w-full md:w-auto">
               <Button
                 variant="outline"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black text-sm md:text-base font-bold tracking-[0.15em] uppercase px-10 py-7 w-full md:w-auto shadow-lg transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
               >
-                View Portfolio
+                How It Works
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

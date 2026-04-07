@@ -58,12 +58,12 @@ export function PortfolioHero() {
             </Link>
 
             {/* CTA 2: White Outline with Icon */}
-            <Link to="/how-it-works">
+            <Link to="/portfolio">
               <Button
                 variant="outline"
                 className="bg-white hover:bg-white/90 text-foreground border-none text-sm md:text-base font-bold tracking-[0.15em] uppercase px-8 py-6 w-full md:w-auto shadow-lg transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
               >
-                How It Works
+                View Portfolio
                 <PlayCircle className="w-5 h-5 text-gold group-hover:scale-110 transition-transform" />
               </Button>
             </Link>
