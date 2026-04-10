@@ -10,6 +10,7 @@ const PortfolioPage = lazy(() => import("@/app/pages/public/Portfolio"));
 const HowItWorksPage = lazy(() => import("@/app/pages/public/HowItWorksPage"));
 const BlogIndex = lazy(() => import("@/app/pages/public/BlogIndex"));
 const BlogPost = lazy(() => import("@/app/pages/public/BlogPost"));
+const StyleQuizPage = lazy(() => import("@/app/pages/public/StyleQuizPage"));
 
 
 
@@ -29,6 +30,10 @@ export const publicRoutes: RouteObject[] = [
       {
         path: "how-it-works",
         element: SuspenseWrapper(HowItWorksPage),
+      },
+      {
+        path: "quiz",
+        element: SuspenseWrapper(StyleQuizPage),
       },
       {
         path: "blog",
