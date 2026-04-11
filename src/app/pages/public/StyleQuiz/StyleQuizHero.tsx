@@ -47,7 +47,7 @@ export function StyleQuizHero() {
 
           {/* CTA */}
           <div className="pt-4">
-            <Link to="/quiz/start">
+            <Link to="/style-quiz-start">
               <Button
                 className="bg-gold hover:bg-gold/90 text-gold-foreground text-sm md:text-base font-bold tracking-[0.15em] uppercase px-10 py-7 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
