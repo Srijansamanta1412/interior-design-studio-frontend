@@ -6,8 +6,6 @@ import { SectionLoader } from "@/components/shared/SectionLoader";
 const HowItWorksTabs = lazy(() => import("./HowItWorks/HowItWorksTabs").then(module => ({ default: module.HowItWorksTabs })));
 const HowItWorksProjectDetails = lazy(() => import("./HowItWorks/HowItWorksProjectDetails").then(module => ({ default: module.HowItWorksProjectDetails })));
 const HowItWorksGallery = lazy(() => import("./HowItWorks/HowItWorksGallery").then(module => ({ default: module.HowItWorksGallery })));
-const CTASection = lazy(() => import("@/components/shared/CTASection").then(module => ({ default: module.CTASection })));
-
 const Portfolio = () => {
   return (
     <>
@@ -42,12 +40,8 @@ const Portfolio = () => {
             reversed={true}
           />
         </Suspense>
-        
-        <Suspense fallback={<SectionLoader height="h-[300px]" />}>
-          <CTASection />
-        </Suspense>
-        
-        {/* Future sections: Steps, FAQ, etc. */}
+
+        {/* CTA is provided by parent PortfolioLayout */}
       </div>
     </>
   );
