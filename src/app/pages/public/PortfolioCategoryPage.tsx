@@ -17,13 +17,18 @@ export default function PortfolioCategoryPage() {
   const { categorySlug } = useParams<{ categorySlug: string }>();
   const navigate = useNavigate();
 
+  const [currentSlug, setCurrentSlug] = useState<string | undefined>(categorySlug);
   const [category, setCategory] = useState<PortfolioCategory | null>(null);
-  const [loading, setLoading] = useState(true);
+
+  // Derived state pattern: if slug changes in URL, clear data to trigger loading state synchronously
+  if (categorySlug !== currentSlug) {
+    setCurrentSlug(categorySlug);
+    setCategory(null);
+  }
 
   useEffect(() => {
     if (!categorySlug) return;
 
-    setLoading(true);
     portfolioService
       .getCategoryBySlug(categorySlug)
       .then((data) => {
@@ -33,16 +38,12 @@ export default function PortfolioCategoryPage() {
           return;
         }
         setCategory(data);
-      })
-      .finally(() => setLoading(false));
+      });
   }, [categorySlug, navigate]);
 
-  if (loading) {
-    return <SectionLoader height="h-screen" />;
-  }
-
+  // If category is null, we are either loading initially or fetching a new category
   if (!category) {
-    return null; // Will have navigated away
+    return <SectionLoader height="h-screen" />;
   }
 
   return (
