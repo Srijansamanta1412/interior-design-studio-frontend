@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 const vendors = [
   "ANTHROPOLOGIE",
@@ -21,10 +20,10 @@ export function VendorSavingsSection() {
         {/* Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="font-serif text-4xl md:text-5xl font-normal text-foreground mb-6">
-            Decorilla Pays for Itself
+            Modern Interior Brings You Better Value
           </h2>
           <p className="text-muted-foreground font-light text-lg max-w-2xl mx-auto">
-            We pass on our furniture discount at +350 vendors so you save money
+            Get access to premium materials and trusted vendor partnerships
           </p>
         </div>
 
@@ -47,16 +46,6 @@ export function VendorSavingsSection() {
           </div>
 
 
-        </div>
-
-        {/* Footer Link */}
-        <div>
-          <Link
-            to="/concierge"
-            className="inline-block text-gold-dark hover:text-gold-dark/80 font-bold text-sm tracking-[0.15em] uppercase border-b border-gold pb-1 transition-colors"
-          >
-            + WHITE GLOVE CONCIERGE ACCESS
-          </Link>
         </div>
 
       </div>

@@ -2,23 +2,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CalendarCheck, HandCoins, PackageOpen } from "lucide-react";
 
 export function BenefitsSection() {
-  const benefits = [
-    {
-      icon: CalendarCheck,
-      title: "Save Time",
-      description: "Realistic 3D model & top professional help to take the guesswork out of the designing process."
-    },
-    {
-      icon: HandCoins,
-      title: "Save Money",
-      description: "Top talent for up to 80% less than traditional interior design & trade discounts of 5% to 45% at the top vendors."
-    },
-    {
-      icon: PackageOpen,
-      title: "Convenient & Stress Free",
-      description: "A fun and easy white-glove service including everything from design to convenient ordering."
-    }
-  ];
+const benefits = [
+  {
+    icon: CalendarCheck,
+    title: "Personalized Designs",
+    description:
+      "Get customized interior solutions designed to match your lifestyle, space requirements, and budget.",
+  },
+  {
+    icon: HandCoins,
+    title: "Transparent Pricing",
+    description:
+      "Receive detailed estimations with quality material options and cost-effective solutions without hidden charges.",
+  },
+  {
+    icon: PackageOpen,
+    title: "Hassle-Free Execution",
+    description:
+      "From planning to final handover, our team manages the entire project smoothly with timely updates and quality workmanship.",
+  }
+];
 
   return (
     <section className="py-24 bg-background">

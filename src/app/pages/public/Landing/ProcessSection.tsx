@@ -3,18 +3,21 @@ import { Camera, PencilRuler, ShoppingBag } from "lucide-react";
 const steps = [
   {
     icon: Camera,
-    title: "Share Your Space",
-    description: "Upload photos of your room and tell us about your style, budget, and needs.",
+    title: "Share Your Requirements",
+    description:
+      "Share photos, room dimensions, and your design preferences so we can understand your vision and requirements.",
   },
   {
     icon: PencilRuler,
-    title: "Get Custom Designs",
-    description: "Receive multiple design concepts from expert interior designers. Choose your favorite.",
+    title: "Design & Estimation",
+    description:
+      "We create personalized interior designs along with detailed layouts, material suggestions, and project cost estimations.",
   },
   {
     icon: ShoppingBag,
-    title: "Shop the Look",
-    description: "Access a curated shopping list with exclusive discounts on furniture and decor.",
+    title: "Execution & Handover",
+    description:
+      "Our experts handle the end-to-end execution, ensuring quality work, timely completion, and a beautifully finished space.",
   },
 ];
 

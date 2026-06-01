@@ -35,9 +35,9 @@ export default function Landing() {
           <ProjectShowcaseSection />
         </Suspense>
 
-        <Suspense fallback={<SectionLoader height="h-[400px]" />}>
+        {/* <Suspense fallback={<SectionLoader height="h-[400px]" />}>
           <VendorSavingsSection />
-        </Suspense>
+        </Suspense>*/}
 
         <Suspense fallback={<SectionLoader height="h-[800px]" />}>
           <RealSpacesSection />
@@ -51,9 +51,9 @@ export default function Landing() {
           <ConsultationCTA />
         </Suspense>
 
-        <Suspense fallback={<SectionLoader height="h-[300px]" />}>
+        {/*<Suspense fallback={<SectionLoader height="h-[300px]" />}>
           <FeaturedSection />
-        </Suspense>
+        </Suspense>*/}
       </div>
     </>
   );

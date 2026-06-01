@@ -82,7 +82,7 @@ export function Navbar() {
             <Link to="/auth/login">
               <Button className="text-gold bg-muted/50 hover:bg-muted/80">Log In</Button>
             </Link>
-            <Button variant="gold">Start Project</Button>
+            {/*<Button variant="gold">Start Project</Button>*/}
           </div>
 
           {/* 4. Mobile Menu (Sheet) */}
