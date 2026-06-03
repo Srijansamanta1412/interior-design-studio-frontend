@@ -11,6 +11,13 @@ export interface BlogCategory {
   slug: string;
 }
 
+export interface BlogTag {
+  id: string;
+  name: string;
+  slug: string;
+  icon: string;
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -21,7 +28,7 @@ export interface BlogPost {
   author: BlogAuthor;
   publishDate: string; // ISO 8601 format (e.g., "2026-02-18T10:00:00Z")
   category: BlogCategory;
-  tags: string[];
+  tags: BlogTag[];
   readingTime: number; // In minutes
 }
 

@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import {
   NavigationMenu,
@@ -78,28 +77,12 @@ export function Navbar() {
 
         {/* 3. Actions */}
         <div className="flex items-center gap-4">
-          <div className="hidden lg:flex items-center space-x-2">
-            <Input
-              type="search"
-              placeholder="Search designs..."
-              className="h-9 w-[200px] lg:w-[250px] bg-muted/50 focus-visible:ring-gold"
-            />
-            <Button size="icon" variant="outline" className="bg-muted/50 px-3">
-              <Search className="h-4 w-4" />
-              <span className="sr-only">Search</span>
-            </Button>
-          </div>
-
-          <Button variant="outline" size="icon" className="lg:hidden">
-            <Search className="h-4 w-4" />
-          </Button>
-
           <div className="hidden md:flex gap-2 items-center">
             <ModeToggle />
             <Link to="/auth/login">
               <Button className="text-gold bg-muted/50 hover:bg-muted/80">Log In</Button>
             </Link>
-            <Button variant="gold">Start Project</Button>
+            {/*<Button variant="gold">Start Project</Button>*/}
           </div>
 
           {/* 4. Mobile Menu (Sheet) */}

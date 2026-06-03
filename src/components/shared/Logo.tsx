@@ -16,7 +16,7 @@ export function Logo({ className, variant = "dark" }: LogoProps) {
         className
       )}
     >
-      DECORILLA
+      Modern Interior Decor
     </Link>
   );
 }

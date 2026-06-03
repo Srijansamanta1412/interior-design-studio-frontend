@@ -3,7 +3,7 @@
 
 export interface NavItem {
   title: string;
-  href: string;
+  href?: string;
   description?: string; // Good for mega menus
   items?: NavItem[]; // Recursive children
 }
@@ -33,7 +33,8 @@ export const navbarLinks: NavItem[] = [
       { title: "Compare Us", href: "/compare", description: "See how we stack up against traditional designers." },
     ]
   },
-  { title: "Blogs", href: "/blogs" },
+  { title: "Style Quiz", href: "/quiz" },
+  { title: "Blogs", href: "/blog" },
   { title: "Pricing", href: "/pricing" },
 ];
 
@@ -42,12 +43,9 @@ export const footerLinks: Record<string, FooterSection> = {
   about: {
     title: "ABOUT US",
     links: [
-      { title: "The Team", href: "/team" },
-      { title: "Company", href: "/company" },
+      { title: "Company", href: "/" },
       { title: "Reviews", href: "/reviews" },
-      { title: "Pricing", href: "/pricing" },
-      { title: "Design Careers", href: "/careers" },
-      { title: "Press", href: "/press" },
+      { title: "Pricing", href: "/pricing" }
     ]
   },
   explore: {
@@ -55,25 +53,22 @@ export const footerLinks: Record<string, FooterSection> = {
     links: [
       { title: "Style Quiz", href: "/quiz" },
       { title: "Interior Design Blog", href: "/blog" },
-      { title: "Sample Projects", href: "/projects" },
       { title: "Designer Portfolios", href: "/portfolios" },
       { title: "Virtual Interior Design", href: "/virtual-design" },
-      { title: "FAQ", href: "/faq" },
-      { title: "Contact Us", href: "/contact" },
-      { title: "Interior Design Gift Cards", href: "/gift-cards" },
+      { title: "Contact Us"}
     ]
   },
   locations: {
     title: "LOCATIONS",
-    links: [
-      { title: "New York", href: "/locations/nyc" },
-      { title: "Miami", href: "/locations/miami" },
-      { title: "Los Angeles", href: "/locations/la" },
-      { title: "Austin", href: "/locations/austin" },
-      { title: "Charlotte", href: "/locations/charlotte" },
-      { title: "Chicago", href: "/locations/chicago" },
-      { title: "Seattle", href: "/locations/seattle" },
-      { title: "See All Locations", href: "/locations" },
-    ]
+      links: [
+        { title: "Kolkata" },
+        { title: "Howrah" },
+        { title: "Dum Dum" },
+        { title: "Barasat" },
+        { title: "Diamond Harbour" },
+        { title: "Shantiniketan" },
+        { title: "Bishnupur" },
+        { title: "Digha" }
+      ]
   }
 };

@@ -20,12 +20,7 @@ const categories = [
   "BEDROOM",
   "BATHROOM",
   "OFFICE",
-  "KITCHEN",
-  "HALLWAY",
-  "KIDS",
-  "OUTDOOR",
-  "BUSINESS",
-  "OTHER"
+  "KITCHEN"
 ];
 
 // Expanded Data with 5+ items per category

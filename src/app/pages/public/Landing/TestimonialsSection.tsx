@@ -4,28 +4,32 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Jenkins",
-    role: "Living Room Redesign",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
-    quote: "I never thought I could afford an interior designer. Decorilla made it possible and the results are stunning!",
+    name: "Ankita Chatterjee",
+    role: "2BHK Flat Interior",
+    image: "https://i.pravatar.cc/150?u=ankita-modern-interior",
+    quote:
+      "Modern Interior completely transformed our flat. The team perfectly balanced modern aesthetics with practical space utilization.",
   },
   {
-    name: "Michael Ross",
-    role: "Home Office",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-    quote: "The 3D renderings were a game changer. I could see exactly how the furniture would fit before buying anything.",
+    name: "Sourav Mukherjee",
+    role: "Modular Kitchen Design",
+    image: "https://i.pravatar.cc/150?u=sourav-modern-interior",
+    quote:
+      "From planning to execution, Modern Interior handled everything professionally. The kitchen looks premium and highly functional.",
   },
   {
-    name: "Elena Rodriguez",
+    name: "Priyanka Sen",
     role: "Full Home Renovation",
-    image: "https://i.pravatar.cc/150?u=a04258114e29026302d",
-    quote: "Professional, timely, and incredibly talented designers. Highly recommend to anyone looking to refresh their home.",
+    image: "https://i.pravatar.cc/150?u=priyanka-modern-interior",
+    quote:
+      "The detailed designs and smooth execution impressed us the most. Modern Interior delivered exactly what they promised.",
   },
   {
-    name: "David Chen",
-    role: "Modern Apartment",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026024e",
-    quote: "Every detail was considered. They transformed my blank canvas apartment into a warm, inviting home.",
+    name: "Arijit Das",
+    role: "Living Room & Bedroom Makeover",
+    image: "https://i.pravatar.cc/150?u=arijit-modern-interior",
+    quote:
+      "Our home now feels elegant and comfortable at the same time. The team paid attention to every small detail throughout the project.",
   },
 ];
 
