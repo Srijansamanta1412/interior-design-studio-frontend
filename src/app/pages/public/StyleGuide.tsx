@@ -50,7 +50,7 @@ export default function StyleGuide() {
         </div>
       </section>
 
-      {/* 3. Typography */}
+      {/* 3. Typography For Text*/}
       <section className="space-y-4">
         <h2 className="text-xl font-bold">3. Typography</h2>
         <div className="border p-6 rounded-lg space-y-6">
