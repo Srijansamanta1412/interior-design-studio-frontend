@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { BlurImage } from "@/components/shared/BlurImage";
+import bathroom1 from "@/assets/images/bathroom/bathroom1.jpg";
 
 const categories = [
   "LIVING ROOM",
@@ -47,6 +48,7 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&q=80&w=1200"
   ],
   "BEDROOM": [
+    bathroom1,
     "https://images.unsplash.com/photo-1616594039964-40891a90969d?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=1200",
@@ -54,11 +56,7 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1522771753035-4848230d3f63?auto=format&fit=crop&q=80&w=1200"
   ],
   "BATHROOM": [
-    "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1564540580234-a129df627fa7?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1507652313519-d47f18056943?auto=format&fit=crop&q=80&w=1200"
+    bathroom1,
   ],
   "OFFICE": [
     "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&q=80&w=1200",

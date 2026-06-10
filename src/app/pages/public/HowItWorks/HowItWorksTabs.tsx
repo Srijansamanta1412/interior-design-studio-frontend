@@ -53,34 +53,10 @@ export function HowItWorksTabs() {
 
         {/* Outer Tabs: Before vs After */}
         <Tabs defaultValue="after" className="w-full max-w-5xl mx-auto flex flex-col items-center">
-            
-          {/* Outer Triggers */}
-          <TabsList className="grid w-full max-w-[400px] grid-cols-2 bg-transparent gap-4 mb-8">
-            <TabsTrigger 
-              value="before"
-              className="data-[state=active]:bg-gold data-[state=active]:text-white bg-muted text-muted-foreground border border-transparent rounded-none uppercase font-bold tracking-widest py-3 hover:bg-muted/80 transition-colors"
-            >
-              Before
-            </TabsTrigger>
-            <TabsTrigger 
-              value="after"
-              className="data-[state=active]:bg-gold data-[state=active]:text-white bg-muted text-muted-foreground border border-transparent rounded-none uppercase font-bold tracking-widest py-3 hover:bg-muted/80 transition-colors"
-            >
-              After
-            </TabsTrigger>
-          </TabsList>
-
-          {/* Before Content */}
-          <TabsContent value="before" className="w-full mt-0 focus-visible:ring-0">
-            <ImageGallery images={projectData.before} />
-          </TabsContent>
-
-          {/* After Content */}
-          <TabsContent value="after" className="w-full mt-0 focus-visible:ring-0">
-            <ImageGallery images={projectData.after} />
-          </TabsContent>
-
+          <ImageGallery images={projectData.after} />
         </Tabs>
+
+
 
         {/* Testimonial */}
         <motion.div 

@@ -457,7 +457,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
   {
     id: "cat-office",
     slug: "office",
-    name: "Home Office",
+    name: "Office",
     description:
       "See our home office designs — productive workspaces that balance function, comfort, and personal style.",
     heroImage:

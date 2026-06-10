@@ -106,7 +106,7 @@ export function Navbar() {
                       <div key={item.title} className="flex flex-col">
                         {item.items ? (
                           // Mobile "Accordion" style
-                          <AccordionItem value={item.title} className="border-b-0">
+                          <AccordionItem value={item.title || ""} className="border-b-0">
                             <div className="flex items-center justify-between py-2 border-b">
                                 <Link 
                                     to={item.href || "#"} 
