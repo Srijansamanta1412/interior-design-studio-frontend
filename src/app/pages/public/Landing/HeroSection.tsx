@@ -1,4 +1,4 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -40,11 +40,13 @@ export function HeroSection() {
           </h1>
 
           <div className="pt-8">
+          <Link to="/style-quiz-start">
               <Button
                 className="bg-gold hover:bg-gold/90 text-gold-foreground text-sm md:text-lg font-medium tracking-[0.15em] uppercase px-6 py-6 md:px-10 md:py-7 rounded-sm shadow-lg transition-all duration-300 hover:scale-105 w-full md:w-auto max-w-xs md:max-w-none"
               >
                 Start My Transformation
               </Button>
+          </Link>
           </div>
 
         </div>

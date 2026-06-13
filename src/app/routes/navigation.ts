@@ -2,7 +2,7 @@
 // This decouples "Menu Data" from "UI Components"
 
 export interface NavItem {
-  title: string;
+  title?: string;
   href?: string;
   description?: string; // Good for mega menus
   items?: NavItem[]; // Recursive children
@@ -17,21 +17,16 @@ export const navbarLinks: NavItem[] = [
   { 
     title: "Portfolio", 
     href: "/portfolio", // Main click goes to full portfolio
-    items: [
+    items: [      
       { title: "Living Room", href: "/portfolio/living-room", description: "Cozy and modern living spaces." },
       { title: "Kitchen & Dining", href: "/portfolio/kitchen", description: "Functional and stylish culinary hubs." },
       { title: "Bedroom", href: "/portfolio/bedroom", description: "Serene retreats and sleeping quarters." },
-      { title: "Home Office", href: "/portfolio/office", description: "Productive workspaces." },
+      { title: "Office", href: "/portfolio/office", description: "Productive workspaces." },
     ]
   },
   { 
     title: "How it Works", 
-    href: "/how-it-works",
-    items: [
-      { title: "The Process", href: "/how-it-works/process", description: "Step-by-step guide to your dream home." },
-      { title: "Pricing Packages", href: "/pricing", description: "Affordable flat-rate design packages." },
-      { title: "Compare Us", href: "/compare", description: "See how we stack up against traditional designers." },
-    ]
+    href: "/how-it-works"
   },
   { title: "Style Quiz", href: "/quiz" },
   { title: "Blogs", href: "/blog" },

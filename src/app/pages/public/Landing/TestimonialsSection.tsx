@@ -6,28 +6,28 @@ const testimonials = [
   {
     name: "Ankita Chatterjee",
     role: "2BHK Flat Interior",
-    image: "https://i.pravatar.cc/150?u=ankita-modern-interior",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop",
     quote:
       "Modern Interior completely transformed our flat. The team perfectly balanced modern aesthetics with practical space utilization.",
   },
   {
     name: "Sourav Mukherjee",
     role: "Modular Kitchen Design",
-    image: "https://i.pravatar.cc/150?u=sourav-modern-interior",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
     quote:
       "From planning to execution, Modern Interior handled everything professionally. The kitchen looks premium and highly functional.",
   },
   {
     name: "Priyanka Sen",
     role: "Full Home Renovation",
-    image: "https://i.pravatar.cc/150?u=priyanka-modern-interior",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop",
     quote:
       "The detailed designs and smooth execution impressed us the most. Modern Interior delivered exactly what they promised.",
   },
   {
     name: "Arijit Das",
     role: "Living Room & Bedroom Makeover",
-    image: "https://i.pravatar.cc/150?u=arijit-modern-interior",
+    image: "https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=400&auto=format&fit=crop",
     quote:
       "Our home now feels elegant and comfortable at the same time. The team paid attention to every small detail throughout the project.",
   },

@@ -3,26 +3,30 @@ import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { BlurImage } from "@/components/shared/BlurImage";
+import DiningHallAndEntraceBefore from "@/assets/images/dining/before/dining-hall-and-entrance-combined-before-renovation.jpg";
+import DiningHallAndEntraceAfter from "@/assets/images/dining/combined-dining-room-and-entryway-design.jpg"
+import LivingRoomTVUnitBefore from "@/assets/images/living/before/living-room-tv-unit-before-renovation.jpg";
+import LivingRoomTVUnitAfter from "@/assets/images/living/modern-living-room-tv-unit-design.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Modern Coastal Living Room and Bedroom Makeover",
-    beforeImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1200&auto=format&fit=crop",
-    challenge: "We would like a more minimal look with Feng Shui and natural elements that highlight our beautiful green view.",
-    result: "We got the relaxing dream home we always wanted. Wanda was fun to work with and paid attention to every single detail.",
-    author: "Kris",
+    title: "Refined Dining Room and Entrance Transformation",
+    beforeImage: DiningHallAndEntraceBefore,
+    afterImage: DiningHallAndEntraceAfter,
+    challenge: "We wanted our dining and entrance area to feel more elegant, spacious, and welcoming while keeping the design simple and functional for everyday family use.",
+    result: "The transformation completely changed the feel of our home. The entrance now looks warm and inviting, and the dining area feels refined, modern, and perfectly suited for family gatherings.",
+    author: "Ananya",
     link: "/portfolio/project-1"
   },
   {
     id: 2,
-    title: "Urban Industrial Loft Transformation",
-    beforeImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
-    challenge: "Our loft felt cold and empty. We wanted to add warmth and define separate zones without losing the open concept.",
-    result: "The design team perfectly balanced industrial elements with cozy textures. It feels like a completely new home.",
-    author: "Sarah",
+    title: "Modern Living Room & TV Unit Transformation",
+    beforeImage: LivingRoomTVUnitBefore,
+    afterImage: LivingRoomTVUnitAfter,
+    challenge: "Our living room felt outdated and lacked proper storage and visual balance around the TV unit. We wanted a modern design that looked stylish while still feeling comfortable for everyday family time.",
+    result: "The new design completely transformed our space. The TV unit looks sleek and elegant, and the living room now feels more spacious, organized, and perfect for relaxing or hosting guests.",
+    author: "Rohan",
     link: "/portfolio/project-2"
   }
 ];

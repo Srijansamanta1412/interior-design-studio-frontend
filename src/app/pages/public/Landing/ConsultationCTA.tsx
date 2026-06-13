@@ -26,7 +26,14 @@ export function ConsultationCTA() {
           size="lg"
           className="px-10 py-7 text-sm rounded-none uppercase tracking-[0.15em]" // Keeping rounded-none as it fits this specific section design better, but using theme colors
         >
+            <a
+    href="https://wa.me/8697663161?text=Hi%20I%20would%20like%20to%20schedule%20a%20consultation."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+
           Schedule a Consultation
+          </a>
         </Button>
       </div>
     </section>
