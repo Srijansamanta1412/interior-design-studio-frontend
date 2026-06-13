@@ -41,13 +41,13 @@ export function HowItWorksHero() {
 
           {/* Subtext */}
           <p className="text-lg md:text-xl md:max-w-2xl leading-relaxed drop-shadow-md font-light text-gray-100/90">
-            Experience a seamless online design process tailored to your style and budget. Transform your space in just a few easy steps.
+              Transform your space with personalized interior designs that match your style and budget.          
           </p>
 
           {/* CTAs */}
           <div className="pt-8 flex flex-col md:flex-row gap-5 w-full md:w-auto justify-center items-center">
             {/* CTA 1: Gold Primary */}
-            <Link to="/start-project" className="w-full md:w-auto">
+            <Link to="/style-quiz-start" className="w-full md:w-auto">
               <Button
                 className="bg-gold hover:bg-gold-dark text-white text-sm md:text-base font-bold tracking-[0.15em] uppercase px-10 py-7 w-full md:w-auto shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gold/20"
               >

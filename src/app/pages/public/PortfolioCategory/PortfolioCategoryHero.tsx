@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+// import { Link } from "react-router-dom";
+// import { Button } from "@/components/ui/button";
+// import { ArrowRight } from "lucide-react";
 
 interface PortfolioCategoryHeroProps {
   name: string;
@@ -34,14 +34,6 @@ export function PortfolioCategoryHero({
       {/* Content Overlay */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
         <div className="max-w-4xl space-y-6 animate-fade-in-up flex flex-col items-center">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-white/70">
-            <Link to="/portfolio" className="hover:text-gold transition-colors">
-              Portfolio
-            </Link>
-            <span>/</span>
-            <span className="text-white">{name}</span>
-          </nav>
 
           {/* Title */}
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-tight drop-shadow-xl">
@@ -58,12 +50,12 @@ export function PortfolioCategoryHero({
 
           {/* CTA */}
           <div className="pt-4">
-            <Link to="/quiz">
+            {/*<Link to="/quiz">
               <Button className="bg-gold hover:bg-gold-dark text-white text-sm md:text-base font-bold tracking-[0.15em] uppercase px-10 py-7 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gold/20 flex items-center gap-2 group">
                 Start Your Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </Link>*/}
           </div>
         </div>
       </div>
