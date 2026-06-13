@@ -12,14 +12,25 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { BlurImage } from "@/components/shared/BlurImage";
-import bathroom1 from "@/assets/images/bathroom/bathroom1.jpg";
+import ModernFullBathroomView from "@/assets/images/bathroom/modern-full-bathroom-view.jpg";
+import ModernBathroomAndBasinView from "@/assets/images/bathroom/modern-bathroom-basin-and-mirror.jpg";
+import BathroomWalkInShowerAndComot from "@/assets/images/bathroom/bathroom-walk-in-shower-and-toilet.jpg";
+import ModernEnsuiteBathroomFullView from "@/assets/images/bathroom/modern-ensuite-bathroom-full-view.jpg";
+import EnsuiteWalkInShowerArea from "@/assets/images/bathroom/ensuite-walk-in-shower-area.jpg";
+import LuxuryIlluminatedBathroomPanelMirror from "@/assets/images/bathroom/luxury-illuminated-bathroom-panel-mirror.jpg";
+import IndianClassicDining from "@/assets/images/dining/indian-classic-dining.jpg";
+import BrightOpenSpaceDiningRoom from "@/assets/images/dining/bright-open-space-dining-room.jpg";
+import CombinedDiningRoomAndEntryWayDesign from "@/assets/images/dining/combined-dining-room-and-entryway-design.jpg";
+import ModernFamilySizeDiningArea from "@/assets/images/dining/modern-family-size-dining-area.jpg";
+import VibrantBrightlyColouredDiningHall from "@/assets/images/dining/vibrant-brightly-coloured-dining-hall.jpg";
+
 
 const categories = [
-  "LIVING ROOM",
   "DINING ROOM",
-  "COMBINED LIVING/DINING",
-  "BEDROOM",
   "BATHROOM",
+  "LIVING ROOM",
+  "COMBINED LIVING/DINING",
+  "BEDROOM",  
   "OFFICE",
   "KITCHEN"
 ];
@@ -34,11 +45,12 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&q=80&w=1200"
   ],
   "DINING ROOM": [
+    IndianClassicDining,
+    BrightOpenSpaceDiningRoom,
+    CombinedDiningRoomAndEntryWayDesign,
+    ModernFamilySizeDiningArea,
+    VibrantBrightlyColouredDiningHall,
     "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1576158189578-18e3881ca768?auto=format&fit=crop&q=80&w=1200"
   ],
   "COMBINED LIVING/DINING": [
     "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200",
@@ -48,7 +60,6 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&q=80&w=1200"
   ],
   "BEDROOM": [
-    bathroom1,
     "https://images.unsplash.com/photo-1616594039964-40891a90969d?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=1200",
@@ -56,7 +67,12 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1522771753035-4848230d3f63?auto=format&fit=crop&q=80&w=1200"
   ],
   "BATHROOM": [
-    bathroom1,
+    ModernFullBathroomView,
+    LuxuryIlluminatedBathroomPanelMirror,
+    BathroomWalkInShowerAndComot,
+    ModernEnsuiteBathroomFullView,
+    ModernBathroomAndBasinView,
+    EnsuiteWalkInShowerArea,
   ],
   "OFFICE": [
     "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&q=80&w=1200",
@@ -143,7 +159,7 @@ export function RealSpacesSection() {
         </h2>
 
         {/* Categories / Tabs */}
-        <Tabs defaultValue="LIVING ROOM" className="w-full mb-12">
+        <Tabs defaultValue="DINING ROOM" className="w-full mb-12">
           <TabsList variant="line" className="bg-transparent flex flex-nowrap overflow-x-auto justify-start md:justify-center gap-x-8 mb-12 border-b-0 w-screen relative left-1/2 right-1/2 -ml-[50vw] h-auto no-scrollbar scroll-smooth px-4 md:px-12">
             {categories.map((category) => (
               <TabsTrigger
