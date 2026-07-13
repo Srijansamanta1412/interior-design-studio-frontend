@@ -1,41 +1,47 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Quote } from "lucide-react";
+import CombinedLivingAndDingRoom from "@/assets/images/dining/combined-dining-room-and-entryway-design.jpg";
+import IndianClassicDiningRoom from "@/assets/images/dining/indian-classic-dining.jpg";
 
 // Mock Data
 const projectData = {
-  title: "Sleek & Modern Living Room Interior Design",
+  title: "Transforming Dining Rooms with Timeless Designs",
   before: [
     {
       src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
-      alt: "Living Room Before 1"
+      alt: "Dining Room Before 1"
     },
     {
       src: "https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?q=80&w=1200&auto=format&fit=crop",
-      alt: "Living Room Before 2"
+      alt: "Dining Room Before 2"
     },
     {
-      src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200&auto=format&fit=crop",
-      alt: "Living Room Before 3"
+      src: IndianClassicDiningRoom,
+      alt: "Dining Room Before 3"
     }
   ],
   after: [
     {
-      src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
-      alt: "Living Room After 1 (Modern)"
+      src: CombinedLivingAndDingRoom,
+      alt: "Dining Room After 1 (Modern)"
     },
     {
-      src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
-      alt: "Living Room After 2 (Detail)"
+      src: "https://plus.unsplash.com/premium_photo-1671269942393-ab3372a09ce9?q=80&w=909&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Dining Room After 2 (Detail)"
     },
     {
-      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
-      alt: "Living Room After 3 (Angle)"
+      src: IndianClassicDiningRoom,
+      alt: "Dining Room After 3"
+    },
+    {
+      src: "https://plus.unsplash.com/premium_photo-1671269943736-3ffe2ac923f6?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Dining Room After 3 (Angle)"
     }
   ],
   testimonial: {
-    text: "Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.",
-    author: "Liz"
+    text: "We're delighted with our new dining room. Modern Interior created a space that's elegant, welcoming, and perfect for everyday family meals as well as festive gatherings.",
+    author: "Prodeepto"
   }
 };
 

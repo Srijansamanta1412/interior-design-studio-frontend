@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { HowItWorksHero } from "./HowItWorks/HowItWorksHero";
 import { SectionLoader } from "@/components/shared/SectionLoader";
+import ModernBathroomFullView from "@/assets/images/bathroom/modern-full-bathroom-view.jpg";
 
 // Lazy load below-the-fold sections
 const HowItWorksTabs = lazy(() => import("./HowItWorks/HowItWorksTabs").then(module => ({ default: module.HowItWorksTabs })));
@@ -22,9 +23,9 @@ const Portfolio = () => {
 
         <Suspense fallback={<SectionLoader height="h-[600px]" />}>
           <HowItWorksProjectDetails 
-            title="Black and White Living Room Design"
-            designer="Renata P."
-            imageSrc="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200&auto=format&fit=crop"
+            title="Premium Living Room Interior"
+            designer="Priyanka Sarkar"
+            imageSrc="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=1200"
           />
         </Suspense>
 
@@ -34,9 +35,9 @@ const Portfolio = () => {
 
         <Suspense fallback={<SectionLoader height="h-[600px]" />}>
           <HowItWorksProjectDetails 
-            title="Modern Living Room Dining Room Combo"
-            designer="Meric S."
-            imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop"
+            title="Elegant Bathroom Design"
+            designer="Angela Mayur"
+            imageSrc={ModernBathroomFullView}
             reversed={true}
           />
         </Suspense>

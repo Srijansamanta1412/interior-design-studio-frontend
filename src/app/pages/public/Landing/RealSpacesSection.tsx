@@ -56,8 +56,8 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1560185127-6a6a6d63c411?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&q=80&w=1200"
+    "https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&q=80&w=1200",
+    "https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   ],
   "BEDROOM": [
     "https://images.unsplash.com/photo-1616594039964-40891a90969d?auto=format&fit=crop&q=80&w=1200",
