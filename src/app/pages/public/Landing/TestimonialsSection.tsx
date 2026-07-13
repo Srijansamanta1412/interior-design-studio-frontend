@@ -1,5 +1,4 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -75,7 +74,7 @@ export function TestimonialsSection() {
 
                     {/* Author Info */}
                     <div className="flex flex-col items-center gap-4">
-                      <Avatar className="w-16 h-16 border-2 border-gold p-1">
+                      {/*<Avatar className="w-16 h-16 border-2 border-gold p-1">
                         <AvatarImage 
                           src={t.image} 
                           alt={t.name}
@@ -84,7 +83,7 @@ export function TestimonialsSection() {
                           className="rounded-full object-cover" 
                         />
                         <AvatarFallback>{t.name[0]}</AvatarFallback>
-                      </Avatar>
+                      </Avatar>*/}
 
                       <div className="text-center">
                         <cite className="not-italic text-sm font-bold uppercase tracking-widest text-foreground block mb-1">

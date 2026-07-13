@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ModernLivingRoomInteriors from "@/assets/images/living/modern-living-room-tv-unit-design.jpg";
 
 // Mock Data
 const projectData = {
-  title: "Luxury Living Room & Dining Room Combined",
+  title: "Discover Elegant Living Room Interiors",
   images: [
     {
-      src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
+      src: ModernLivingRoomInteriors,
       alt: "Luxury Living Room Main View"
     },
     {
@@ -14,17 +15,17 @@ const projectData = {
       alt: "Luxury Dining Area"
     },
     {
-      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Living Room Seating"
     },
     {
-      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Open Concept View"
     }
   ],
   testimonial: {
-    text: "I was truly lucky to find Decorilla, I got the interior design of my dreams and their process was very friendly! I couldn't be happier!",
-    author: "Michelle"
+    text: "Choosing Modern Interior was the best decision for our home. The entire process was smooth, professional, and the final result exceeded our expectations.",
+    author: "Dhrupadi Banerjee"
   }
 };
 
