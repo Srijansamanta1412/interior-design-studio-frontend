@@ -16,12 +16,11 @@ export function HowItWorksProjectDetails({
   designer, 
   imageSrc, 
   features = [
-    "Up to 45% off furniture & decor (Decorilla can pay for itself!)",
     "3D renderings of your new room",
     "Floorplan & furniture placement",
-    "Shopping list with links",
-    "Moodboard",
+    "Style guide with furniture & decor recommendations",
     "Paint color palette",
+    "Lighting & fixture recommendations",
     "Tips & implementation guide"
   ],
   reversed = false

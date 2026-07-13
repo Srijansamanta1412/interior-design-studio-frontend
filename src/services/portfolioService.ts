@@ -81,8 +81,8 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
           },
         ],
         testimonial: {
-          text: "Thank you for all of the beautiful ideas! I just love my new living room design. It's a perfect blend of contemporary without being too cold.",
-          author: "Liz",
+          text: "We're delighted with our new dining room. Modern Interior created a space that's elegant, welcoming, and perfect for everyday family meals as well as festive gatherings.",
+          author: "Prodeepto",
         },
         tags: ["Modern", "Contemporary", "Neutral Palette"],
       },
