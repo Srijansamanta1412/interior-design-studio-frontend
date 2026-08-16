@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { MessageSquare } from "lucide-react";
 import { BlurImage } from "@/components/shared/BlurImage";
+import KitchenView from "@/assets/images/how-it-works/Kitchen.jpeg";
+import KitchenCabitnet from "@/assets/images/how-it-works/Kitchen Cabinet.jpeg";
+import GreenWardrobe from "@/assets/images/how-it-works/Green Wardrobe.jpeg";
+import TrackProgress from "@/assets/images/how-it-works/Track Progress.jpeg";
 
 export function PortfolioSteps() {
   return (
@@ -18,8 +21,8 @@ export function PortfolioSteps() {
             className="w-full md:w-1/2"
           >
              <BlurImage
-                src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?q=80&w=1200&auto=format&fit=crop"
-                alt="Client filling out design questionnaire"
+                src={KitchenView}
+                alt="Starting a design"
                 ratio={4/3}
                 containerClassName="rounded-2xl shadow-2xl"
              />
@@ -75,16 +78,16 @@ export function PortfolioSteps() {
                >
                   <div className="relative mb-2 bg-gray-50 rounded overflow-hidden">
                      <BlurImage 
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop"
+                        src={TrackProgress}
                         alt="Kitchen Design Board"
                         ratio={4/3}
                      />
                   </div>
                   <div className="flex items-center gap-2 px-1">
-                    <div className="w-6 h-6 rounded-full bg-gray-200 overflow-hidden">
+                    {/* <div className="w-6 h-6 rounded-full bg-gray-200 overflow-hidden">
                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop" className="w-full h-full object-cover" alt="D2"/>
-                    </div>
-                    <span className="text-xs font-semibold text-gray-600">Designer #2</span>
+                    </div> */}
+                    <span className="text-xs font-semibold text-gray-600">Kitchen Wardrobe</span>
                   </div>
                </motion.div>
 
@@ -98,7 +101,7 @@ export function PortfolioSteps() {
                >
                    <div className="relative bg-gray-50 rounded overflow-hidden">
                       <BlurImage 
-                        src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=800&auto=format&fit=crop"
+                        src={GreenWardrobe}
                         alt="Living Area Plan"
                         ratio={4/3}
                       />
@@ -119,7 +122,7 @@ export function PortfolioSteps() {
                   <div className="relative w-full shadow-inner rounded overflow-hidden">
                      {/* Responsive Aspect Ratio handled via className since BlurImage ratio prop is fixed */}
                      <BlurImage 
-                        src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop"
+                        src={KitchenCabitnet}
                         alt="Winning Design Concept Board"
                         containerClassName="aspect-4/3 md:aspect-16/11"
                      />
@@ -128,15 +131,15 @@ export function PortfolioSteps() {
 
               {/* Gold Footer Bar */}
               <div className="bg-gold w-full h-12 md:h-14 rounded-b-lg flex items-center justify-between px-4 shadow-md">
-                 <div className="flex items-center gap-3">
+                 {/* <div className="flex items-center gap-3">
                     <div className="w-8 h-8 md:w-9 md:h-9 rounded-full border-2 border-white overflow-hidden bg-white/20">
                       <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Designer" className="w-full h-full object-cover" />
                     </div>
                     <span className="text-white font-bold text-sm md:text-base tracking-wide">Designer #1</span>
-                 </div>
+                 </div> */}
                  <div className="text-white/90 text-sm font-medium flex items-center gap-1.5 opacity-90">
-                   <MessageSquare className="w-4 h-4" />
-                   <span>(5)</span>
+                   
+                   <span>Elegant Kitchen Space</span>
                  </div>
               </div>
             </motion.div>
@@ -172,7 +175,7 @@ export function PortfolioSteps() {
           >
              <div className="flex items-center gap-4">
               <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gold text-white font-serif text-2xl font-bold shadow-lg shrink-0">3</span>
-              <h3 className="font-serif text-3xl md:text-4xl">Work Closely With Your Chosen Designer</h3>
+              <h3 className="font-serif text-3xl md:text-4xl">Work Closely With Our Designers</h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Your designer will work with you to bring your design to life, using the perfect combination of new and existing pieces. With the help of AI interior design tools, they'll review and refine your custom-made 3D model, floor plan, color palette, and shopping list with you every step of the way.

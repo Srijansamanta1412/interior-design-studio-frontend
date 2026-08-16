@@ -3,11 +3,11 @@ import { Check, X } from "lucide-react";
 import { Logo } from "@/components/shared/Logo";
 
 const comparisonData = [
+
   {
-    feature: "Price",
-    decorilla: "$599.00+",
-    traditional: "$2,000.00+",
-    isText: true,
+    feature: "Free Consultation and Site Measurement",
+    decorilla: true,
+    traditional: false,
   },
   {
     feature: "Unlimited Communication",
@@ -26,7 +26,7 @@ const comparisonData = [
     traditionalType: "check", // Let's give them a check if they communicate, but maybe standard color. 
   },
   {
-    feature: "Realistic 3D Model",
+    feature: "Realistic 3D Designs",
     decorilla: true,
     traditional: false,
   },
@@ -36,12 +36,7 @@ const comparisonData = [
     traditional: false,
   },
   {
-    feature: "Interactive Online Platform",
-    decorilla: true,
-    traditional: false,
-  },
-  {
-    feature: "Trade Discounts on Furniture",
+    feature: "Exclusive Discounts on Furniture & Decor",
     decorilla: true,
     traditional: false,
   },
@@ -65,7 +60,7 @@ export function PortfolioComparison() {
           className="text-center mb-16"
         >
           <h2 className="font-serif text-3xl md:text-5xl text-foreground">
-            Decorilla vs Traditional Interior Design
+            Modern Interior vs Traditional Interior Design
           </h2>
         </motion.div>
 
@@ -99,24 +94,25 @@ export function PortfolioComparison() {
 
                         {/* Decorilla Value */}
                         <div className="flex justify-center text-center">
-                            {row.isText ? (
+                            {/* {row.isText ? (
                                 <span className="font-bold text-lg md:text-xl text-foreground">{row.decorilla}</span>
                             ) : (
                                 row.decorilla && <div className="bg-gold/10 p-1.5 rounded-full"><Check className="w-6 h-6 text-gold" strokeWidth={3} /></div>
-                            )}
+                            )} */}
+                              <div className="bg-gold/10 p-1.5 rounded-full"><Check className="w-6 h-6 text-gold" strokeWidth={3} /></div>
+     
                         </div>
 
                         {/* Traditional Value */}
                         <div className="flex justify-center text-center opacity-70">
-                             {row.isText ? (
-                                <span className="font-semibold text-lg md:text-xl text-muted-foreground/80">{row.traditional}</span>
-                            ) : (
+                             { (
                                 row.traditionalType === "check" ? (
                                      <div className="bg-muted p-1.5 rounded-full"><Check className="w-6 h-6 text-muted-foreground/50" strokeWidth={3} /></div>
                                 ) : (
                                      <div className="bg-red-50 p-1.5 rounded-full"><X className="w-6 h-6 text-red-400" strokeWidth={3} /></div>
                                 )
-                            )}
+                            )
+                            }
                         </div>
                     </motion.div>
                 ))}

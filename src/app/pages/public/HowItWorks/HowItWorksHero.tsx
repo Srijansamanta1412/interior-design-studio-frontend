@@ -12,11 +12,8 @@ export function HowItWorksHero() {
       <div className="absolute inset-0 z-0">
         <img
           srcSet="
-            https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop&fm=webp 800w,
-            https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop&fm=webp 1200w,
-            https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop&fm=webp 2000w
           "
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1633330977020-2bdfb8530cc2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           sizes="100vw"
           alt="Modern Interior Design Process"
           width="2000"
