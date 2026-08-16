@@ -7,26 +7,16 @@ import type { PortfolioCategory, PortfolioProject } from "@/types/portfolio";
 
 // --- MOCK DESIGNERS ---
 const DESIGNERS = {
-  renata: {
-    name: "Renata P.",
+  priyanka: {
+    name: "Priyanka Sarkar",
     avatar: "https://i.pravatar.cc/150?u=renata-designer",
-    role: "Senior Interior Designer",
+    role: "Interior Designer",
   },
-  meric: {
-    name: "Meric S.",
+  angela: {
+    name: "Angela Mayur",
     avatar: "https://i.pravatar.cc/150?u=meric-designer",
-    role: "Lead Designer",
-  },
-  elena: {
-    name: "Elena R.",
-    avatar: "https://i.pravatar.cc/150?u=elena-designer",
-    role: "Design Director",
-  },
-  james: {
-    name: "James K.",
-    avatar: "https://i.pravatar.cc/150?u=james-designer",
-    role: "Interior Architect",
-  },
+    role: "Interior Designer",
+  }
 };
 
 // --- MOCK CATEGORIES WITH PROJECTS ---
@@ -41,7 +31,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
     description:
       "Discover our curated collection of living room transformations — from cozy family spaces to sleek modern lounges.",
     heroImage:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     heroSubtitle:
       "Explore stunning living room makeovers crafted by our expert designers",
     projects: [
@@ -51,7 +41,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Sleek & Modern Living Room Interior Design",
         description:
           "A complete transformation of a dated living space into a contemporary haven with clean lines and warm textures.",
-        designer: DESIGNERS.renata,
+        designer: DESIGNERS.priyanka,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
@@ -68,12 +58,12 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         ],
         afterImages: [
           {
-            src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
-            alt: "Living Room After - Modern design",
-          },
-          {
             src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
             alt: "Living Room After - Detail view",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
+            alt: "Living Room After - Modern design",
           },
           {
             src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
@@ -88,12 +78,11 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
       },
       {
         id: "lr-2",
-        slug: "cozy-bohemian-lounge",
-        title: "Cozy Bohemian Lounge Makeover",
+        slug: "beautiiful-space-everyday-moments",
+        title: "A Beautiful Space for Everyday Moments",
         description:
-          "Layered textures, warm earth tones, and eclectic decor brought this living room to life with bohemian charm.",
-        designer: DESIGNERS.elena,
-        beforeImages: [
+          "Thoughtfully designed with comfortable seating, subtle Indian accents, and a welcoming atmosphere, this living room is perfect for everyday family moments.",     designer: DESIGNERS.priyanka,
+                beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1200&auto=format&fit=crop",
             alt: "Bohemian Before - Plain room",
@@ -123,17 +112,17 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         ],
         testimonial: {
           text: "My living room finally feels like me. The mix of plants, textures, and colors is exactly what I dreamed of. I never want to leave!",
-          author: "Sarah",
+          author: "Ankita",
         },
-        tags: ["Bohemian", "Eclectic", "Warm Tones"],
+        tags: ["Relaxed", "Stylish", "Inviting"],
       },
       {
         id: "lr-3",
         slug: "minimalist-scandinavian-space",
-        title: "Minimalist Scandinavian Living Space",
+        title: "The Art of Simple Living",
         description:
           "Clean lines, natural materials, and a restrained color palette create a serene Scandinavian-inspired retreat.",
-        designer: DESIGNERS.meric,
+        designer: DESIGNERS.angela,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200&auto=format&fit=crop",
@@ -142,11 +131,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
           {
             src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop",
             alt: "Scandi Before - Old layout",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop",
-            alt: "Scandi Before - Existing furniture",
-          },
+          }
         ],
         afterImages: [
           {
@@ -164,9 +149,9 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         ],
         testimonial: {
           text: "Less really is more. The space feels so much bigger and calmer now. Every piece has a purpose and it's absolutely beautiful.",
-          author: "Marcus",
+          author: "Arijit",
         },
-        tags: ["Scandinavian", "Minimalist", "Natural"],
+        tags: ["Minimalist", "Spacious", "Functional"],
       },
     ],
   },
@@ -191,7 +176,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Chef's Dream Kitchen Renovation",
         description:
           "A professional-grade kitchen transformation with marble countertops, custom cabinetry, and a massive island.",
-        designer: DESIGNERS.james,
+        designer: DESIGNERS.angela,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=1200&auto=format&fit=crop",
@@ -222,7 +207,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         ],
         testimonial: {
           text: "This kitchen has completely changed how our family cooks and entertains. The island is a game-changer — it's the heart of our home now.",
-          author: "David & Maria",
+          author: "Ishani",
         },
         tags: ["Luxury", "Professional", "Marble"],
       },
@@ -232,7 +217,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Open-Plan Kitchen & Dining Transformation",
         description:
           "Knocking down walls to create a seamless flow between cooking and dining, perfect for modern family living.",
-        designer: DESIGNERS.renata,
+        designer: DESIGNERS.priyanka,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop",
@@ -263,7 +248,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         ],
         testimonial: {
           text: "We can finally cook and chat with our guests at the same time. The open plan design makes everything feel so spacious and connected.",
-          author: "Tom",
+          author: "Shouvik",
         },
         tags: ["Open Plan", "Modern", "Family"],
       },
@@ -273,7 +258,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Rustic Farmhouse Kitchen Design",
         description:
           "Reclaimed wood, apron-front sinks, and vintage hardware create a warm and inviting farmhouse-style kitchen.",
-        designer: DESIGNERS.elena,
+        designer: DESIGNERS.priyanka,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1200&auto=format&fit=crop",
@@ -293,7 +278,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
             src: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1200&auto=format&fit=crop",
             alt: "Farmhouse After - Reclaimed wood",
           },
-          {
+          {  
             src: "https://images.unsplash.com/photo-1583845112203-29329902332e?q=80&w=1200&auto=format&fit=crop",
             alt: "Farmhouse After - Apron sink",
           },
@@ -304,7 +289,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         ],
         testimonial: {
           text: "It feels like a country estate kitchen but in our suburban home. The reclaimed wood beams and farmhouse sink are absolutely stunning.",
-          author: "Patricia",
+          author: "Sombudhdha",
         },
         tags: ["Farmhouse", "Rustic", "Warm"],
       },
@@ -331,7 +316,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Serene Master Suite Redesign",
         description:
           "Soft neutrals, plush textiles, and ambient lighting create the ultimate relaxation sanctuary.",
-        designer: DESIGNERS.elena,
+        designer: DESIGNERS.priyanka,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
@@ -372,7 +357,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Modern Guest Bedroom Refresh",
         description:
           "A welcoming guest bedroom with boutique-hotel vibes — thoughtful amenities and sophisticated styling.",
-        designer: DESIGNERS.meric,
+        designer: DESIGNERS.angela,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1200&auto=format&fit=crop",
@@ -413,7 +398,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Luxe Primary Retreat with Walk-in Closet",
         description:
           "A full primary bedroom suite with custom walk-in closet, seating area, and spa-inspired ensuite.",
-        designer: DESIGNERS.james,
+        designer: DESIGNERS.angela,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200&auto=format&fit=crop",
@@ -471,7 +456,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Executive Home Office Design",
         description:
           "A sophisticated workspace with dark wood, leather accents, and professional video-call-ready backdrop.",
-        designer: DESIGNERS.james,
+        designer: DESIGNERS.priyanka,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1200&auto=format&fit=crop",
@@ -512,7 +497,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Creative Studio Workspace",
         description:
           "An inspiring creative workspace with ample natural light, pin boards, and flexible work zones.",
-        designer: DESIGNERS.renata,
+        designer: DESIGNERS.priyanka,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?q=80&w=1200&auto=format&fit=crop",
@@ -553,7 +538,7 @@ const MOCK_CATEGORIES: PortfolioCategory[] = [
         title: "Compact Workspace Under the Stairs",
         description:
           "Maximizing an underused nook into a fully functional home office with clever storage solutions.",
-        designer: DESIGNERS.meric,
+        designer: DESIGNERS.angela,
         beforeImages: [
           {
             src: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200&auto=format&fit=crop",
@@ -637,5 +622,5 @@ export const portfolioService = {
         resolve(null);
       }, 400);
     });
-  },
+  },   
 };

@@ -1,11 +1,15 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import { BlurImage } from "@/components/shared/BlurImage";
+import ModularKitchen from "@/assets/images/how-it-works/Modular Kitchen.jpeg";
+import EnsuiteWalkInShowerArea from "@/assets/images/bathroom/ensuite-walk-in-shower-area.jpg";
+import GreenWardrobe from "@/assets/images/how-it-works/Green Wardrobe.jpeg";
+
 
 const deliverables = [
   {
     title: "Concepts From Multiple Designers",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop",
+    image: GreenWardrobe,
     alt: "Multiple design concepts on a screen",
     delay: 0.1,
   },
@@ -17,13 +21,13 @@ const deliverables = [
   },
   {
     title: "Final Photorealistic 3D Designs",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=600&auto=format&fit=crop", // Reverting to high-quality render
+    image: ModularKitchen, // Reverting to high-quality render
     alt: "Photorealistic 3D render of a living room",
     delay: 0.3,
   },
   {
     title: "Floor Plan And Color Palette",
-    image: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=600&auto=format&fit=crop", // Blueprint/Plan
+    image: EnsuiteWalkInShowerArea, // Blueprint/Plan
     alt: "Architectural floor plan and color swatches",
     delay: 0.4,
   },

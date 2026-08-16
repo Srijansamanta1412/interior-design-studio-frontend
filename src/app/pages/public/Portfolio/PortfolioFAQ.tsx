@@ -16,16 +16,16 @@ const faqs = [
     answer: "We are a 100% online interior design service. This allows us to offer top-tier design talent to anyone, anywhere, at a fraction of the cost of traditional in-person design."
   },
   {
-    question: "Do I have to buy the items right away?",
-    answer: "No, absolutely not! Your shopping list and exclusive trade discounts never expire. You can purchase items at your own pace, all at once or one by one, whenever you are ready."
-  },
-  {
     question: "What happens once I select the winning design?",
     answer: "Once you select a winning concept, you'll work 1-on-1 with that designer to refine the space. You'll collaborate on the floor plan, 3D renders, and shopping list until the design is exactly what you envisioned."
   },
   {
-    question: "How do I receive your exclusive furniture discounts?",
-    answer: "Our white-glove concierge team handles all the ordering for you. When you're ready to buy, simply check out through our platform, and we'll apply the trade discounts automatically and manage the shipping logistics."
+    question: "Can I request changes to the design?",
+    answer: "Absolutely. We work closely with you throughout the design process to understand your preferences and make adjustments based on your feedback. Our goal is to create a space that reflects your style, needs, and vision."
+  },
+  {
+  question: "Can you design different types of spaces?",
+  answer: "Yes, we can design a wide range of spaces, including living rooms, bedrooms, kitchens, dining areas, home offices, and more. We also provide multiple design concepts so you can explore different styles and choose the one that best suits your space and preferences."
   }
 ];
 

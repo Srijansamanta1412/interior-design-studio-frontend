@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { BlurImage } from "@/components/shared/BlurImage";
+import DreamSpace from "@/assets/images/how-it-works/Dream Space.jpeg";
+import GreenWardrobe from "@/assets/images/how-it-works/Green Wardrobe.jpeg";
+
 
 export function PortfolioBottomSteps() {
   return (
@@ -17,12 +20,10 @@ export function PortfolioBottomSteps() {
             className="w-full md:w-1/2"
           >
              <div className="relative p-4">
-                {/* Simple Laptop Frame CSS or just a clean screenshot of a laptop */}
-                {/* Using a high quality mockup style image */}
                 <BlurImage
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
-                    alt="Online shopping for furniture on a laptop"
-                    ratio={4/3}
+                    src= {GreenWardrobe}
+                    alt="Track Progress"
+                    ratio={3/3}
                     containerClassName="rounded-2xl shadow-2xl"
                  />
              </div>
@@ -38,11 +39,10 @@ export function PortfolioBottomSteps() {
           >
             <div className="flex items-center gap-4">
               <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gold text-white font-serif text-2xl font-bold shadow-lg shrink-0">4</span>
-              <h3 className="font-serif text-3xl md:text-4xl uppercase tracking-wide">Order and Track Your Items</h3>
+              <h3 className="font-serif text-3xl md:text-4xl uppercase tracking-wide">Track thr Progress</h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              You'll have the flexibility to buy the items on your own timeline as needed. Our white-glove shopping concierge service never expires and ensures that you'll get the best price possible with our exclusive discounts saving you $1000s.
-            </p>
+              Watch your visual completion percentage update in real time. Disregard or revert unauthorized modifications that doesn't go with your initial requirements.   </p>
           </motion.div>
         </div>
 
@@ -57,7 +57,7 @@ export function PortfolioBottomSteps() {
           >
              <div className="flex items-center justify-center gap-4">
               <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gold text-white font-serif text-2xl font-bold shadow-lg shrink-0">5</span>
-              <h3 className="font-serif text-3xl md:text-4xl uppercase tracking-wide">Enjoy Your Dream Room Design!</h3>
+              <h3 className="font-serif text-3xl md:text-4xl uppercase tracking-wide">Enjoy Your Dream Space</h3>
             </div>
           </motion.div>
 
@@ -70,7 +70,7 @@ export function PortfolioBottomSteps() {
             className="w-full"
           >
             <BlurImage 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop"
+                src={DreamSpace}
                 alt="Completed dream living room design with high ceilings"
                 ratio={16/9}
                 containerClassName="rounded-3xl shadow-2xl"

@@ -14,10 +14,7 @@ export function PortfolioHero() {
           // 2. Serve right size for right device (800w for mobile, 2000w for desktop)
           // Using a different Unsplash image suitable for Portfolio (Modern Living Room)
           srcSet="
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop&fm=webp 800w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop&fm=webp 1200w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop&fm=webp 2000w
-          "
+        "
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop"
           sizes="100vw"
           alt="Modern Living Room Interior Design"
@@ -49,7 +46,7 @@ export function PortfolioHero() {
           {/* CTAs */}
           <div className="pt-8 flex flex-col md:flex-row gap-4 w-full md:w-auto justify-center">
             {/* CTA 1: Gold Primary */}
-            <Link to="/start-project">
+            <Link to="/style-quiz-start">
               <Button
                 className="bg-gold hover:bg-gold/90 text-gold-foreground text-sm md:text-base font-bold tracking-[0.15em] uppercase px-8 py-6 w-full md:w-auto shadow-lg transition-all duration-300 hover:scale-105"
               >
