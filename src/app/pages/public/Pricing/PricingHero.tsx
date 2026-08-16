@@ -1,12 +1,5 @@
-import { useRef } from "react";
-import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import confetti from "canvas-confetti";
 
-interface PricingHeroProps {
-  isMonthly: boolean;
-  setIsMonthly: (value: boolean) => void;
-}
 
 export function PricingHero(){
 

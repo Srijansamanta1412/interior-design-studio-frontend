@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense} from "react";
 import { SectionLoader } from "@/components/shared/SectionLoader";
 import { PricingHero } from "./Pricing/PricingHero";
 
@@ -7,7 +7,6 @@ const PricingCards = lazy(() =>
 );
 
 export default function PricingPage() {
-  const [isMonthly, setIsMonthly] = useState(true);
 
   return (
     <>
@@ -18,10 +17,10 @@ export default function PricingPage() {
       />
 
       <div className="flex flex-col w-full">
-        <PricingHero isMonthly={isMonthly} setIsMonthly={setIsMonthly} />
+        <PricingHero />
 
   <Suspense fallback={<SectionLoader height="h-[700px]" />}>
-    <PricingCards isMonthly={isMonthly} />
+    <PricingCards isMonthly={true} />
   </Suspense>
 </div>
     </>
