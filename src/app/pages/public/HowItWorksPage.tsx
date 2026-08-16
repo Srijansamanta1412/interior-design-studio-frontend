@@ -10,7 +10,6 @@ const PortfolioCTA = lazy(() => import("@/components/shared/CTASection").then(mo
 const PortfolioComparison = lazy(() => import("./Portfolio/PortfolioComparison").then(module => ({ default: module.PortfolioComparison })));
 const BenefitsSection = lazy(() => import("@/components/shared/BenefitsSection").then(module => ({ default: module.BenefitsSection })));
 const PortfolioFAQ = lazy(() => import("./Portfolio/PortfolioFAQ").then(module => ({ default: module.PortfolioFAQ })));
-const FeaturedSection = lazy(() => import("@/components/shared/FeaturedSection").then(module => ({ default: module.FeaturedSection })));
 
 const HowItWorksPage = () => {
   return (
@@ -49,12 +48,6 @@ const HowItWorksPage = () => {
         <Suspense fallback={<SectionLoader height="h-[600px]" />}>
             <PortfolioFAQ />
         </Suspense>
-
-        <Suspense fallback={<SectionLoader height="h-[300px]" />}>
-            <FeaturedSection />
-        </Suspense>
-
-        {/* Future sections like Gallery/Testimonials will go here */}
       </div>
     </>
   );

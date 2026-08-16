@@ -17,20 +17,22 @@ export const navbarLinks: NavItem[] = [
   { 
     title: "Portfolio", 
     href: "/portfolio", // Main click goes to full portfolio
-    items: [      
-      { title: "Living Room", href: "/portfolio/living-room", description: "Cozy and modern living spaces." },
-      { title: "Kitchen & Dining", href: "/portfolio/kitchen", description: "Functional and stylish culinary hubs." },
-      { title: "Bedroom", href: "/portfolio/bedroom", description: "Serene retreats and sleeping quarters." },
-      { title: "Office", href: "/portfolio/office", description: "Productive workspaces." },
-    ]
+    // items: [      
+    //   { title: "Living Room", href: "/portfolio/living-room", description: "Cozy and modern living spaces." },
+    //   { title: "Kitchen & Dining", href: "/portfolio/kitchen", description: "Functional and stylish culinary hubs." },
+    //   { title: "Bedroom", href: "/portfolio/bedroom", description: "Serene retreats and sleeping quarters." },
+    //   { title: "Office", href: "/portfolio/office", description: "Productive workspaces." },
+    // ]
   },
   { 
     title: "How it Works", 
     href: "/how-it-works"
   },
   { title: "Style Quiz", href: "/quiz" },
-  { title: "Blogs", href: "/blog" },
+  { title: "3D Design", href: "/blog" },
   { title: "Pricing", href: "/pricing" },
+
+
 ];
 
 // Updated to match the new Dark Theme Footer design

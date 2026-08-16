@@ -50,10 +50,6 @@ export default function Landing() {
         <Suspense fallback={<SectionLoader height="h-[400px]" />}>
           <ConsultationCTA />
         </Suspense>
-
-        {/*<Suspense fallback={<SectionLoader height="h-[300px]" />}>
-          <FeaturedSection />
-        </Suspense>*/}
       </div>
     </>
   );
