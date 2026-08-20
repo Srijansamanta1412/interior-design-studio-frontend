@@ -1,8 +1,9 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { quizSteps, type QuizSelection } from "@/services/quizData";
 import { StyleQuizForm } from "./StyleQuiz/StyleQuizForm";
 import { EmailCaptureDialog } from "./StyleQuiz/EmailCaptureDialog";
 import { useNavigate } from "react-router-dom";
+import { createWhatsappUrl } from "@/lib/whatsapp";
 
 const TOTAL_STEPS = quizSteps.length;
 
@@ -11,7 +12,33 @@ export default function StyleQuizStart() {
 
   const [currentStep, setCurrentStep] = useState(0);
   const [selections, setSelections] = useState<QuizSelection[]>([]);
-  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [showWhatsappModal, setShowWhatsappModal] = useState(false);
+
+  const whatsappUrl = useMemo(() => {
+    const selectedStyles = selections.map((selection) => {
+      const step = quizSteps.find((quizStep) => quizStep.id === selection.stepId);
+
+      if (!step || !selection.selectedOptionId) {
+        return `Question ${selection.stepId}: Neither`;
+      }
+
+      const selectedOption =
+        step.optionA.id === selection.selectedOptionId ? step.optionA : step.optionB;
+
+      return `Question ${selection.stepId}: ${selectedOption.styleLabel}`;
+    });
+
+    const messageLines = [
+      "Hi, I completed the interior style quiz.",
+      "",
+      "My quiz choices:",
+      ...(selectedStyles.length ? selectedStyles : ["No style choices selected."]),
+      "",
+      "Please help me understand my interior design style and next steps.",
+    ];
+
+    return createWhatsappUrl(messageLines.join("\n"));
+  }, [selections]);
 
   // Handle image selection (Option A or B)
   const handleSelect = useCallback(
@@ -29,7 +56,7 @@ export default function StyleQuizStart() {
         if (currentStep < TOTAL_STEPS - 1) {
           setCurrentStep((prev) => prev + 1);
         } else {
-          setShowEmailModal(true);
+          setShowWhatsappModal(true);
         }
       }, 400);
     },
@@ -49,39 +76,26 @@ export default function StyleQuizStart() {
     if (currentStep < TOTAL_STEPS - 1) {
       setCurrentStep((prev) => prev + 1);
     } else {
-      setShowEmailModal(true);
+      setShowWhatsappModal(true);
     }
   }, [currentStep]);
 
   // Handle "SKIP ALL"
   const handleSkipAll = useCallback(() => {
-    setShowEmailModal(true);
+    setShowWhatsappModal(true);
   }, []);
 
-  // Handle email submission
-  const handleEmailSubmit = useCallback(
-    (email: string) => {
-      console.log("Quiz results submitted:", { email, selections });
-      // Future: POST to API
-      setShowEmailModal(false);
+  // Handle WhatsApp submission
+  const handleWhatsappSubmit = useCallback(() => {
+    console.log("Quiz results sent to WhatsApp:", { selections });
+    setShowWhatsappModal(false);
       navigate("/");
-    },
-    [selections, navigate]
-  );
+  }, [selections]);
 
-  // Handle social login redirect
-  const handleSocialLogin = useCallback(
-    (provider: "google" | "facebook") => {
-      console.log("Social login:", provider, { selections });
-      navigate("/auth/login");
-    },
-    [selections, navigate]
-  );
-
-  // Handle skip email
-  const handleSkipEmail = useCallback(() => {
-    console.log("Quiz completed without email:", { selections });
-    setShowEmailModal(false);
+  // Handle skip WhatsApp
+  const handleSkipWhatsapp = useCallback(() => {
+    console.log("Quiz completed without WhatsApp:", { selections });
+    setShowWhatsappModal(false);
     navigate("/");
   }, [selections, navigate]);
 
@@ -105,12 +119,12 @@ export default function StyleQuizStart() {
           onSkipAll={handleSkipAll}
         />
 
-        {/* Email Capture Modal */}
+        {/* WhatsApp Capture Modal */}
         <EmailCaptureDialog
-          isOpen={showEmailModal}
-          onSubmit={handleEmailSubmit}
-          onSocialLogin={handleSocialLogin}
-          onSkip={handleSkipEmail}
+          isOpen={showWhatsappModal}
+          whatsappUrl={whatsappUrl}
+          onSubmit={handleWhatsappSubmit}
+          onSkip={handleSkipWhatsapp}
         />
       </div>
     </>

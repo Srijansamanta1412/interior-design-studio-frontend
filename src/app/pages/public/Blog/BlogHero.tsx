@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 
 export function BlogHero() {
   return (
@@ -28,14 +27,11 @@ export function BlogHero() {
       {/* CONTENT OVERLAY */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
         <div className="max-w-4xl space-y-6 animate-fade-in-up flex flex-col items-center">
-          <Badge variant="outline" className="mb-2 text-gold border-gold/50 uppercase tracking-widest px-4 py-1.5 bg-black/20 backdrop-blur-sm">
-            Our Journal
-          </Badge>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-tight drop-shadow-xl text-white">
-            Interior Design <span className="font-light text-gold-light italic">Insights</span>
+            3D Design <span className="font-light text-gold-light italic">Visualization</span>
           </h1>
           <p className="text-lg md:text-xl md:max-w-2xl leading-relaxed drop-shadow-md font-light text-gray-100/90 max-w-2xl mx-auto">
-            Discover the latest trends, expert advice, and inspiration from our world-class interior designers to elevate your living spaces.
+Bring your ideas to life with realistic 3D visualizations that help you see, explore, and refine your space before it's built.
           </p>
         </div>
       </div>
