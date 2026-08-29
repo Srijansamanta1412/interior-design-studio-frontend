@@ -58,7 +58,7 @@ export const publicRoutes: RouteObject[] = [
         element: SuspenseWrapper(PricingPage),
       },
       {
-        path: "blog",
+        path: "design",
         element: <BlogLayout />, // Inner Shell
         children: [
           {

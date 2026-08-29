@@ -1,5 +1,10 @@
 import type { BlogPost, BlogTag, PaginatedBlogResponse } from "@/types/blog";
-
+import FinishedHallSpace from "@/assets/images/3d-design/Finished_Hall_Space.jpeg";
+import BedroomSpace from "@/assets/images/3d-design/3d-bedroom.jpeg";
+import DiningSpace from "@/assets/images/3d-design/3d-dining-space.jpeg";
+import SofaCumHall from "@/assets/images/3d-design/3d-sofa-cum-hall.jpeg";
+import Hall from "@/assets/images/3d-design/3d-hall.jpeg";
+import FoodTable from "@/assets/images/3d-design/3d-food-table.jpeg";
 // --- MOCK DATA ---
 const MOCK_AUTHOR = {
   id: "a1",
@@ -10,10 +15,6 @@ const MOCK_AUTHOR = {
 
 const CATEGORY_BEFORE_AFTER = { id: "c-ba", name: "Before & After", slug: "before-and-after" };
 const CATEGORY_TIPS_GUIDES = { id: "c-tg", name: "Tips & Guides", slug: "tips-and-guides" };
-const CATEGORY_DECOR_TRENDS = { id: "c-dt", name: "Decor Trends", slug: "decor-trends" };
-const CATEGORY_SEASONAL = { id: "c-se", name: "Seasonal", slug: "seasonal" };
-const CATEGORY_BUSINESS_OFFICE = { id: "c-bo", name: "Business Office", slug: "business-office" };
-const CATEGORY_STYLES_GUIDES = { id: "c-sg", name: "Styles & Guides", slug: "styles-and-guides" };
 
 const TAGS = {
   FULL_HOME: { id: "t-fh", name: "Full Home", slug: "full-home", icon: "Home" } as BlogTag,
@@ -26,23 +27,23 @@ const TAGS = {
 const MOCK_POSTS: BlogPost[] = [
   // Full Home
   {
-    id: "fh-1", slug: "historic-victorian-revival", title: "Historic Victorian Revival: A Full Home Transformation",
+    id: "fh-1", slug: "historic-victorian-revival", title: "Soothing Elegance",
     description: "See how we brought modern luxury to a 19th-century Victorian home while preserving its historic charm.",
-    featuredImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
+    featuredImage: FinishedHallSpace,
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-20T09:00:00Z",
     category: CATEGORY_BEFORE_AFTER, tags: [TAGS.FULL_HOME], readingTime: 8,
   },
   {
-    id: "fh-2", slug: "mid-century-modern-update", title: "Mid-Century Modern Masterpiece Revived",
+    id: "fh-2", slug: "mid-century-modern-update", title: "Paradise Bedroom",
     description: "A complete overhaul of a classic mid-century home, blending original architecture with contemporary comforts.",
-    featuredImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop",
+    featuredImage: BedroomSpace,
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-18T09:00:00Z",
     category: CATEGORY_BEFORE_AFTER, tags: [TAGS.FULL_HOME], readingTime: 7,
   },
   {
-    id: "fh-3", slug: "coastal-retreat-makeover", title: "From Drab to Fab: Coastal Retreat Makeover",
+    id: "fh-3", slug: "coastal-retreat-makeover", title: "From Drab to Fab",
     description: "Transforming a tired beach house into a light-filled, luxurious coastal haven for the whole family.",
-    featuredImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    featuredImage: DiningSpace,
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-15T09:00:00Z",
     category: CATEGORY_BEFORE_AFTER, tags: [TAGS.FULL_HOME], readingTime: 6,
   },
@@ -211,23 +212,23 @@ const MOCK_POSTS: BlogPost[] = [
 
   // Tips & Guides
   {
-    id: "tg-1", slug: "how-to-choose-the-right-white-paint", title: "How to Choose the Perfect White Paint",
+    id: "tg-1", slug: "how-to-choose-the-right-white-paint", title: "Heritage Meets Modern Luxury",
     description: "A comprehensive guide to understanding undertones, LRV, and natural lighting when selecting white paint.",
-    featuredImage: "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1200&auto=format&fit=crop",
+    featuredImage: SofaCumHall,
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-23T09:00:00Z",
     category: CATEGORY_TIPS_GUIDES, tags: [TAGS.FULL_HOME], readingTime: 8,
   },
   {
-    id: "tg-2", slug: "budgeting-for-a-remodel", title: "The Ultimate Guide to Kitchen Remodel Budgets",
+    id: "tg-2", slug: "budgeting-for-a-remodel", title: "Sukoon - Modern Serenity",
     description: "Where to splurge and where to save during a full kitchen renovation project.",
-    featuredImage: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop",
+    featuredImage: Hall,
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-19T09:00:00Z",
     category: CATEGORY_TIPS_GUIDES, tags: [TAGS.KITCHEN_BATH], readingTime: 10,
   },
   {
-    id: "tg-3", slug: "mixing-metal-finishes", title: "Mastering the Art of Mixing Metal Finishes",
+    id: "tg-3", slug: "mixing-metal-finishes", title: "Food Harmony",
     description: "Rules of thumb for combining brass, nickel, matte black, and chrome across your home fixtures.",
-    featuredImage: "https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop",
+    featuredImage: FoodTable,
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-12T09:00:00Z",
     category: CATEGORY_TIPS_GUIDES, tags: [TAGS.KITCHEN_BATH], readingTime: 5,
   },
@@ -281,45 +282,6 @@ const MOCK_POSTS: BlogPost[] = [
     category: CATEGORY_TIPS_GUIDES, tags: [TAGS.OFFICES], readingTime: 5,
   }
 ];
-
-// Dynamically generate 10 posts for the requested categories to flush out the mock data
-const generatedCategories = [
-  CATEGORY_BEFORE_AFTER, CATEGORY_TIPS_GUIDES, CATEGORY_DECOR_TRENDS,
-  CATEGORY_SEASONAL, CATEGORY_BUSINESS_OFFICE, CATEGORY_STYLES_GUIDES
-];
-
-const mockImages = [
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200",
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200",
-  "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=1200",
-  "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1200",
-  "https://images.unsplash.com/photo-1560067174-c5a3a8f37060?q=80&w=1200",
-  "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200"
-];
-
-generatedCategories.forEach((cat, catIndex) => {
-  for (let i = 1; i <= 10; i++) {
-    const defaultTag = cat.id === 'c-bo' ? TAGS.OFFICES :
-                       cat.id === 'c-se' ? TAGS.BEDROOMS :
-                       cat.id === 'c-kb' ? TAGS.KITCHEN_BATH : TAGS.FULL_HOME;
-                       
-    MOCK_POSTS.push({
-      id: `gen-${cat.id}-${i}`,
-      slug: `${cat.slug}-post-${i}`,
-      title: `${cat.name} Inspiration & Tips ${i}`,
-      description: `Explore the latest design trends and comprehensive guides focusing on ${cat.name.toLowerCase()} to elevate your space.`,
-      featuredImage: mockImages[(catIndex + i) % mockImages.length],
-      content: "<p>Detailed interior design masterclass content will go here. Featuring comprehensive layouts and before/after comparisons.</p>",
-      author: MOCK_AUTHOR,
-      publishDate: new Date(Date.now() - (i * 86400000) - (catIndex * 1000000)).toISOString(),
-      category: cat,
-      tags: [defaultTag],
-      readingTime: 4 + (i % 6)
-    });
-  }
-});
-
 // --- SERVICE METHODS ---
 export const blogService = {
   
