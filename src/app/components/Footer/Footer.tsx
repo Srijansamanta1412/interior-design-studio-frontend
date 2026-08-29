@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Logo } from "@/components/shared/Logo";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram} from "lucide-react";
 import { footerLinks } from "@/app/routes/navigation";
-import { NewsletterDialog } from "./NewsletterDialog";
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +10,6 @@ import {
 } from "@/components/ui/accordion";
 
 export function Footer() {
-  const [showDialog, setShowDialog] = useState(false);
 
   return (
     <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border">
