@@ -1,7 +1,9 @@
 // ============================================================
 // Pricing Data — Static configuration for the 3-tier pricing page.
 // Plans are tailored for an interior design studio service.
-// ============================================================
+// ============================================================\
+import { createWhatsappUrl } from "@/lib/whatsapp";
+  const whatsappUrl = createWhatsappUrl("Hi I would like to schedule a consultation.");
 
 export interface PricingPlan {
   name: string;
@@ -31,7 +33,7 @@ export const pricingPlans: PricingPlan[] = [
     description:
       "Perfect for refreshing a single room with professional guidance",
     buttonText: "Start Free Consultation",
-    href: "/quiz",
+    href: whatsappUrl,
     isPopular: false,
   },
   {
@@ -71,7 +73,7 @@ export const pricingPlans: PricingPlan[] = [
     description:
       "For complete home transformations with a dedicated design team",
     buttonText: "Contact Our Team",
-    href: "/contact",
+    href: whatsappUrl,
     isPopular: false,
   },
 ];
