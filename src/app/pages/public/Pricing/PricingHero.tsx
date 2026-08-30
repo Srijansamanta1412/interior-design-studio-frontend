@@ -25,10 +25,6 @@ export function PricingHero(){
             htmlFor="billing-toggle"
             className="cursor-pointer flex items-center gap-3"
           >
-            <span className="text-sm font-semibold text-foreground">
-              Annual billing{" "}
-              <span className="text-gold font-bold">(Save 20%)</span>
-            </span>
           </Label>
         </div>
       </div>

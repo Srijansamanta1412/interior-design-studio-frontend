@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { BlurImage } from "@/components/shared/BlurImage";
+import ModernTVUnit from "@/assets/images/dining/Modern TV Unit.jpeg";
+import { createWhatsappUrl } from "@/lib/whatsapp";
 
 export function ConsultationCTA() {
+  const whatsappUrl = createWhatsappUrl("Hi I would like to schedule a consultation.");
+
   return (
     <section className="w-full flex flex-col md:flex-row">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 h-[50vh] md:h-auto md:min-h-[600px] relative bg-muted/50">
         <BlurImage
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop"
-          alt="Beautiful interior design living room"
+          src={ModernTVUnit}
+          alt="Modern TV Unit"
           className="h-full w-full object-cover"
           containerClassName="h-full rounded-none"
         />
@@ -21,18 +25,18 @@ export function ConsultationCTA() {
           Think again.
         </h2>
         
-        <Button 
+        <Button
+          asChild
           variant="gold"
           size="lg"
           className="px-10 py-7 text-sm rounded-none uppercase tracking-[0.15em]" // Keeping rounded-none as it fits this specific section design better, but using theme colors
         >
-            <a
-    href="https://wa.me/8697663161?text=Hi%20I%20would%20like%20to%20schedule%20a%20consultation."
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-
-          Schedule a Consultation
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Schedule a Consultation
           </a>
         </Button>
       </div>

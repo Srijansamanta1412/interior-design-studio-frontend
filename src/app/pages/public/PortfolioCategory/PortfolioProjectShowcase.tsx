@@ -57,7 +57,7 @@ export function PortfolioProjectShowcase({
         <Tabs
           defaultValue="after"
           className="w-full max-w-5xl mx-auto flex flex-col items-center"
-        >
+        >  
           {/* Tab Triggers */}
           {/*<TabsList className="grid w-full max-w-[400px] grid-cols-2 bg-transparent gap-4 mb-8">
             <TabsTrigger

@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BlurImage } from "@/components/shared/BlurImage";
+import { Link } from "react-router-dom";
+import KitchenSlab from "@/assets/images/how-it-works/Kitchen-Slab.jpeg";
 
 export function BlogLayout() {
   return (
@@ -16,7 +18,7 @@ export function BlogLayout() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-black">
           <BlurImage
-            src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2000&auto=format&fit=crop"
+            src= {KitchenSlab}
             alt="Beautiful contemporary kitchen"
             className="w-full h-full object-cover opacity-60 md:opacity-80 brightness-[0.65]"
             containerClassName="w-full h-full rounded-none border-0"
@@ -38,12 +40,14 @@ export function BlogLayout() {
               Take our interior design style quiz<br className="hidden md:block" />
               to ignite your inspiration today!
             </p>
+            <Link to="/style-quiz-start">
             <Button 
               size="lg"
               className="bg-gold hover:bg-gold-dark text-white px-8 py-6 text-sm md:text-base tracking-widest font-bold uppercase rounded shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
-            >
+            > 
               FIND YOUR STYLE
             </Button>
+          </Link>
           </div>
         </div>
       </section>

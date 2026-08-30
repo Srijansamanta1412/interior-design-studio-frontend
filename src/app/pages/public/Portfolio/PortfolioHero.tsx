@@ -14,7 +14,10 @@ export function PortfolioHero() {
           // 2. Serve right size for right device (800w for mobile, 2000w for desktop)
           // Using a different Unsplash image suitable for Portfolio (Modern Living Room)
           srcSet="
-        "
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop&fm=webp 800w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop&fm=webp 1200w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop&fm=webp 2000w
+          "
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop"
           sizes="100vw"
           alt="Modern Living Room Interior Design"

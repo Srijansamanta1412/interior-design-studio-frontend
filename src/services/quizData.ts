@@ -1,7 +1,21 @@
-// ============================================================
-// Quiz Data — Static configuration for the 10-step style quiz.
-// Each step presents two contrasting interior design styles.
-// ============================================================
+import ThreeDBedroom from "@/assets/images/3d-design/3d-bedroom.jpeg";
+import ThreeDDiningSpace from "@/assets/images/3d-design/3D-dining-space.jpeg";
+import ThreeDFoodTable from "@/assets/images/3d-design/3d-food-table.jpeg";
+import ThreeDHall from "@/assets/images/3d-design/3d-hall.jpeg";
+import ThreeDSofaCumHall from "@/assets/images/3d-design/3d-sofa-cum-hall.jpeg";
+import ThreeDTvUnit from "@/assets/images/3d-design/3d-tv-unit.jpeg";
+import FinishedHallSpace from "@/assets/images/3d-design/Finished_Hall_Space.jpeg";
+import IndianClassicDining from "@/assets/images/dining/indian-classic-dining.jpg";
+import BrightOpenDining from "@/assets/images/dining/bright-open-space-dining-room.jpg";
+import CombinedDiningEntry from "@/assets/images/dining/combined-dining-room-and-entryway-design.jpg";
+import ModernFamilyDining from "@/assets/images/dining/modern-family-size-dining-area.jpg";
+import VibrantDiningHall from "@/assets/images/dining/vibrant-brightly-coloured-dining-hall.jpg";
+import ModernLivingTvUnit from "@/assets/images/living/modern-living-room-tv-unit-design.jpg";
+import DreamSpace from "@/assets/images/how-it-works/Dream Space.jpeg";
+import GreenWardrobe from "@/assets/images/how-it-works/Green Wardrobe.jpeg";
+import Kitchen from "@/assets/images/how-it-works/Kitchen.jpeg";
+import ModularKitchen from "@/assets/images/how-it-works/Modular Kitchen.jpeg";
+import KitchenCabinet from "@/assets/images/how-it-works/Kitchen Cabinet.jpeg";
 
 export interface QuizOption {
   id: string;
@@ -12,184 +26,176 @@ export interface QuizOption {
 
 export interface QuizStep {
   id: number;
+  question: string;
   optionA: QuizOption;
   optionB: QuizOption;
 }
 
 export type QuizSelection = {
   stepId: number;
-  selectedOptionId: string | null;   // null = "Neither"
+  selectedOptionId: string | null;
   selectedImageUrl: string | null;
 };
 
 export const quizSteps: QuizStep[] = [
-  // Step 1: Modern Minimalist vs Traditional Ornate
   {
     id: 1,
+    question: "Which living room feels more like home for you?",
     optionA: {
       id: "1a",
-      imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
-      alt: "Clean modern minimalist living room with neutral tones",
-      styleLabel: "Modern Minimalist",
+      imageUrl: FinishedHallSpace,
+      alt: "Contemporary Indian living room with warm finishes and family seating",
+      styleLabel: "Contemporary Indian Living",
     },
     optionB: {
       id: "1b",
-      imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
-      alt: "Traditional ornate living room with rich details",
-      styleLabel: "Traditional",
+      imageUrl: IndianClassicDining,
+      alt: "Classic Indian interior with rich wood and traditional detailing",
+      styleLabel: "Classic Indian Elegance",
     },
   },
-
-  // Step 2: Scandinavian Light vs Industrial Dark
   {
     id: 2,
+    question: "What kind of TV unit would you prefer?",
     optionA: {
       id: "2a",
-      imageUrl: "https://images.unsplash.com/photo-1616137466211-f939a420be84?q=80&w=1200&auto=format&fit=crop",
-      alt: "Bright Scandinavian living room with light wood",
-      styleLabel: "Scandinavian",
+      imageUrl: ModernLivingTvUnit,
+      alt: "Sleek wall-mounted TV unit with storage for an Indian apartment",
+      styleLabel: "Sleek TV Wall Unit",
     },
     optionB: {
       id: "2b",
-      imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
-      alt: "Dark industrial loft with exposed brick and metal",
-      styleLabel: "Industrial",
+      imageUrl: ThreeDTvUnit,
+      alt: "Warm wood TV unit with display shelves and concealed storage",
+      styleLabel: "Warm Wood TV Unit",
     },
   },
-
-  // Step 3: Coastal Relaxed vs Urban Contemporary
   {
     id: 3,
+    question: "Which dining setup suits your family better?",
     optionA: {
       id: "3a",
-      imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-      alt: "Breezy coastal living room with ocean-inspired palette",
-      styleLabel: "Coastal",
+      imageUrl: ModernFamilyDining,
+      alt: "Modern family dining area with practical seating and clean finishes",
+      styleLabel: "Family Dining",
     },
     optionB: {
       id: "3b",
-      imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop",
-      alt: "Sleek urban contemporary apartment",
-      styleLabel: "Urban Contemporary",
+      imageUrl: VibrantDiningHall,
+      alt: "Bright colourful dining hall with expressive Indian styling",
+      styleLabel: "Vibrant Dining",
     },
   },
-
-  // Step 4: Mid-Century Modern vs Rustic Farmhouse
   {
     id: 4,
+    question: "How should your kitchen feel?",
     optionA: {
       id: "4a",
-      imageUrl: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1200&auto=format&fit=crop",
-      alt: "Mid-century modern living room with retro furniture",
-      styleLabel: "Mid-Century Modern",
+      imageUrl: ModularKitchen,
+      alt: "Compact modular kitchen with efficient storage and clean shutters",
+      styleLabel: "Compact Modular Kitchen",
     },
     optionB: {
       id: "4b",
-      imageUrl: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
-      alt: "Warm rustic farmhouse with natural wood",
-      styleLabel: "Rustic Farmhouse",
+      imageUrl: Kitchen,
+      alt: "Warm Indian kitchen with practical counters and everyday cooking space",
+      styleLabel: "Warm Everyday Kitchen",
     },
   },
-
-  // Step 5: Art Deco Glam vs Japanese Zen
   {
     id: 5,
+    question: "What bedroom mood would you choose?",
     optionA: {
       id: "5a",
-      imageUrl: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1200&auto=format&fit=crop",
-      alt: "Glamorous Art Deco interior with gold accents",
-      styleLabel: "Art Deco",
+      imageUrl: ThreeDBedroom,
+      alt: "Calm modern bedroom with soft neutral tones and storage planning",
+      styleLabel: "Calm Neutral Bedroom",
     },
     optionB: {
       id: "5b",
-      imageUrl: "https://images.unsplash.com/photo-1600566753086-00f18f6b8ae9?q=80&w=1200&auto=format&fit=crop",
-      alt: "Serene Japanese-inspired minimalist room",
-      styleLabel: "Japanese Zen",
+      imageUrl: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200&auto=format&fit=crop",
+      alt: "Luxury bedroom with rich textures, warm lighting, and statement decor",
+      styleLabel: "Luxury Statement Bedroom",
     },
   },
-
-  // Step 6: Bohemian Eclectic vs Transitional Classic
   {
     id: 6,
+    question: "Which colour palette feels right for your home?",
     optionA: {
       id: "6a",
-      imageUrl: "https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=1200&auto=format&fit=crop",
-      alt: "Vibrant bohemian room with layered textiles",
-      styleLabel: "Bohemian",
+      imageUrl: BrightOpenDining,
+      alt: "Bright open Indian dining space with light colours",
+      styleLabel: "Light And Airy",
     },
     optionB: {
       id: "6b",
-      imageUrl: "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1200&auto=format&fit=crop",
-      alt: "Elegant transitional living room blending classic and modern",
-      styleLabel: "Transitional",
+      imageUrl: ThreeDHall,
+      alt: "Warm interior with deeper tones and a cosy evening ambience",
+      styleLabel: "Warm And Cosy",
     },
   },
-
-  // Step 7: Mediterranean vs Contemporary Luxe
   {
     id: 7,
+    question: "What kind of wardrobe and storage style do you like?",
     optionA: {
       id: "7a",
-      imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4ea0d?q=80&w=1200&auto=format&fit=crop",
-      alt: "Mediterranean villa interior with terracotta and arches",
-      styleLabel: "Mediterranean",
+      imageUrl: GreenWardrobe,
+      alt: "Colourful Indian wardrobe design with a fresh modern finish",
+      styleLabel: "Coloured Wardrobes",
     },
     optionB: {
       id: "7b",
-      imageUrl: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
-      alt: "Sleek contemporary luxury living room",
-      styleLabel: "Contemporary Luxe",
+      imageUrl: KitchenCabinet,
+      alt: "Elegant neutral storage design with seamless shutters",
+      styleLabel: "Seamless Neutral Storage",
     },
   },
-
-  // Step 8: French Country vs Urban Loft
   {
     id: 8,
+    question: "How would you treat your foyer or entrance?",
     optionA: {
       id: "8a",
-      imageUrl: "https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop",
-      alt: "Charming French country dining room with florals",
-      styleLabel: "French Country",
+      imageUrl: CombinedDiningEntry,
+      alt: "Combined dining and entrance design with storage and a welcoming layout",
+      styleLabel: "Practical Foyer Storage",
     },
     optionB: {
       id: "8b",
-      imageUrl: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop",
-      alt: "Open-concept urban loft with industrial elements",
-      styleLabel: "Urban Loft",
+      imageUrl: ThreeDDiningSpace,
+      alt: "Decorative Indian entrance connected to dining with display details",
+      styleLabel: "Decorative Welcome Area",
     },
   },
-
-  // Step 9: Tropical Resort vs Brutalist Modern
   {
     id: 9,
+    question: "Which open living layout do you prefer?",
     optionA: {
       id: "9a",
-      imageUrl: "https://images.unsplash.com/photo-1560067174-c5a3a8f37060?q=80&w=1200&auto=format&fit=crop",
-      alt: "Tropical resort-style room with natural materials",
-      styleLabel: "Tropical Resort",
+      imageUrl: ThreeDSofaCumHall,
+      alt: "Open sofa and hall layout for a compact Indian home",
+      styleLabel: "Compact Open Living",
     },
     optionB: {
       id: "9b",
-      imageUrl: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1200&auto=format&fit=crop",
-      alt: "Raw concrete and clean lines in a brutalist interior",
-      styleLabel: "Brutalist Modern",
+      imageUrl: DreamSpace,
+      alt: "Finished dream home space with more detailed decor and a premium feel",
+      styleLabel: "Premium Finished Look",
     },
   },
-
-  // Step 10: Hollywood Regency vs Organic Modern
   {
     id: 10,
+    question: "Which overall direction should your designer explore?",
     optionA: {
       id: "10a",
-      imageUrl: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200&auto=format&fit=crop",
-      alt: "Bold Hollywood Regency bedroom with rich textures",
-      styleLabel: "Hollywood Regency",
+      imageUrl: ThreeDFoodTable,
+      alt: "Simple functional Indian home design focused on daily family use",
+      styleLabel: "Simple And Functional",
     },
     optionB: {
       id: "10b",
-      imageUrl: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1200&auto=format&fit=crop",
-      alt: "Calming organic modern bedroom with earthy tones",
-      styleLabel: "Organic Modern",
+      imageUrl: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1200&auto=format&fit=crop",
+      alt: "Premium interior with rich textures, statement lighting, and luxury finishes",
+      styleLabel: "Premium And Decorative",
     },
   },
 ];
