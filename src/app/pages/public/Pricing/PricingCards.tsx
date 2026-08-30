@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import NumberFlow from "@number-flow/react";
+
 import { Check, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -11,7 +11,7 @@ interface PricingCardsProps {
   isMonthly: boolean;
 }
 
-export function PricingCards({ isMonthly }: PricingCardsProps) {
+export function PricingCards({ }: PricingCardsProps) {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
