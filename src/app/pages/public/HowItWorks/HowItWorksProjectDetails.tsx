@@ -90,7 +90,7 @@ export function HowItWorksProjectDetails({
             <hr className="border-t border-border" />
 
             <div className="pt-2 text-center md:text-left space-y-4">
-              <Link to="/start-project">
+              <Link to="/style-quiz-start">
                 <Button 
                   className="w-full md:w-auto bg-gold hover:bg-gold-dark text-white px-10 py-8 text-lg font-bold tracking-widest uppercase rounded shadow-lg transition-all hover:shadow-xl hover:-translate-y-1"
                 >

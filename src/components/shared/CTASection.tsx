@@ -17,7 +17,7 @@ export function CTASection() {
             Ready to make your dream space a reality?
           </h2>
           
-          <Link to="/start-project">
+          <Link to="/style-quiz-start">
             <Button 
               size="lg" 
               className="bg-gold hover:bg-gold-dark text-white px-8 py-6 text-sm md:text-base tracking-widest font-bold uppercase rounded shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
