@@ -72,7 +72,7 @@ export function PricingCards({ isMonthly }: PricingCardsProps) {
 
                 {/* Price */}
                 <div className="mt-6 flex items-center justify-center gap-x-2">
-                  <span className="text-foreground text-5xl font-bold tracking-tight">
+                  {/* <span className="text-foreground text-5xl font-bold tracking-tight">
                     <NumberFlow
                       value={
                         isMonthly
@@ -92,16 +92,10 @@ export function PricingCards({ isMonthly }: PricingCardsProps) {
                       willChange
                       className="tabular-nums"
                     />
-                  </span>
-                  <span className="text-muted-foreground text-sm leading-6 font-semibold tracking-wide">
-                    / {plan.period}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Billing info */}
-                <p className="text-muted-foreground text-xs leading-5 mt-1">
-                  {isMonthly ? "billed monthly" : "billed annually"}
-                </p>
 
                 {/* Features */}
                 <ul className="mt-6 flex flex-col gap-2.5 text-sm">

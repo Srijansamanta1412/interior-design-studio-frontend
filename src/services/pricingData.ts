@@ -1,15 +1,8 @@
-// ============================================================
-// Pricing Data — Static configuration for the 3-tier pricing page.
-// Plans are tailored for an interior design studio service.
-// ============================================================\
 import { createWhatsappUrl } from "@/lib/whatsapp";
-  const whatsappUrl = createWhatsappUrl("Hi I would like to schedule a consultation.");
 
 export interface PricingPlan {
   name: string;
   price: string;
-  yearlyPrice: string;
-  period: string;
   features: string[];
   description: string;
   buttonText: string;
@@ -17,62 +10,55 @@ export interface PricingPlan {
   isPopular: boolean;
 }
 
+const whatsappUrl = createWhatsappUrl("Hi I would like to schedule a consultation.");
+
 export const pricingPlans: PricingPlan[] = [
   {
-    name: "ESSENTIALS",
+    name: "SECTION-SPECIFIC PACKAGE",
     price: "99",
-    yearlyPrice: "79",
-    period: "per month",
     features: [
-      "1 room design concept",
-      "2 initial design revisions",
-      "Curated shopping list",
-      "3D room visualization",
-      "Color palette guide",
+      "Focused design for one room or section",
+      "Layout suggestions for the selected area",
+      "Style and colour direction",
+      "Material and finish guidance",
+      "Practical storage recommendations",
     ],
-    description:
-      "Perfect for refreshing a single room with professional guidance",
-    buttonText: "Start Free Consultation",
+    description: "Best for changing a kitchen, bedroom, TV unit, or any one specific area.",
+    buttonText: "Schedule a Consultation",
     href: whatsappUrl,
     isPopular: false,
   },
   {
-    name: "PROFESSIONAL",
-    price: "299",
-    yearlyPrice: "239",
-    period: "per month",
+    name: "FULL APARTMENT CHANGE",
+    price: "",
     features: [
-      "Up to 3 room designs",
-      "Unlimited design revisions",
-      "Dedicated interior designer",
+      "Complete apartment transformation",
+      "Room-by-room design planning",
       "Detailed floor plans",
-      "3D photorealistic renderings",
-      "Furniture & decor sourcing",
-      "Priority support",
+      "3D visual direction for all key spaces",
+      "Furniture, finishes, and decor planning",
+      "Dedicated designer support",
+      "Revision rounds for the full home",
     ],
-    description: "Ideal for homeowners looking to transform multiple spaces",
+    description: "Ideal for a complete home makeover with one connected design language.",
     buttonText: "Get Started",
     href: "/quiz",
     isPopular: true,
   },
   {
-    name: "FULL HOME",
+    name: "PLANNING & LAYOUT SUGGESTION",
     price: "599",
-    yearlyPrice: "479",
-    period: "per month",
     features: [
-      "Whole-home design package",
-      "Senior designer dedicated to you",
-      "Unlimited rooms & revisions",
-      "Custom furniture design",
-      "Contractor coordination",
-      "In-person site consultation",
-      "Vendor discount program",
-      "White-glove project management",
+      "Concept and layout consultation",
+      "Space planning suggestions",
+      "Furniture placement ideas",
+      "Traffic flow and zoning guidance",
+      "Room-wise planning recommendations",
+      "Ideal for self-execution or partial renovation",
+      "Advice before you begin work",
     ],
-    description:
-      "For complete home transformations with a dedicated design team",
-    buttonText: "Contact Our Team",
+    description: "Best when you need a smart plan before starting the project yourself.",
+    buttonText: "Contact Us",
     href: whatsappUrl,
     isPopular: false,
   },
