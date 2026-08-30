@@ -1,5 +1,5 @@
 import ThreeDBedroom from "@/assets/images/3d-design/3d-bedroom.jpeg";
-import ThreeDDiningSpace from "@/assets/images/3d-design/3d-dining-space.jpeg";
+import ThreeDDiningSpace from "@/assets/images/3d-design/3D-dining-space.jpeg";
 import ThreeDFoodTable from "@/assets/images/3d-design/3d-food-table.jpeg";
 import ThreeDHall from "@/assets/images/3d-design/3d-hall.jpeg";
 import ThreeDSofaCumHall from "@/assets/images/3d-design/3d-sofa-cum-hall.jpeg";
@@ -15,6 +15,7 @@ import DreamSpace from "@/assets/images/how-it-works/Dream Space.jpeg";
 import GreenWardrobe from "@/assets/images/how-it-works/Green Wardrobe.jpeg";
 import Kitchen from "@/assets/images/how-it-works/Kitchen.jpeg";
 import ModularKitchen from "@/assets/images/how-it-works/Modular Kitchen.jpeg";
+import KitchenCabinet from "@/assets/images/how-it-works/Kitchen Cabinet.jpeg";
 
 export interface QuizOption {
   id: string;
@@ -144,7 +145,7 @@ export const quizSteps: QuizStep[] = [
     },
     optionB: {
       id: "7b",
-      imageUrl: "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1200&auto=format&fit=crop",
+      imageUrl: KitchenCabinet,
       alt: "Elegant neutral storage design with seamless shutters",
       styleLabel: "Seamless Neutral Storage",
     },

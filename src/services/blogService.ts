@@ -1,7 +1,7 @@
 import type { BlogPost, BlogTag, PaginatedBlogResponse } from "@/types/blog";
 import FinishedHallSpace from "@/assets/images/3d-design/Finished_Hall_Space.jpeg";
 import BedroomSpace from "@/assets/images/3d-design/3d-bedroom.jpeg";
-import DiningSpace from "@/assets/images/3d-design/3d-dining-space.jpeg";
+import DiningSpace from "@/assets/images/3d-design/3D-dining-space.jpeg";
 import SofaCumHall from "@/assets/images/3d-design/3d-sofa-cum-hall.jpeg";
 import Hall from "@/assets/images/3d-design/3d-hall.jpeg";
 import FoodTable from "@/assets/images/3d-design/3d-food-table.jpeg";
