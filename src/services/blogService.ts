@@ -54,13 +54,6 @@ const MOCK_POSTS: BlogPost[] = [
     content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-10T09:00:00Z",
     category: CATEGORY_BEFORE_AFTER, tags: [TAGS.FULL_HOME], readingTime: 9,
   },
-  {
-    id: "fh-5", slug: "suburban-family-home", title: "Elevating the Everyday: Suburban Family Home Redesign",
-    description: "Creating a cohesive, stylish, and highly functional home for a busy family of five.",
-    featuredImage: "https://images.unsplash.com/photo-1600585154526-990dced4ea0d?q=80&w=1200&auto=format&fit=crop",
-    content: "<p>Full content will go here...</p>", author: MOCK_AUTHOR, publishDate: "2026-02-05T09:00:00Z",
-    category: CATEGORY_BEFORE_AFTER, tags: [TAGS.FULL_HOME], readingTime: 7,
-  },
   
   // Offices
   {
