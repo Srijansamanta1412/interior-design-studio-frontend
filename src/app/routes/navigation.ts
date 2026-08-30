@@ -29,7 +29,7 @@ export const navbarLinks: NavItem[] = [
     href: "/how-it-works"
   },
   { title: "Style Quiz", href: "/quiz" },
-  { title: "3D Design", href: "/blog" },
+  { title: "3D Design", href: "/design" },
   { title: "Pricing", href: "/pricing" },
 
 
@@ -41,7 +41,6 @@ export const footerLinks: Record<string, FooterSection> = {
     title: "ABOUT US",
     links: [
       { title: "Company", href: "/" },
-      { title: "Reviews", href: "/reviews" },
       { title: "Pricing", href: "/pricing" }
     ]
   },
@@ -49,10 +48,9 @@ export const footerLinks: Record<string, FooterSection> = {
     title: "EXPLORE",
     links: [
       { title: "Style Quiz", href: "/quiz" },
-      { title: "Interior Design Blog", href: "/blog" },
+      { title: "3D Design", href: "/design" },
       { title: "Designer Portfolios", href: "/portfolios" },
-      { title: "Virtual Interior Design", href: "/virtual-design" },
-      { title: "Contact Us"}
+      { title: "How It Works", href: "/how-it-works" }
     ]
   },
   locations: {

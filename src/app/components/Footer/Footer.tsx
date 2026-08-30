@@ -1,10 +1,7 @@
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
 import { Logo } from "@/components/shared/Logo";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Youtube, PinIcon } from "lucide-react";
+import { Facebook, Instagram} from "lucide-react";
 import { footerLinks } from "@/app/routes/navigation";
-import { NewsletterDialog } from "./NewsletterDialog";
 import {
   Accordion,
   AccordionContent,
@@ -13,17 +10,6 @@ import {
 } from "@/components/ui/accordion";
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-  const [showDialog, setShowDialog] = useState(false);
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && email) {
-      e.preventDefault(); // Prevent default behavior (form submission, focus jump)
-      if (email.includes("@")) {
-        setShowDialog(true);
-      }
-    }
-  };
 
   return (
     <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border">
@@ -77,7 +63,7 @@ export function Footer() {
 
           {/* 4. Newsletter & Socials */}
           <div className="lg:pl-8">
-            <h4 className="font-bold text-sm tracking-wider mb-4 text-foreground uppercase">GET EXCLUSIVE TIPS & OFFERS</h4>
+            {/* <h4 className="font-bold text-sm tracking-wider mb-4 text-foreground uppercase">GET EXCLUSIVE TIPS & OFFERS</h4>
             <div className="flex gap-2 mb-10">
               <Input
                 placeholder="Enter email address"
@@ -86,15 +72,12 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={handleKeyDown}
               />
-            </div>
+            </div> */}
 
             <h4 className="font-bold text-sm tracking-wider mb-4 text-foreground uppercase">JOIN OUR COMMUNITY</h4>
             <div className="flex gap-6">
-              <a href="#" aria-label="Follow us on Instagram" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" aria-label="Follow us on Facebook" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" aria-label="Follow us on Pinterest" className="text-muted-foreground hover:text-foreground transition-colors"><PinIcon className="w-5 h-5" /></a>
-              <a href="#" aria-label="Follow us on Twitter" className="text-muted-foreground hover:text-foreground transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" aria-label="Subscribe to our YouTube channel" className="text-muted-foreground hover:text-foreground transition-colors"><Youtube className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/moderninteriordecorstudio?igsh=ZnJuMm9zcmhwanpj" aria-label="Follow us on Instagram" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/share/1C7jwQbQoe/" aria-label="Follow us on Facebook" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
             </div>
           </div>
         </div>
@@ -120,12 +103,6 @@ export function Footer() {
         </div>
 
       </div>
-
-      <NewsletterDialog
-        isOpen={showDialog}
-        onOpenChange={setShowDialog}
-        email={email}
-      />
     </footer>
   );
 }

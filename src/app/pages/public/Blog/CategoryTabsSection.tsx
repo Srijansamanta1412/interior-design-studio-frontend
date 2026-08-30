@@ -1,15 +1,17 @@
 import * as React from "react";
 import { blogService } from "@/services/blogService";
 import type { BlogPost } from "@/types/blog";
-import { BlogCard } from "@/components/shared/BlogCard";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious
+  CarouselPrevious,
+  type CarouselApi
 } from "@/components/ui/carousel";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
+import { BlurImage } from "@/components/shared/BlurImage";
 
 const categories = [
   "Full Home",
@@ -22,6 +24,9 @@ const categories = [
 export function CategoryTabsSection() {
   const [posts, setPosts] = React.useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     const fetchAllPosts = async () => {
@@ -38,7 +43,18 @@ export function CategoryTabsSection() {
     fetchAllPosts();
   }, []);
 
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
 
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   if (isLoading) {
     return (
@@ -104,30 +120,49 @@ export function CategoryTabsSection() {
                 {/* Full Width Carousel Container */}
                 <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] text-left">
                   <Carousel
+                    setApi={setApi}
                     opts={{
                       align: "center",
                       loop: true,
                     }}
-                    className="w-full relative"
+                    className="w-full relative group"
                   >
-                    <CarouselContent className="-ml-6">
+                    <CarouselContent className="-ml-4">
                       {filteredPosts.map((post) => (
-                        <CarouselItem key={post.id} className="pl-6 basis-[85%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pt-4 pb-8">
-                           <div className="h-full group-hover:cursor-pointer transition-transform duration-300">
-                               <BlogCard post={post} />
-                           </div>
+                        <CarouselItem key={post.id} className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                          <div className="group-hover:cursor-pointer">
+                            <BlurImage
+                              src={post.featuredImage}
+                              alt={post.title}
+                              ratio={1 / 1}
+                              className="hover:scale-105"
+                            />
+                          </div>
                         </CarouselItem>
                       ))}
                     </CarouselContent>
 
                     {/* Navigation Arrows - customized positioning similar to RealSpacesSection */}
-                    <CarouselPrevious aria-label="Previous image" className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg transition-opacity duration-300 pointer-events-auto flex" />
-                    <CarouselNext aria-label="Next image" className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg transition-opacity duration-300 pointer-events-auto flex" />
+                    <CarouselPrevious aria-label="Previous image" className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
+                    <CarouselNext aria-label="Next image" className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground border-none w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto flex" />
 
                   </Carousel>
                 </div>
 
-
+                {/* Dots */}
+                <div className="flex justify-center gap-2 mt-8">
+                  {Array.from({ length: count }).map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => api?.scrollTo(index)}
+                      className={cn(
+                        "w-2 h-2 rounded-full transition-all duration-300",
+                        current === index ? "bg-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                      )}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
                 
               </TabsContent>
             );

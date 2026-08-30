@@ -79,9 +79,9 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex gap-2 items-center">
             <ModeToggle />
-            <Link to="/auth/login">
+            {/* <Link to="/auth/login">
               <Button className="text-gold bg-muted/50 hover:bg-muted/80">Log In</Button>
-            </Link>
+            </Link> */}
             {/*<Button variant="gold">Start Project</Button>*/}
           </div>
 
@@ -144,9 +144,9 @@ export function Navbar() {
                   </Accordion>
 
                   <hr className="my-2 border-border" />
-                  <Link to="/auth/login" className="py-2 text-lg font-medium hover:text-gold">
+                  {/* <Link to="/auth/login" className="py-2 text-lg font-medium hover:text-gold">
                     Log In
-                  </Link>
+                  </Link> */}
                   <Button variant="gold" className="w-full mt-2">Start Project</Button>
                   <div className="mt-4 flex justify-center">
                     <ModeToggle />

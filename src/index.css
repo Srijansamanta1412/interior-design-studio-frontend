@@ -151,3 +151,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .contact-button-blink {
+    position: relative;
+    animation: contact-button-blink 1.8s ease-in-out infinite;
+  }
+
+  .contact-button-blink::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 9999px;
+    border: 2px solid currentColor;
+    opacity: 0;
+    animation: contact-button-ring 1.8s ease-out infinite;
+  }
+}
+
+@keyframes contact-button-blink {
+  0%,
+  100% {
+    filter: brightness(1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  50% {
+    filter: brightness(1.18);
+    box-shadow: 0 16px 28px -10px rgb(0 0 0 / 0.35);
+  }
+}
+
+@keyframes contact-button-ring {
+  0% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}

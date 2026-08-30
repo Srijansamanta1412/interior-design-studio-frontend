@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import NumberFlow from "@number-flow/react";
+
 import { Check, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -11,7 +11,7 @@ interface PricingCardsProps {
   isMonthly: boolean;
 }
 
-export function PricingCards({ isMonthly }: PricingCardsProps) {
+export function PricingCards({ }: PricingCardsProps) {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
@@ -72,7 +72,7 @@ export function PricingCards({ isMonthly }: PricingCardsProps) {
 
                 {/* Price */}
                 <div className="mt-6 flex items-center justify-center gap-x-2">
-                  <span className="text-foreground text-5xl font-bold tracking-tight">
+                  {/* <span className="text-foreground text-5xl font-bold tracking-tight">
                     <NumberFlow
                       value={
                         isMonthly
@@ -92,16 +92,10 @@ export function PricingCards({ isMonthly }: PricingCardsProps) {
                       willChange
                       className="tabular-nums"
                     />
-                  </span>
-                  <span className="text-muted-foreground text-sm leading-6 font-semibold tracking-wide">
-                    / {plan.period}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Billing info */}
-                <p className="text-muted-foreground text-xs leading-5 mt-1">
-                  {isMonthly ? "billed monthly" : "billed annually"}
-                </p>
 
                 {/* Features */}
                 <ul className="mt-6 flex flex-col gap-2.5 text-sm">

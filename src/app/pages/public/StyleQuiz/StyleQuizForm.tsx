@@ -41,10 +41,10 @@ export function StyleQuizForm({
       {/* Header */}
       <div className="text-center mb-8 md:mb-12 space-y-3">
         <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
-          Click on the style you prefer
+          {step.question}
         </h1>
         <p className="text-muted-foreground text-sm md:text-base font-light max-w-lg mx-auto">
-          Point us to the styles you like by clicking on an image
+          Choose the option that feels closer to your home and lifestyle.
         </p>
       </div>
 

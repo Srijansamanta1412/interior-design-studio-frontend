@@ -4,7 +4,6 @@ import { SectionLoader } from "@/components/shared/SectionLoader";
 const BlogHero = lazy(() => import("./Blog/BlogHero").then(module => ({ default: module.BlogHero })));
 const RecentStories = lazy(() => import("./Blog/RecentStories").then(module => ({ default: module.RecentStories })));
 const CategoryTabsSection = lazy(() => import("./Blog/CategoryTabsSection").then(module => ({ default: module.CategoryTabsSection })));
-const TipsAndGuidesSection = lazy(() => import("./Blog/TipsAndGuidesSection").then(module => ({ default: module.TipsAndGuidesSection })));
 
 export default function BlogIndex() {
   return (
@@ -22,10 +21,6 @@ export default function BlogIndex() {
 
         <Suspense fallback={<SectionLoader height="h-[800px]" />}>
           <CategoryTabsSection />
-        </Suspense>
-
-        <Suspense fallback={<SectionLoader height="h-[600px]" />}>
-          <TipsAndGuidesSection />
         </Suspense>
       </div>
     </>
