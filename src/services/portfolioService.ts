@@ -1,21 +1,38 @@
+import PriyankaSarkarDesginer from "@/assets/images/designers/priyanka-sarkar-designer.jpeg";
 // ============================================================
 // Portfolio Service — Mock data and service methods for portfolio
 // categories and projects. Follows the blogService.ts pattern.
 // ============================================================
 
-import type { PortfolioCategory, PortfolioProject } from "@/types/portfolio";
+import type {
+  DesignerProfile,
+  PortfolioCategory,
+  PortfolioProject,
+} from "@/types/portfolio";
 
 // --- MOCK DESIGNERS ---
 const DESIGNERS = {
   priyanka: {
+    slug: "priyanka-sarkar",
     name: "Priyanka Sarkar",
     avatar: "https://i.pravatar.cc/150?u=renata-designer",
+    portrait: PriyankaSarkarDesginer,
     role: "Interior Designer",
+    location: "Kolkata, India",
+    experience: "10+ years",
+    bio: "I create inviting, thoughtfully layered homes that feel as beautiful as they are easy to live in. My work pairs timeless materials with personal details, bringing each client's routines and story into the design.",
+    specialties: ["Warm minimalism", "Living rooms", "Family homes", "Natural materials"],
   },
   angela: {
+    slug: "angela-mayur",
     name: "Angela Mayur",
     avatar: "https://i.pravatar.cc/150?u=meric-designer",
+    portrait: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
     role: "Interior Designer",
+    location: "Kolkata, India",
+    experience: "9+ years",
+    bio: "I believe great interiors should feel effortless and deeply personal. I blend considered proportions, tactile finishes, and a little unexpected character to make everyday spaces feel exceptional.",
+    specialties: ["Contemporary classic", "Kitchens", "Bedrooms", "Lighting design"],
   }
 };
 
@@ -622,5 +639,28 @@ export const portfolioService = {
         resolve(null);
       }, 400);
     });
-  },   
+  },
+
+  /** Get all designer profiles with project counts derived from the portfolio. */
+  getDesigners: async (): Promise<DesignerProfile[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const designers = Object.values(DESIGNERS).map((designer) => {
+          const projects = MOCK_CATEGORIES.flatMap((category) =>
+            category.projects
+              .filter((project) => project.designer.name === designer.name)
+              .map((project) => ({
+                ...project,
+                categoryName: category.name,
+                categorySlug: category.slug,
+              }))
+          );
+
+          return { ...designer, projects };
+        });
+
+        resolve(designers);
+      }, 400);
+    });
+  },
 };
