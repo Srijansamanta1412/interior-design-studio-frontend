@@ -9,6 +9,7 @@ import { PortfolioLayout } from "@/app/layouts/PortfolioLayout";
 const LandingPage = lazy(() => import("@/app/pages/public/Landing"));
 const PortfolioPage = lazy(() => import("@/app/pages/public/Portfolio"));
 const PortfolioCategoryPage = lazy(() => import("@/app/pages/public/PortfolioCategoryPage"));
+const DesignerDetailsPage = lazy(() => import("../pages/public/DesignerDetailsPage"));
 const HowItWorksPage = lazy(() => import("@/app/pages/public/HowItWorksPage"));
 const BlogIndex = lazy(() => import("@/app/pages/public/BlogIndex"));
 const BlogPost = lazy(() => import("@/app/pages/public/BlogPost"));
@@ -40,6 +41,10 @@ export const publicRoutes: RouteObject[] = [
             element: SuspenseWrapper(PortfolioCategoryPage),
           },
         ]
+      },
+      {
+        path: "designers",
+        element: SuspenseWrapper(DesignerDetailsPage),
       },
       {
         path: "how-it-works",

@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { BlurImage } from "@/components/shared/BlurImage";
-import ModernFullBathroomView from "@/assets/images/bathroom/modern-full-bathroom-view.jpg";
 import ModernBathroomAndBasinView from "@/assets/images/bathroom/modern-bathroom-basin-and-mirror.jpg";
 import BathroomWalkInShowerAndComot from "@/assets/images/bathroom/bathroom-walk-in-shower-and-toilet.jpg";
 import ModernEnsuiteBathroomFullView from "@/assets/images/bathroom/modern-ensuite-bathroom-full-view.jpg";
@@ -23,7 +22,9 @@ import BrightOpenSpaceDiningRoom from "@/assets/images/dining/bright-open-space-
 import CombinedDiningRoomAndEntryWayDesign from "@/assets/images/dining/combined-dining-room-and-entryway-design.jpg";
 import ModernFamilySizeDiningArea from "@/assets/images/dining/modern-family-size-dining-area.jpg";
 import VibrantBrightlyColouredDiningHall from "@/assets/images/dining/vibrant-brightly-coloured-dining-hall.jpg";
-
+import BathroomWithBlueGeyser from "@/assets/images/bathroom/bathroom-with-blue-geyser.jpeg";
+import OppositeViewBathroom from "@/assets/images/bathroom/opposite-view-bathroom.jpeg";
+import HangingComotBathroom from "@/assets/images/bathroom/hanging-comot-bathroom-view.jpeg";
 
 const categories = [
   "DINING ROOM",
@@ -67,12 +68,14 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1522771753035-4848230d3f63?auto=format&fit=crop&q=80&w=1200"
   ],
   "BATHROOM": [
-    ModernFullBathroomView,
+    BathroomWithBlueGeyser,
     LuxuryIlluminatedBathroomPanelMirror,
+    OppositeViewBathroom,
     BathroomWalkInShowerAndComot,
     ModernEnsuiteBathroomFullView,
     ModernBathroomAndBasinView,
     EnsuiteWalkInShowerArea,
+    HangingComotBathroom
   ],
   "OFFICE": [
     "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&q=80&w=1200",
