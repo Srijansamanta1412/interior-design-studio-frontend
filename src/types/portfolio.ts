@@ -14,6 +14,21 @@ export interface PortfolioDesigner {
   role: string;
 }
 
+export interface DesignerPortfolioProject extends PortfolioProject {
+  categoryName: string;
+  categorySlug: string;
+}
+
+export interface DesignerProfile extends PortfolioDesigner {
+  slug: string;
+  portrait: string;
+  location: string;
+  experience: string;
+  bio: string;
+  specialties: string[];
+  projects: DesignerPortfolioProject[];
+}
+
 export interface PortfolioTestimonial {
   text: string;
   author: string;

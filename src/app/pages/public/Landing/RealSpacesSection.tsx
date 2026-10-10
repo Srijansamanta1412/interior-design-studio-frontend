@@ -23,7 +23,9 @@ import BrightOpenSpaceDiningRoom from "@/assets/images/dining/bright-open-space-
 import CombinedDiningRoomAndEntryWayDesign from "@/assets/images/dining/combined-dining-room-and-entryway-design.jpg";
 import ModernFamilySizeDiningArea from "@/assets/images/dining/modern-family-size-dining-area.jpg";
 import VibrantBrightlyColouredDiningHall from "@/assets/images/dining/vibrant-brightly-coloured-dining-hall.jpg";
-
+import BathroomWithBlueGeyser from "@/assets/images/bathroom/bathroom-with-blue-geyser.jpeg";
+import OppositeViewBathroom from "@/assets/images/bathroom/opposite-view-bathroom.jpeg";
+import HangingComotBathroom from "@/assets/images/bathroom/hanging-comot-bathroom-view.jpeg";
 
 const categories = [
   "DINING ROOM",
@@ -67,12 +69,14 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1522771753035-4848230d3f63?auto=format&fit=crop&q=80&w=1200"
   ],
   "BATHROOM": [
-    ModernFullBathroomView,
+    BathroomWithBlueGeyser,
     LuxuryIlluminatedBathroomPanelMirror,
+    OppositeViewBathroom,
     BathroomWalkInShowerAndComot,
     ModernEnsuiteBathroomFullView,
     ModernBathroomAndBasinView,
     EnsuiteWalkInShowerArea,
+    HangingComotBathroom
   ],
   "OFFICE": [
     "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&q=80&w=1200",

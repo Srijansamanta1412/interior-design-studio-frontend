@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Quote } from "lucide-react";
+import { Link } from "react-router-dom";
 import type { PortfolioProject } from "@/types/portfolio";
 
 interface PortfolioProjectShowcaseProps {
@@ -44,9 +45,12 @@ export function PortfolioProjectShowcase({
             />*/}
             <span className="text-sm text-muted-foreground">
               Designed by{" "}
-              <span className="text-gold font-semibold">
+              <Link
+                to="/designers"
+                className="font-semibold text-gold transition-colors hover:text-gold-dark hover:underline"
+              >
                 {project.designer.name}
-              </span>
+              </Link>
               {" · "}
               {project.designer.role}
             </span>
