@@ -7,7 +7,7 @@ import { SectionLoader } from "@/components/shared/SectionLoader";
 import { portfolioService } from "@/services/portfolioService";
 import type { DesignerProfile } from "@/types/portfolio";
 import CombinedDesignersImage from "@/assets/images/designers/combined-designers.jpeg";
-import PriyankaSarkarDesginer from "@/assets/images/designers/priyanka-sarkar-designer.jpeg";
+
 
 export default function DesignerDetailsPage() {
   const [designers, setDesigners] = useState<DesignerProfile[]>([]);

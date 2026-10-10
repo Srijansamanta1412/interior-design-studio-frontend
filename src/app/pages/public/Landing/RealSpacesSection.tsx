@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { BlurImage } from "@/components/shared/BlurImage";
-import ModernFullBathroomView from "@/assets/images/bathroom/modern-full-bathroom-view.jpg";
 import ModernBathroomAndBasinView from "@/assets/images/bathroom/modern-bathroom-basin-and-mirror.jpg";
 import BathroomWalkInShowerAndComot from "@/assets/images/bathroom/bathroom-walk-in-shower-and-toilet.jpg";
 import ModernEnsuiteBathroomFullView from "@/assets/images/bathroom/modern-ensuite-bathroom-full-view.jpg";
